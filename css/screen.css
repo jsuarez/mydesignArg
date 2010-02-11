@@ -50,7 +50,7 @@ body {
   font-size: 75%;
   color: #222; 
   background:url(../images/bg_body.jpg) no-repeat top center #D3E8EC;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "Verdana", Arial, Helvetica, sans-serif;
 }
 
 
@@ -80,8 +80,8 @@ p img.left  { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
 p img.right { float: right; margin: 1.5em 0 1.5em 1.5em; }
 
 a:focus, 
-a:hover     { color: #000; }
-a           { color: #009; text-decoration: underline; }
+a:hover     { color: inherit; }
+a           { color: inherit; text-decoration: none; }
 
 blockquote  { margin: 1.5em; color: #666; font-style: italic; }
 strong      { font-weight: bold; }
@@ -105,7 +105,7 @@ li ul,
 li ol       { margin:0 1.5em; }
 ul, ol      { margin: 0 1.5em 1.5em 1.5em; }
 
-ul          { list-style-type: disc; }
+ul          { list-style-type: none; }
 ol          { list-style-type: decimal; }
 
 dl          { margin: 0 0 1.5em 0; }
@@ -175,7 +175,7 @@ caption     { background: #eee; }
 .span-2  { width: 70px; }
 .span-3  { width: 110px; }
 .span-4  { width: 150px; }
-.span-5  { width: 190px; }
+.span-5  { width: 255px; }
 .span-6  { width: 230px; }
 .span-7  { width: 270px; }
 .span-8  { width: 310px; }
@@ -183,7 +183,7 @@ caption     { background: #eee; }
 .span-10  { width: 390px; }
 .span-11  { width: 430px; }
 .span-12  { width: 470px; }
-.span-13  { width: 510px; }
+.span-13  { width: 535px; }
 .span-14  { width: 550px; }
 .span-15  { width: 590px; }
 .span-16  { width: 630px; }
@@ -198,8 +198,8 @@ caption     { background: #eee; }
 
 /* Use these classes to set the width of an input. */
 input.span-1, textarea.span-1, input.span-2, textarea.span-2, input.span-3, textarea.span-3, input.span-4, textarea.span-4, input.span-5, textarea.span-5, input.span-6, textarea.span-6, input.span-7, textarea.span-7, input.span-8, textarea.span-8, input.span-9, textarea.span-9, input.span-10, textarea.span-10, input.span-11, textarea.span-11, input.span-12, textarea.span-12, input.span-13, textarea.span-13, input.span-14, textarea.span-14, input.span-15, textarea.span-15, input.span-16, textarea.span-16, input.span-17, textarea.span-17, input.span-18, textarea.span-18, input.span-19, textarea.span-19, input.span-20, textarea.span-20, input.span-21, textarea.span-21, input.span-22, textarea.span-22, input.span-23, textarea.span-23, input.span-24, textarea.span-24 {
-  border-left-width: 1px!important;
-  border-right-width: 1px!important;
+  /*border-left-width: 1px!important;
+  border-right-width: 1px!important;*/
   padding-left: 5px!important;
   padding-right: 5px!important;
 }
@@ -208,7 +208,7 @@ input.span-1, textarea.span-1 { width: 18px!important; }
 input.span-2, textarea.span-2 { width: 58px!important; }
 input.span-3, textarea.span-3 { width: 98px!important; }
 input.span-4, textarea.span-4 { width: 138px!important; }
-input.span-5, textarea.span-5 { width: 178px!important; }
+input.span-5, textarea.span-5 { width: 176px!important; }
 input.span-6, textarea.span-6 { width: 218px!important; }
 input.span-7, textarea.span-7 { width: 258px!important; }
 input.span-8, textarea.span-8 { width: 298px!important; }
@@ -328,6 +328,7 @@ next column, or to pull it into the previous column.  */
 .pull-1, .pull-2, .pull-3, .pull-4, .pull-5, .pull-6, .pull-7, .pull-8, .pull-9, .pull-10, .pull-11, .pull-12, .pull-13, .pull-14, .pull-15, .pull-16, .pull-17, .pull-18, .pull-19, .pull-20, .pull-21, .pull-22, .pull-23, .pull-24 {float: left; position:relative;}
 
 .push-1 { margin: 0 -40px 1.5em 40px; }
+.push-1-1 { margin: 0 -50px 1.5em 50px; }
 .push-2 { margin: 0 -80px 1.5em 80px; }
 .push-3 { margin: 0 -120px 1.5em 120px; }
 .push-4 { margin: 0 -160px 1.5em 160px; }
@@ -431,8 +432,8 @@ legend      { font-weight: bold; font-size:1.2em; }
 input[type=text], input[type=password],
 input.text, input.title, 
 textarea, select { 
-  background-color:#fff; 
-  border:1px solid #bbb; 
+  background-color:transparent;
+  border:none;
 }
 input[type=text]:focus, input[type=password]:focus, 
 input.text:focus, input.title:focus, 

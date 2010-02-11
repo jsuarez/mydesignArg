@@ -1,4 +1,124 @@
-/*******************************Head********************************/
-.top-head{
+h3{
+    font-size:125%;
+    color:#0C2131;
+    font-weight:bold;
+}
+.float-left{
+    float:left;
+}
+
+/************************** Tipografia ********************************/
+.bold{
+    font-weight:bold;
+}
+.italic{
+    font-style:italic;
+}
+.cursive{
+    font-family:"Book Antiqua", Times, serif;
+    font-size:125%;
+    color:#19517F;
+}
+/************************** FIN Tipografia ********************************/
+
+
+/************************** Input ********************************/
+.form-input{
+    border:1px solid #78A9B0;
+    background-color:#fff;
+    height:17px;
+    width:183px;
+}
+    .form-input input{
+        margin-top:-5px;
+        height:16px;
+    }
+.form-input2{
+    border:1px solid #78A9B0;
+    background-color:#fff;
+    height:50px;
+    margin-top:5px;
+    width:183px;
+}
+    .form-input2 textarea{
+        height:40px;
+        margin-top:-3px;
+    }
+/************************** FIN Input ********************************/
+
+
+/******************************* Head ********************************/
+.head{
     margin-top:20px;
 }
+        .head .top-head .phones .img-phone{
+            margin:7px 5px 0 0;
+        }
+        .head .top-head .phones .number-phone .tel{
+            float:left;
+            border-bottom:1px dashed #778C9C;
+        }
+    .head .top-head .support{
+        background:url(../images/button_support.png) no-repeat top left;
+        height:33px;
+    }
+        .head .top-head .support span{
+            margin:8px 0 0 30px;
+            font-size:80%;
+            display:block;
+        }
+/******************************* FIN Head ********************************/
+
+/******************************* Menu ********************************/
+.menu{
+    background:url(../images/bg_menu.png) no-repeat top center;
+    height:54px;
+    margin-top:25px;
+}
+    .menu ul{
+        color:#fff;
+        font-size:110%;
+        margin:15px 0 0 50px;
+        font-weight:bold;
+    }
+    .menu li{
+        width:156px;
+        float:left;
+        text-align:center;
+    }
+/******************************* FIN Menu ********************************/
+
+/******************************* MainContainer ********************************/
+.maincontainer{
+    background:url(../images/bg_container_top.png) no-repeat top center;
+    height:445px;
+}
+    .maincontainer .banner{
+        border:1px solid;
+        height:246px;
+        margin-top:50px;
+    }
+    .maincontainer .form-info{
+        margin-top:32px;
+        clear:right;
+        width:220px;
+    }
+        .maincontainer .form-info .form-top{
+            background:url(../images/form_top.jpg) no-repeat top left #F1F7F9;
+            height:45px;
+            text-align:center;
+            padding-top:10px;
+        }
+        .maincontainer .form-info .form-center{
+            background:#F1F7F9;
+            height:216px;
+            margin:0;
+            padding-left:15px;
+        }
+            .maincontainer .form-info .form-center p{
+                margin-bottom:0;
+            }
+        .maincontainer .form-info .form-bottom{
+            background:url(../images/form_bottom.jpg) no-repeat top left;
+            height:20px;
+        }
