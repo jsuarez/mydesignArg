@@ -162,7 +162,7 @@ caption     { background: #eee; }
 -------------------------------------------------------------- */
 
 /* Sets up basic grid floating and margin. */
-.column, div.span-1, div.span-2, div.span-3, div.span-4, div.span-5, div.span-6, div.span-7, div.span-8, div.span-9, div.span-10, div.span-11, div.span-12, div.span-13, div.span-14, div.span-15, div.span-16, div.span-17, div.span-18, div.span-19, div.span-20, div.span-21, div.span-22, div.span-23, div.span-24 {
+.column, div.span-1, div.span-2, div.span-3, div.span-4, div.span-5, div.span-6, div.span-7, div.span-8, div.span-9, div.span-10, div.span-11, div.span-12, div.span-13, div.span-14, div.span-15, div.span-16, div.span-17, div.span-18, div.span-19, div.span-20, div.span-21, div.span-22, div.span-23, div.span-24, div.span-4-1 {
   float: left;
   margin-right: 10px;
 }
@@ -175,12 +175,13 @@ caption     { background: #eee; }
 .span-2  { width: 70px; }
 .span-3  { width: 110px; }
 .span-4  { width: 150px; }
+.span-4-1  { width: 212px; }
 .span-5  { width: 255px; }
 .span-6  { width: 230px; }
 .span-7  { width: 270px; }
 .span-8  { width: 310px; }
 .span-9  { width: 350px; }
-.span-10  { width: 390px; }
+.span-10  { width: 380px; }
 .span-11  { width: 430px; }
 .span-12  { width: 470px; }
 .span-13  { width: 535px; }
@@ -257,7 +258,8 @@ input.span-24, textarea.span-24 { width: 938px!important; }
 
 /* Add these to a column to prepend empty cols. */
 
-.prepend-1  { padding-left: 40px; } 
+.prepend-1  { padding-left: 40px; }
+.prepend-1-1  { padding-left: 47px; }
 .prepend-2  { padding-left: 80px; } 
 .prepend-3  { padding-left: 120px; } 
 .prepend-4  { padding-left: 160px; } 

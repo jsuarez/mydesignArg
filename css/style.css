@@ -1,3 +1,16 @@
+h1{
+    font-size:190%;
+    color:#0C2131;
+    font-weight:bold;
+    font-family:"Book Antiqua", Times, serif;
+}
+h2{
+    font-family:"Book Antiqua", Times, serif;
+    color:#19517F;
+    font-size:165%;
+    font-weight:bold;
+    font-style:italic;
+}
 h3{
     font-size:125%;
     color:#0C2131;
@@ -5,6 +18,9 @@ h3{
 }
 .float-left{
     float:left;
+}
+.float-right{
+    float:right;
 }
 
 /************************** Tipografia ********************************/
@@ -44,6 +60,18 @@ h3{
         height:40px;
         margin-top:-3px;
     }
+.button-content{
+        text-align:center;
+        width:183px;
+        margin-top:5px;
+}
+.button1{
+    background:url(../images/button_send.png) no-repeat top center;
+    width:63px;
+    height:18px;
+    border:none;
+    color:#fff;
+}
 /************************** FIN Input ********************************/
 
 
@@ -86,12 +114,23 @@ h3{
         float:left;
         text-align:center;
     }
+.menu2{
+    position:absolute;
+    z-index:0;
+    width:32px;
+    top:80px;
+    left:43px;
+}
+    .menu2 a{
+        float:left;
+    }
 /******************************* FIN Menu ********************************/
 
 /******************************* MainContainer ********************************/
 .maincontainer{
     background:url(../images/bg_container_top.png) no-repeat top center;
     height:445px;
+    position:relative;
 }
     .maincontainer .banner{
         border:1px solid;
@@ -122,3 +161,33 @@ h3{
             background:url(../images/form_bottom.jpg) no-repeat top left;
             height:20px;
         }
+        .maincontainer .content{
+            background:url(../images/bg_container_bottom.png) no-repeat bottom center;
+            padding-bottom:10px;
+            position:relative;
+        }
+            .maincontainer .content .column-img{
+                width:156px;
+                margin-right:10px;
+                float:left;
+            }
+            .maincontainer .content .column{
+                font-size:90%;
+                border-bottom:dashed #778C9C 1px;
+                margin-bottom:10px;
+            }
+            .maincontainer .content .column-end{
+                border:none;
+            }
+            .maincontainer .content a{
+                color:#F7941D;
+                text-decoration:underline;
+            }
+/******************************* FIN MainContainer ********************************/
+
+/******************************* Footer ********************************/
+.footer{
+    background:url(../images/bg_footer.jpg) no-repeat top center;
+    position:relative;
+
+}
