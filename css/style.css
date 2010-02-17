@@ -133,7 +133,6 @@ h3{
     position:relative;
 }
     .maincontainer .banner{
-        border:1px solid;
         height:246px;
         margin-top:50px;
     }
@@ -183,8 +182,53 @@ h3{
                 color:#F7941D;
                 text-decoration:underline;
             }
+                .maincontainer .content .column-content .column-portfolio{
+                    background:url(../images/bg_images.png) no-repeat top center;
+                    font-family:"Book Antiqua", Times, serif;
+                    font-size:130%;
+                    color:#19517F;
+                    font-style:italic;
+                    margin-bottom:-20px;
+                }
+                    .maincontainer .content .column-content .column-portfolio img{
+                        margin-left:14px;
+                        padding-top:15px;
+                    }
+                    .maincontainer .content .column-content .column-portfolio p{
+                        margin-left:15px;
+                    }
 /******************************* FIN MainContainer ********************************/
 
+/******************************** Clientes *************************************/
+/*.container-clientes .content-clientes .image-clientes{
+    margin-right:10px;
+}*/
+.banner .bg-clientes-top{
+    background:url(../images/bg_cliente_top.png) no-repeat top center;
+    height:12px;
+    margin-top:-10px;
+}
+.banner .bg-clientes-bottom{
+    background:url(../images/bg_cliente_bottom.png) no-repeat top center;
+    height:12px;
+}
+.banner .container-clientes{
+    background-color:#F1F7F9;
+    height:194px;
+}
+    .banner .container-clientes .content-clientes{
+        margin-top:7px;
+    }
+    .banner .paginador{
+        background-color:#F1F7F9;
+    }
+        .banner .paginador .arrow-left{
+            float:left;
+        }
+        .banner .paginador .arrow-right{
+            float:right;
+
+        }
 /******************************* Footer ********************************/
 /*.footer{
     background:url(../images/bg_footer.jpg) no-repeat top center;

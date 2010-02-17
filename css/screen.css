@@ -171,9 +171,10 @@ caption     { background: #eee; }
 .last, div.last { margin-right: 0; }
 
 /* Use these classes to set the width of a column. */
+
 .span-1  { width: 30px; }
 .span-2  { width: 70px; }
-.span-3  { width: 110px; }
+.span-3  { width: 119px; }
 .span-4  { width: 150px; }
 .span-4-1  { width: 212px; }
 .span-5  { width: 255px; }
@@ -232,6 +233,7 @@ input.span-24, textarea.span-24 { width: 938px!important; }
 
 /* Add these to a column to append empty cols. */
 
+.append-0  { padding-right: 13px; }
 .append-1  { padding-right: 40px; } 
 .append-2  { padding-right: 80px; } 
 .append-3  { padding-right: 120px; } 
@@ -258,6 +260,7 @@ input.span-24, textarea.span-24 { width: 938px!important; }
 
 /* Add these to a column to prepend empty cols. */
 
+.prepend-0  { padding-left: 13px; }
 .prepend-1  { padding-left: 40px; }
 .prepend-1-1  { padding-left: 47px; }
 .prepend-2  { padding-left: 80px; } 
