@@ -1,5 +1,5 @@
 
-    <div class="span-20 prepend-3-1 append-1 last">www.mydesign.com.ar &copy Copyright 2003 - 2010 - Todos los derechos reservados - Logo MyDesign<br /><br /></div>
+    <div class="span-20 prepend-3-1 append-1 last">www.mydesign.com.ar &copy; Copyright 2003 - 2010 - Todos los derechos reservados - Logo MyDesign<br /><br /></div>
     <div class="clear span-22 last">
         <div class="span-3 prepend-2-1">
             <span class="bold">MyDesign</span>
