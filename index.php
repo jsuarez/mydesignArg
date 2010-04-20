@@ -11,7 +11,9 @@
         <?php include("includes/header.php");?>
         <div class="span-22 prepend-1 append-1 last maincontainer">
             <div class="span-22">
-                <div class="span-13 push-1-1 banner"> </div>
+                <div class="span-13 prepend-1 append-0 banner">
+                    <img src="images/banner.png" alt=""/>
+                </div>
                 <div class="float-left last form-info">
                     <div class="form-top cursive"><h4>Solicitar Informaci&oacute;n</h4></div>
                     <div class="form-center">
@@ -42,49 +44,48 @@
             </div>
             
             <div class="span-22 last content">
+                <div class="span-21 prepend-1-1"><h1>Diseño Web</h1></div>
                 <div class="span-10 prepend-1-1 column-content">
-                    <h1>Diseño Web</h1>
                     <div class="span-10 column">
                         <div class="column-img"><img src="images/img_web5.png" alt="Web Institucional"/></div>
-                        <h3>Web Institucional</h3>
-                        <p>Para poder insertar su Pyme o simplemente tener su pagina personal. Obteniendo un diseño profesional...</p>
-                        <p><a class="bold italic" href="#">Subir</a></p>
+                        <div class="span-4-2 float-left"><h3>Web Institucional</h3></div>
+                        <p>Para poder insertar su Pyme o simplemente tener su pagina personal. Obteniendo...</p>
+                        <p><a class="bold italic" href="#">Más info</a></p>
                     </div>
 
                     <div class="span-10 column">
                         <div class="column-img"><img src="images/img_web2.png" alt="Web Autoadministrable"/></div>
-                        <h3>Web Autoadministrable</h3>
+                        <div class="span-4-2 float-left"><h3>Web Autoadministrable</h3></div>
                         <p>Cuenta con una interfaz para poder modificar el contenido sin causar ningún efecto en el diseño... </p>
                         <p><a class="bold italic" href="#">Más info</a></p>
                     </div>
 
                     <div class="span-10 column column-end">
                         <div class="column-img"><img src="images/img_web1.png" alt="Web Imobiliaria"/></div>
-                        <h3>Web Inmobiliaria</h3>
+                        <div class="span-4-2 float-left"><h3>Web Inmobiliaria</h3></div>
                         <p>A través de nuestro sistema Inmobiliario logre una mayor dinámica en la compra, venta... </p>
                         <p><a class="bold italic" href="#">Más info</a></p>
                     </div>
                 </div><!--end .column-content-->
 
                 <div class="span-9 last column-content">
-                    <h1>&emsp;</h1>
                     <div class="span-10 column">
                         <div class="column-img"><img src="images/img_web4.png" alt="Sistema catalogo de productos"/></div>
-                        <h3>Cat&aacute;logo de Productos</h3>
+                        <div class="span-4-2 float-left"><h3>Cat&aacute;logo de Productos</h3></div>
                         <p>A través de nuestro sistema Inmobiliario logre una mayor dinámica en la compra, venta... </p>
                         <p><a class="bold italic" href="#">Más info</a></p>
                     </div>
 
                     <div class="span-10 column">
                         <div class="column-img"><img src="images/img_web3.png" alt="Carrito de Compras"/></div>
-                        <h3>Carrito de Compras</h3>
+                        <div class="span-4-2 float-left"><h3>Carrito de Compras</h3></div>
                         <p>Venda sus productos a todo el mundo. Nuestra solución de comercio electrónico...  </p>
                         <p><a class="bold italic" href="#">Más info</a></p>
                     </div>
 
                     <div class="span-10 column column-end">
                         <div class="column-img"><img src="images/img_web6.png" alt="Web Turismo"/></div>
-                        <h3>Web Turismo</h3>
+                        <div class="span-4-2 float-left"><h3>Web Turismo</h3></div>
                         <p>Ofrece una solución absolutamente flexible y escalable. Tanto microempresas o agentes...</p>
                         <p><a class="bold italic" href="#">Más info</a></p>
                     </div>
