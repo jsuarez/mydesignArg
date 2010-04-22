@@ -1,3 +1,12 @@
+/*------------------------------------------------------------------------------
+ - ESTILO GENERAL
+ -----------------------------------------------------------------------------*/
+.float-left{float:left !important;}
+.float-right{float:right !important;}
+.text-center{text-align: center !important;}
+.border{border:1px solid red !important;}
+ul{margin-left: 0;}
+
 h1{
     font-size:190%;
     color:#0C2131;
@@ -5,13 +14,13 @@ h1{
     font-family:"Book Antiqua", Times, serif;
 }
 h2{
-    /*font-family:"Book Antiqua", Times, serif;
+    font-family:"Book Antiqua", Times, serif;
     color:#19517F;
     font-size:165%;
     font-weight:bold;
-    font-style:italic;*/
+    font-style:normal;
     color:#fff;
-    font-size:110%;
+    font-size:140%;
 }
 h3{
     font-family:"Book Antiqua", Times, serif;
@@ -28,243 +37,394 @@ h4{
     color:#0C2131;
     font-weight:bold;
 }
-.float-left{
-    float:left;
-}
-.float-right{
-    float:right;
-}
-
-/************************** Tipografia ********************************/
-.bold{
-    font-weight:bold;
-}
-.italic{
-    font-style:italic;
-}
-.cursive{
-    font-family:"Book Antiqua", Times, serif;
-    font-size:125%;
-    color:#19517F;
-}
-/************************** FIN Tipografia ********************************/
 
 
-/************************** Input ********************************/
-.form-input{
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA INPUT y TEXTAREA
+ -----------------------------------------------------------------------------*/
+input[type=text],input[type=password], textarea{
     border:1px solid #78A9B0;
     background-color:#fff;
-    height:16px;
+    padding:2px;
+    text-align:left;
+    font-family: "Verdana", Arial, Helvetica, sans-serif;
+    font-size:100%;
+}
+
+input.input-formcontact{
+    margin-top: 0 !important;
     width:186px;
 }
-    .form-input input{
-        margin:0 !important;
-        height:12px;
-        font-size:90%;
-    }
-.form-input2{
-    border:1px solid #78A9B0;
-    background-color:#fff;
+textarea.textarea-formcontact{
+    margin-top: 0 !important;
+    width:186px;
     height:50px;
-    margin-top:5px;
-    width:186px;
 }
-    .form-input2 textarea{
-        height:40px;
-        width:180px;
-        margin-top:0px;
-    }
-.button-content{
-        text-align:center;
-        width:183px;
-        margin-top:5px;
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA BOTONES
+ -----------------------------------------------------------------------------*/
+button{
+    font-family: "Verdana", Arial, Helvetica, sans-serif;
+    border:none;
+    font-size: 100%;
+    font-weight:normal;
+    text-align:center;
 }
-.button1{
+button.button-small{
     background:url(../images/button_send.png) no-repeat top center;
     width:63px;
     height:18px;
-    border:none;
     color:#fff;
 }
-/************************** FIN Input ********************************/
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA LINK
+ -----------------------------------------------------------------------------*/
+a.link-moreinfo{
+    color:#F7941D;
+    font-weight:bold;
+    font-size: 90%;
+    font-style: italic;
+    text-decoration: underline;
+}
+a.link-1{
+    font-family:"Book Antiqua", Times, serif;
+    color:#19517F;
+    font-style:italic;
+    font-weight: normal;
+    font-size: 130%;
+}
+    a.link-1:hover{font-weight: bold;}
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA LABEL
+ -----------------------------------------------------------------------------*/
+label.label-form{
+    font-weight: normal;
+    font-size: 100%;
+}
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA TEXTO
+ -----------------------------------------------------------------------------*/
+.text-detach{
+    color:#19517F;
+    font-weight: bold;
+    font-family: "Book Antiqua",Times,serif;
+    font-style: italic;
+    font-size: 120%;
+}
 
 
-/******************************* Head ********************************/
-.head{
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA EL HEADER
+ -----------------------------------------------------------------------------*/
+.header{
     margin-top:20px;
 }
-        .head .top-head .phones .img-phone{
-            margin:7px 5px 0 0;
-        }
-        .head .top-head .phones .number-phone .tel{
-            float:left;
-            border-bottom:1px dashed #778C9C;
-        }
-    .head .top-head .support{
-        background:url(../images/button_support.png) no-repeat top left;
-        height:33px;
+    .header .icon-phone{
+        float:left;
+        margin: 6px 5px 0 0;
     }
-        .head .top-head .support span{
+    .header .separator{
+        float: left;
+        border-bottom:1px dashed #778C9C;
+    }
+    .header .support {
+        float:right;
+        background:url(../images/button_support.png) no-repeat top left;
+        width: 135px;
+        height:33px;
+        margin-right: 30px;
+    }
+        .header .support a{
+            float:left;
+            font-size: 80%;
             margin:8px 0 0 30px;
-            font-size:80%;
-            display:block;
         }
-/******************************* FIN Head ********************************/
 
-/******************************* Menu ********************************/
-.menu{
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA EL MENU
+ -----------------------------------------------------------------------------*/
+.header .menu{
     background:url(../images/bg_menu.png) no-repeat top center;
     height:54px;
     margin-top:10px;
 }
-    .menu ul{
-        color:#fff;
-        font-size:110%;
-        margin:15px 0 0 50px;
-        font-weight:bold;
+    .header .menu ul{
+        position: relative;
+        margin:12px 0 0 48px;
     }
-    .menu li{
-        width:156px;
-        float:left;
-        text-align:center;
-    }
-.menu2{
-    position:absolute;
-    z-index:0;
-    width:32px;
-    top:80px;
-    left:43px;
-}
-    .menu2 a{
-        float:left;
-    }
-/******************************* FIN Menu ********************************/
+        .header .menu ul li{
+            width:156px;
+            height: 30px;
+            float:left;
+            text-align:center;
+            background-color: transparent;
+        }
+        .header .menu ul li.back {
+            position: absolute;
+            background: url(../images/lava.gif) no-repeat right -30px;
+            width: 9px;
+            height: 30px;
+        }
+            .header .menu ul li.back .left {
+                background: url(../images/lava.gif) no-repeat top left;
+                height: 30px;
+                margin-right: 9px; /* 7px is the width of the rounded shape */
+            }
+        .header .menu ul li h2{
+            position: relative;
+            z-index: 1000;
+        }
+        .header .menu ul li a{
+            display: block;
+            color:#fff;
+            z-index: 1010;
+        }
 
-/******************************* MainContainer ********************************/
-.maincontainer{
+        
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA LOS ENCABEZADOS DE LAS SECCIONES
+ -----------------------------------------------------------------------------*/
+.container-head{
+    position: relative;
     background:url(../images/bg_container_top.png) no-repeat top center;
-    /*height:445px;*/
-    position:relative;
+    height: 445px;
 }
-    .maincontainer .banner{
-        height:246px;
-        margin-top:50px;
+    /* BANNER COMUN
+     ******************************************************************/
+    .container-head .banner{
+        float:left;
+        position: relative;
+        width: 551px;
+        height: 263px;
+        margin:40px 0 0 40px;
+        overflow: hidden;
     }
-    .maincontainer .form-info{
-        margin-top:32px;
-        clear:right;
-        width:220px;
+
+    /* BANNER PORTFOLIO
+     ******************************************************************/
+    .container-head .banner-portfolio{
+        float:left;
+        width: 545px;
+        height: auto;
+        margin:50px 0 0 50px;
     }
-        .maincontainer .form-info .form-top{
+    .container-head .banner-portfolio .bg{
+        float:left;
+        width:535px;
+        height:12px;
+    }
+    .container-head .banner-portfolio .bg-top{
+        background:url(../images/bg_cliente_top.png) no-repeat top center;
+    }
+    .container-head .banner-portfolio .bg-bottom{
+        background:url(../images/bg_cliente_bottom.png) no-repeat top center;
+    }
+    .container-head .banner-portfolio .bg-center{
+        float:left;
+        background-color:#F1F7F9;
+        width: 535px;
+        height:230px;
+    }
+    .container-head .banner-portfolio .gallery{
+        float:left;
+        position: relative;
+        width: 520px;
+        height: 193px;
+        padding:10px 0 0 15px;
+    }
+    .container-head .banner-portfolio .container-slide{
+        position:relative;
+        left:0;top:0;
+        width: 2000px;
+        height: 193px;
+        /*border:1px solid red;*/
+    }
+        .container-head .banner-portfolio .container-slide .slide{
+            position:relative;
+            float:left;
+            width: 535px;
+            height: 190px;
+            left:0px;top: 0;
+            /*border:1px solid;*/
+        }
+            .container-head .banner-portfolio .container-slide .slide .thumb{
+                float: left;
+                width: 119px;
+                height: 85px;
+                margin:0 8px 8px 0;
+            }   
+    .container-head .banner-portfolio .arrows{
+        clear:left;
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    
+    /* SOLAPAS
+     ******************************************************************/
+    .container-head .solapas{
+        float: left;
+        position: absolute;
+        width: 32px;
+        height: 200px;
+        top:95px;
+        left:1px;
+    }
+
+    /* FORMULARIO SOLICITAR INFORMACION
+     *****************************************************************/
+    .container-head .form-info{
+        float:right;
+        margin:32px 50px 0 0;
+    }
+        .container-head .form-info .form-top{
+            float: left;
             background:url(../images/form_top.jpg) no-repeat top left #F1F7F9;
+            width: 220px;
             height:45px;
             text-align:center;
             padding-top:10px;
         }
-        .maincontainer .form-info .form-center{
-            background:#F1F7F9;
-            height:216px;
-            margin:0;
-            padding-left:15px;
+        .container-head .form-info .form-center{
+            position: relative;
+            float: left;
+            clear:left;
+            width: 206px;
+            height: auto;
+            padding-left: 14px;
+            background-color:#F1F7F9;
         }
-            .maincontainer .form-info .form-center p{
-                margin-bottom:0;
+            .container-head .form-info .form-center .mask{
+                position: absolute;
+                left:0;top:0;
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                z-index: 100;
+                display: none;
             }
-        .maincontainer .form-info .form-bottom{
+            .container-head .form-info .form-center .ajaxloader{
+                position: absolute;
+                left:0;top:0;
+                width: 100%;
+                height: 100%;
+                background:url(../images/ajax-loader4.gif) no-repeat center;
+                z-index: 110;
+                display: none;
+            }
+            .container-head .form-info .form-center .msg{ /* Estilo para mensaje de error o exito del envio */
+                float: left;
+                width: 215px;
+                height: 128px;
+                margin-left: -12px;
+                padding-top: 80px;
+                font-size: 100%;
+                color:#19529A;
+                text-align: center;
+                display:none;
+            }
+        .container-head .form-info .form-bottom{
+            float: left;
+            clear: left;
             background:url(../images/form_bottom.jpg) no-repeat top left;
+            width: 220px;
             height:20px;
         }
-        .maincontainer .content{
-            background:url(../images/bg_container_bottom.png) no-repeat bottom center;
-            padding-bottom:10px;
-            position:relative;
-            z-index:1;
-        }
-            .maincontainer .content .column-img{
-                width:156px;
-                margin: -2px 10px 0 0;
-                float:left;
-            }
-            .maincontainer .content .column{
-                font-size:90%;
-                /*border-bottom:dashed #778C9C 1px;*/
-                margin-bottom:10px;
-            }
-            .maincontainer .content .column h3{
-                margin-bottom:0px;
-            }
-            .maincontainer .content .column p{
-                padding:5px 0 0 0;
-                margin:0;
-            }
-            .maincontainer .content .column-end{
-                border:none;
-            }
-            .maincontainer .content a{
-                color:#F7941D;
-                text-decoration:underline;
-            }
-                .maincontainer .content .column-content .column-portfolio{
-                    background:url(../images/bg_images.png) no-repeat top center;
-                    font-family:"Book Antiqua", Times, serif;
-                    font-size:130%;
-                    color:#19517F;
-                    font-style:italic;
-                    margin-bottom:-20px;
-                }
-                    .maincontainer .content .column-content .column-portfolio img{
-                        margin-left:14px;
-                        padding-top:15px;
-                    }
-                    .maincontainer .content .column-content .column-portfolio p{
-                        margin-left:15px;
-                    }
-/******************************* FIN MainContainer ********************************/
 
-/******************************** Clientes *************************************/
-/*.container-clientes .content-clientes .image-clientes{
-    margin-right:10px;
-}*/
-.banner .bg-clientes-top{
-    background:url(../images/bg_cliente_top.png) no-repeat top center;
-    height:12px;
-    margin-top:-10px;
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA EL CONTENIDO DE CADA SECCION
+ -----------------------------------------------------------------------------*/
+.content{
+    position: relative;
+    margin-top:-90px;
+    padding-left: 50px;
+    z-index: 100;
 }
-.banner .bg-clientes-bottom{
-    background:url(../images/bg_cliente_bottom.png) no-repeat top center;
-    height:12px;
-}
-.banner .container-clientes{
-    background-color:#F1F7F9;
-    height:194px;
-}
-    .banner .container-clientes .content-clientes{
-        margin-top:7px;
+    .content .bg-bottom{
+        float: left;
+        clear: left;
+        background:url(../images/bg_container_bottom.png) no-repeat bottom left;
+        width: 805px;
+        height: 69px;
+        margin-left: -20px;
     }
-    .banner .paginador{
-        background-color:#F1F7F9;
+    .content .column-content{
+        float:left;
+        width: 380px;
+        margin-right: 20px;
     }
-        .banner .paginador .arrow-left{
+        .content .column-content p{
+            font-size: 90%;
+            margin: -10px 0 10px 0 !important;
+        }
+        .content .column-content .separator{border-bottom: 1px dashed #778C9C;}
+
+        .content .column-content .col-1{
             float:left;
+            margin: -2px 10px 0 0;
         }
-        .banner .paginador .arrow-right{
-            float:right;
+        .content .column-content .col-2{
+            float:left;
+            width: 210px;
+        }
+        .content .column-content .row{
+            float: left;
+            padding:10px 0 10px 0;
+        }
 
-        }
-/******************************* Footer ********************************/
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA EL FOOTER
+ -----------------------------------------------------------------------------*/
 .footer{
     background:url(../images/bg_footer.jpg) no-repeat top center;
     position:relative;
     z-index:0;
-    padding-top:5px;
 }
-.footer ul li{
-    margin-left:-17px;
+    .footer .cont-links{
+        float:left;
+        margin-left: 100px;
+    }
+    .footer .col{
+        float:left;
+        margin-right: 50px;
+    }
+    .footer .icon{
+        position: relative;
+        top:4px;
+    }
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA EL PORTFOLIO
+ -----------------------------------------------------------------------------*/
+.portfolio-thumb{
+    float:left;
+    width: 800px;
+    height: inherit;
+    /*border:1px solid red;*/
 }
-.footer .copyright{
-    margin:0 0 10px 0;
-}
-.footer .valid{
-    margin:0 0 10px 0;
-    text-align:center;
-}
+    .portfolio-thumb .thumb{
+        float:left;
+        width: 351px;
+        height: inherit;
+        margin:0 40px 15px 0;
+    }
+        .portfolio-thumb .thumb .frame{
+            background:url(../images/bg_images.png) no-repeat top center;
+            width: 382px;
+            height: 243px;
+            margin:-5px 0 0 -8px;
+        }
+            .portfolio-thumb .thumb .frame .image{
+                float:left;
+                margin:16px 0 0 15px;
+            }
+    .portfolio-thumb .thumb .link-1{
+        float: left;
+        clear: left;
+        margin: -10px 0 0 10px;
+    }

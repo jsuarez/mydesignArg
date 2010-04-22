@@ -1,0 +1,66 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Servidor: localhost
+-- Tiempo de generación: 22-04-2010 a las 19:28:48
+-- Versión del servidor: 5.1.37
+-- Versión de PHP: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Base de datos: `mydesign_ar`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ci_sessions`
+--
+
+CREATE TABLE IF NOT EXISTS `ci_sessions` (
+  `session_id` varchar(40) NOT NULL DEFAULT '0',
+  `ip_address` varchar(16) NOT NULL DEFAULT '0',
+  `user_agent` varchar(50) NOT NULL,
+  `last_activity` int(10) unsigned NOT NULL DEFAULT '0',
+  `user_data` varchar(500) NOT NULL,
+  PRIMARY KEY (`session_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `ci_sessions`
+--
+
+INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
+('56a55af2c56a9196e845a18d48abc9b4', '192.168.0.2', 'Mozilla/5.0 (X11; U; Linux i686; es-AR; rv:1.9.1.6', 1271956976, '');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(15) NOT NULL,
+  `password` varchar(64) NOT NULL,
+  `firstname` varchar(50) DEFAULT NULL,
+  `lastname` varchar(50) NOT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `phone` char(30) DEFAULT NULL,
+  `phone_area` char(10) NOT NULL,
+  `active` int(1) NOT NULL DEFAULT '0',
+  `fondo` int(6) NOT NULL DEFAULT '0',
+  `token` char(23) NOT NULL,
+  `level` int(1) NOT NULL DEFAULT '0' COMMENT '0=User, 1=Admin',
+  `date_added` datetime NOT NULL,
+  `last_modified` datetime NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Volcar la base de datos para la tabla `users`
+--
+
+
