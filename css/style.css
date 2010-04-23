@@ -87,6 +87,8 @@ a.link-moreinfo{
     font-size: 90%;
     font-style: italic;
     text-decoration: underline;
+    float:left;
+    clear:left;
 }
 a.link-1{
     font-family:"Book Antiqua", Times, serif;
@@ -354,11 +356,14 @@ label.label-form{
         margin-left: -20px;
     }
     .content .column-content{
+        position: relative;
         float:left;
         width: 380px;
+        height:inherit;
         margin-right: 20px;
     }
-        .content .column-content p{
+        .content .column-content .jq-intro,
+        .content .column-content .jq-complete{
             font-size: 90%;
             margin: -10px 0 10px 0 !important;
         }
@@ -368,13 +373,14 @@ label.label-form{
             float:left;
             margin: -2px 10px 0 0;
         }
-        .content .column-content .col-2{
-            float:left;
-            width: 210px;
-        }
         .content .column-content .row{
             float: left;
+            position: relative;
             padding:10px 0 10px 0;
+            background-color: #D3E8EC;
+            z-index: 100;
+            overflow: hidden;
+            /*border:1px solid blue;*/
         }
 
 /*------------------------------------------------------------------------------

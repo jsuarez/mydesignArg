@@ -54,9 +54,5 @@ var Contact = new (function(){
 
     /* PRIVATE METHODS
      **************************************************************************/
-     var ajaxloader = {
-         show : function(){
-         }
-     }
 
 })();

@@ -1,59 +1,96 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 
 <div class="column-content">
-    <div class="span-10 row separator">
+    <div id="cont1" class="span-10 row separator">
         <div class="col-1"><img src="images/img_web5.png" alt="Web Institucional"/></div>
-        <div class="col-2">
-            <h3>Web Institucional</h3>
-            <p>Para poder insertar su Pyme o simplemente tener su pagina personal. Obteniendo...</p>
-            <a href="#" class="link-moreinfo">M&aacute;s info</a>
+        <h3>Web Institucional</h3>
+        <div class="jq-intro"><p>Para poder insertar su Pyme o simplemente tener su pagina personal. Obteniendo...</p></div>
+        <div class="jq-complete hide">
+            <p>Para poder insertar su Pyme o simplemente tener su página personal. Obteniendo un diseño profesional y permitiéndole abrir paso a su negocio en Internet.</p>
+            <p>Consiste en realizar en forma atractiva una presentación eficaz de su empresa, de modo que la pagina sirva de toma de contacto a sus clientes a través de Internet. En ella se podr´n colocar fotos, textos, im´genes y datos de contacto.</p>
+            <p>Es la opción más usada por las PYMES, que desean tener una presencia en Internet junto con sus direcciones de correo personalizadas para reforzar su imagen ante sus clientes.</p>
+            <p>Estamos interesados en brindar una solución para las necesidades de cada cliente. Orientado a nuevos emprendimientos y negocios jóvenes que buscan dar un paso adelante.</p>
         </div>
+        <a href="javascript:void(Info.show('cont1'));" class="link-moreinfo">M&aacute;s info</a>
     </div>
 
-    <div class="span-10 row separator">
+    <div id="cont2" class="span-10 row separator">
         <div class="col-1"><img src="images/img_web2.png" alt="Web Autoadministrable"/></div>
-        <div class="col-2">
-            <h3>Web Autoadministrable</h3>
-            <p>Cuenta con una interfaz para poder modificar el contenido sin causar ningún efecto en el diseño... </p>
-            <a href="#" class="link-moreinfo">M&aacute;s info</a>
+        <h3>Web Autoadministrable</h3>
+        <div class="jq-intro"><p>Cuenta con una interfaz para poder modificar el contenido sin causar ningún efecto en el diseño... </p></div>
+        <div class="jq-complete hide">
+            <p>Cuenta con una interfaz para poder modificar el contenido sin causar ningún efecto en el diseño. Permite un fácil control y publicación de los cambios en el sitio.</p>
+            <p>La combinación mas potente actualmente en lo que se trata de webs con gran dinamismo y funcionalidad. Es la solución más práctica y utilizada hoy en día para la administración de webs que conllevan actualización continua.</p>
+            <p>El manejo adecuado de la información puede marcar la diferencia, un sistema de gestión de contenido (CMS) debe ser fácil de mantener y actualizar, nuestro equipo de profesionales diseña y desarrolla estratégicamente los gestores de contenido para que sean escalables, permitiendo así su fácil modificación y adaptación con los requisitos establecidos.</p>
+            <p>En definitiva, un sitio autoadministrable le permitirá tener control total de su sitio sin cargo alguno.</p>
         </div>
+        <a href="javascript:void(Info.show('cont2'));" class="link-moreinfo">M&aacute;s info</a>
     </div>
 
-    <div class="span-10 row">
+    <div id="cont3" class="span-10 row">
         <div class="col-1"><img src="images/img_web1.png" alt="Web Imobiliaria"/></div>
-        <div class="col-2">
-            <h3>Web Inmobiliaria</h3>
-            <p>A través de nuestro sistema Inmobiliario logre una mayor dinámica en la compra, venta... </p>
-            <a href="#" class="link-moreinfo">M&aacute;s info</a>
+        <h3>Web Inmobiliaria</h3>
+        <div class="jq-intro"><p>A través de nuestro sistema Inmobiliario logre una mayor dinámica en la compra, venta... </p></div>
+        <div class="jq-complete hide">
+            <p>A través de nuestro sistema Inmobiliario logre una mayor dinámica en la compra, venta y alquiler de propiedades en Internet.</p>
+            <p>Permitiéndole llegar al potencial cliente nacional e internacional y acceso permanente e ilimitado a su oferta inmobiliaria, reduciendo considerablemente los costos de operación.</p>
+
+            <p>Mejore la relación con sus clientes, ofreciendo información y precios siempre actualizados. Sus inmuebles van a estar disponibles para que todos sus clientes actuales y potenciales puedan consultarlos las 24 horas al día.</p>
+            <p>Nuestro sistema inmobiliario incluye:</p>
+            <ul>
+                <li>Todas las funcionalidades del Catalogo de productos.</li>
+                <li>Buscador de propiedades por zona/costo/alquiler.</li>
+                <li>Administrador web de propiedades y clientes.</li>
+                <li>Asignación de relevancia y destacados.</li>
+            </ul>
         </div>
+        <a href="javascript:void(Info.show('cont3'));" class="link-moreinfo">M&aacute;s info</a>
     </div>
 </div>
 
 <div class="column-content">
-    <div class="span-10 row separator">
+    <div id="cont4" class="span-10 row separator">
         <div class="col-1"><img src="images/img_web4.png" alt="Sistema catalogo de productos"/></div>
-        <div class="col-2">
-            <h3>Cat&aacute;logo de Productos</h3>
-            <p>A través de nuestro sistema Inmobiliario logre una mayor dinámica en la compra, venta... </p>
-            <a href="#" class="link-moreinfo">M&aacute;s info</a>
+        <h3>Cat&aacute;logo de Productos</h3>
+        <div class="jq-intro"><p>A través de nuestro sistema Inmobiliario logre una mayor dinámica en la compra, venta... </p></div>
+        <div class="jq-complete hide">
+            <p>Cuenta con una interfaz para poder modificar el contenido sin causar ningún efecto en el diseño. Permite un fácil control y publicación de los cambios en el sitio.</p>
+            <p>La combinación mas potente actualmente en lo que se trata de webs con gran dinamismo y funcionalidad. Es la solución más práctica y utilizada hoy en día para la administración de webs que conllevan actualización continua.</p>
+            <p>El manejo adecuado de la información puede marcar la diferencia, un sistema de gestión de contenido (CMS) debe ser fácil de mantener y actualizar, nuestro equipo de profesionales diseña y desarrolla estratégicamente los gestores de contenido para que sean escalables, permitiendo así su fácil modificación y adaptación con los requisitos establecidos.</p>
+            <p>En definitiva, un sitio autoadministrable le permitirá tener control total de su sitio sin cargo alguno.</p>
         </div>
+        <a href="javascript:void(Info.show('cont4'));" class="link-moreinfo">M&aacute;s info</a>
     </div>
 
-    <div class="span-10 row separator">
+    <div id="cont5" class="span-10 row separator">
         <div class="col-1"><img src="images/img_web3.png" alt="Carrito de Compras"/></div>
-        <div class="col-2">
-            <h3>Carrito de Compras</h3>
-            <p>Venda sus productos a todo el mundo. Nuestra solución de comercio electrónico...  </p>
-            <a href="#" class="link-moreinfo">M&aacute;s info</a>
+        <h3>Carrito de Compras</h3>
+        <div class="jq-intro"><p>Venda sus productos a todo el mundo. Nuestra solución de comercio electrónico...  </p></div>
+        <div class="jq-complete hide">
+            <p>Cuenta con una interfaz para poder modificar el contenido sin causar ningún efecto en el diseño. Permite un fácil control y publicación de los cambios en el sitio.</p>
+            <p>La combinación mas potente actualmente en lo que se trata de webs con gran dinamismo y funcionalidad. Es la solución más práctica y utilizada hoy en día para la administración de webs que conllevan actualización continua.</p>
+            <p>El manejo adecuado de la información puede marcar la diferencia, un sistema de gestión de contenido (CMS) debe ser fácil de mantener y actualizar, nuestro equipo de profesionales diseña y desarrolla estratégicamente los gestores de contenido para que sean escalables, permitiendo así su fácil modificación y adaptación con los requisitos establecidos.</p>
+            <p>En definitiva, un sitio autoadministrable le permitirá tener control total de su sitio sin cargo alguno.</p>
         </div>
+        <a href="javascript:void(Info.show('cont5'));" class="link-moreinfo">M&aacute;s info</a>
     </div>
 
-    <div class="span-10 row">
+    <div id="cont6" class="span-10 row">
         <div class="col-1"><img src="images/img_web6.png" alt="Web Turismo"/></div>
-        <div class="col-2">
-            <h3>Web Turismo</h3>
-            <p>Ofrece una solución absolutamente flexible y escalable. Tanto microempresas o agentes...</p>
-            <a href="#" class="link-moreinfo">M&aacute;s info</a>
+        <h3>Web Turismo</h3>
+        <div class="jq-intro"><p>Ofrece una solución absolutamente flexible y escalable. Tanto microempresas o agentes...</p></div>
+        <div class="jq-complete hide">
+            <p>Cuenta con una interfaz para poder modificar el contenido sin causar ningún efecto en el diseño. Permite un fácil control y publicación de los cambios en el sitio.</p>
+            <p>La combinación mas potente actualmente en lo que se trata de webs con gran dinamismo y funcionalidad. Es la solución más práctica y utilizada hoy en día para la administración de webs que conllevan actualización continua.</p>
+            <p>El manejo adecuado de la información puede marcar la diferencia, un sistema de gestión de contenido (CMS) debe ser fácil de mantener y actualizar, nuestro equipo de profesionales diseña y desarrolla estratégicamente los gestores de contenido para que sean escalables, permitiendo así su fácil modificación y adaptación con los requisitos establecidos.</p>
+            <p>En definitiva, un sitio autoadministrable le permitirá tener control total de su sitio sin cargo alguno.</p>
         </div>
+        <a href="javascript:void(Info.show('cont6'));" class="link-moreinfo">M&aacute;s info</a>
     </div>
 </div>
+
+<script type="text/javascript">
+<!--
+Info.initializer();
+-->
+</script>
