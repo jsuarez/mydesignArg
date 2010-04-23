@@ -7,8 +7,3 @@
     <img src="images/banner3.png" alt=""/>
 </div>
 
-<script type="text/javascript">
-<!--
-init_banner();
--->
-</script>'

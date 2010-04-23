@@ -7,10 +7,6 @@ var Info = new (function(){
 
     /* PUBLIC METHODS
      **************************************************************************/
-    this.initializer = function(mode){
-        
-    };
-
     this.show = function(tag_id){
         if( working ) return false;
         working=true;
@@ -28,7 +24,7 @@ var Info = new (function(){
 
             div.find('div.jq-intro').hide();
             divText = div.find('div.jq-complete').show();
-            height = divText.innerHeight()+50;
+            height = divText.innerHeight()+65;
         }else{
             div.data('info-slidedown-on', false);
             height = div.data('info-height-div');

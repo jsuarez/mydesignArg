@@ -3,7 +3,7 @@
     <div class="span-22 last">
         <div class="span-7 push-1"><img src="images/logo.png" alt="Diseño Web www.mydesign.com.ar"/></div>
 
-        <div class="support"><a href="#"><b>Soporte en l&iacute;nea</b></a></div>
+        <div class="support"><a href="javascript:void(Chat.open())"><b>Soporte en l&iacute;nea</b></a></div>
         <div class="span-7 float-right">
             <div class="icon-phone"><img src="images/icon_phone.png" alt="" /></div>
             <div class="float-left">

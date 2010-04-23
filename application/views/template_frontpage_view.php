@@ -16,6 +16,14 @@
 </head>
 
 <body>
+<noscript>
+    <p>Bienvenido a MyDesign</p>
+    <p>
+        La página que estás viendo requiere para su funcionamiento el uso de JavaScript.
+        Si lo has deshabilitado intencionadamente, por favor vuelve a activarlo.
+    </p>
+</noscript>
+
 <div class="container">
 
     <div class="span-24 last">
@@ -70,7 +78,6 @@
         </div>
         <!-- =============== FIN FOOTER =============== -->
     </div>
-
 </div>
 </body>
 </html>

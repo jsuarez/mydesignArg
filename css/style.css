@@ -87,8 +87,9 @@ a.link-moreinfo{
     font-size: 90%;
     font-style: italic;
     text-decoration: underline;
-    float:left;
+    float:right;
     clear:left;
+    margin-right: 170px;
 }
 a.link-1{
     font-family:"Book Antiqua", Times, serif;
@@ -118,6 +119,13 @@ label.label-form{
     font-size: 120%;
 }
 
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA LISTADOS
+ -----------------------------------------------------------------------------*/
+.list-item li{
+    list-style-type:disc !important;
+    margin-left: 30px;
+}
 
 /*------------------------------------------------------------------------------
  - ESTILOS PARA EL HEADER
@@ -375,6 +383,7 @@ label.label-form{
         }
         .content .column-content .row{
             float: left;
+            height: 130px;
             position: relative;
             padding:10px 0 10px 0;
             background-color: #D3E8EC;

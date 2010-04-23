@@ -1,4 +1,4 @@
-function init_banner(){
+$(window).load(function() {
     $('#slider').nivoSlider({
         effect : 'fade',
         slices : 15,
@@ -19,4 +19,4 @@ function init_banner(){
         afterChange: function(){},
         slideshowEnd: function(){} //Triggers after all slides have been shown
     });
-}
+});

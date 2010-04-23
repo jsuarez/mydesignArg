@@ -3,57 +3,59 @@
 <div class="column-content">
     <div class="span-10 row separator">
         <div class="col-1"><img src="images/img_web5.png" alt="Web Institucional"/></div>
-        <div class="col-2">
-            <h3>Web Institucional</h3>
-            <p>Para poder insertar su Pyme o simplemente tener su pagina personal. Obteniendo...</p>
-            <a href="#" class="link-moreinfo">M&aacute;s info</a>
+        <h3>Registro de Dominios</h3>
+        <div class="jq-intro"><p>Su dominio será su marca e identidad en el mundo virtual, y como tal, lo llevará a identificarse y obtener ...</p></div>
+        <div class="jq-complete hide">
+            <p>Su dominio será su marca e identidad en el mundo virtual, y como tal, lo llevará a identificarse y obtener un nombre de referencia.</p>
+            <p>Lo asesoramos en todo el proceso, desde la identificación de los mejores nombres para su negocio, hasta la gestión y alta de dominios locales e internacionales en cualquiera de las extensiones utilizadas mundialmente (.com, .net, .info, etc.).</p>
+            <p>El éxito de su estrategia en Internet comienza con la elección de un buen nombre de dominio. Esto le permitirá a su empresa generar la identidad necesaria para posicionarse en la red y ser reconocido por los visitantes de todo el mundo.</p>
         </div>
+        <a href="#" class="link-moreinfo">M&aacute;s info</a>
     </div>
 
     <div class="span-10 row separator">
         <div class="col-1"><img src="images/img_web2.png" alt="Web Autoadministrable"/></div>
-        <div class="col-2">
-            <h3>Web Autoadministrable</h3>
-            <p>Cuenta con una interfaz para poder modificar el contenido sin causar ningún efecto en el diseño... </p>
-            <a href="#" class="link-moreinfo">M&aacute;s info</a>
+        <h3>Generación de Contenidos</h3>
+        <div class="jq-intro"><p>Para generar un flujo constante de usuarios, es necesario que la información disponible esté de acuerdo con su imagen ...</p></div>
+        <div class="jq-complete hide">
+            <p>Para generar un flujo constante de usuarios, es necesario que la información disponible esté de acuerdo con su imagen y sea actualizada constantemente.</p>
+            <p>Si su estructura actual no puede abarcar tener el contenido adecuado y debidamente actualizado le ofrecemos hacernos cargo de la producción de información exclusiva para su website, portal o intranet.</p>
+            <p>El proceso se inicia con la investigación de contenidos, para luego desarrollar la clasificación, redacción, revisión editorial, adaptación multimedial y publicación del contenido en el formato digital que usted necesite (texto, imagen, audio y animación), bajo un componente hipertextual.</p>
         </div>
+        <a href="#" class="link-moreinfo">M&aacute;s info</a>
     </div>
 
     <div class="span-10 row">
         <div class="col-1"><img src="images/img_web1.png" alt="Web Imobiliaria"/></div>
-        <div class="col-2">
-            <h3>Web Inmobiliaria</h3>
-            <p>A través de nuestro sistema Inmobiliario logre una mayor dinámica en la compra, venta... </p>
-            <a href="#" class="link-moreinfo">M&aacute;s info</a>
-        </div>
+        <h3>Servicio de Traducción</h3>
+        <div class="jq-intro"><p>A través de nuestro sistema Inmobiliario logre una mayor dinámica en la compra, venta... </p></div>
+        <div class="jq-complete hide"></div>
+        <a href="#" class="link-moreinfo">M&aacute;s info</a>
     </div>
 </div>
 
 <div class="column-content">
     <div class="span-10 row separator">
         <div class="col-1"><img src="images/img_web4.png" alt="Sistema catalogo de productos"/></div>
-        <div class="col-2">
-            <h3>Cat&aacute;logo de Productos</h3>
-            <p>A través de nuestro sistema Inmobiliario logre una mayor dinámica en la compra, venta... </p>
-            <a href="#" class="link-moreinfo">M&aacute;s info</a>
-        </div>
+        <h3>Cat&aacute;logo de Productos</h3>
+        <div class="jq-intro"><p>A través de nuestro sistema Inmobiliario logre una mayor dinámica en la compra, venta... </p></div>
+        <div class="jq-complete hide"></div>
+        <a href="#" class="link-moreinfo">M&aacute;s info</a>
     </div>
 
     <div class="span-10 row separator">
         <div class="col-1"><img src="images/img_web3.png" alt="Carrito de Compras"/></div>
-        <div class="col-2">
-            <h3>Carrito de Compras</h3>
-            <p>Venda sus productos a todo el mundo. Nuestra solución de comercio electrónico...  </p>
-            <a href="#" class="link-moreinfo">M&aacute;s info</a>
-        </div>
+        <h3>Carrito de Compras</h3>
+        <div class="jq-intro"><p>Venda sus productos a todo el mundo. Nuestra solución de comercio electrónico...  </p></div>
+        <div class="jq-complete hide"></div>
+        <a href="#" class="link-moreinfo">M&aacute;s info</a>
     </div>
 
     <div class="span-10 row">
         <div class="col-1"><img src="images/img_web6.png" alt="Web Turismo"/></div>
-        <div class="col-2">
-            <h3>Web Turismo</h3>
-            <p>Ofrece una solución absolutamente flexible y escalable. Tanto microempresas o agentes...</p>
-            <a href="#" class="link-moreinfo">M&aacute;s info</a>
-        </div>
+        <h3>Web Turismo</h3>
+        <div class="jq-intro"><p>Ofrece una solución absolutamente flexible y escalable. Tanto microempresas o agentes...</p></div>
+        <div class="jq-complete hide"></div>
+        <a href="#" class="link-moreinfo">M&aacute;s info</a>
     </div>
 </div>

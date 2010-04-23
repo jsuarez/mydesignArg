@@ -49,7 +49,7 @@ html { font-size:100.01%; }
 body {
   font-size: 75%;
   color: #222;
-  background:url(../images/bg_body.jpg) no-repeat top center #D3E8EC;
+  background:url(../../images/bg_body.jpg) no-repeat top center #D3E8EC;
   font-family: "Verdana", Arial, Helvetica, sans-serif;
 }
 
