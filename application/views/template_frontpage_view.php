@@ -34,14 +34,42 @@
         <!-- ================  FIN HEADER  ================ -->
 
         <!-- =============== CONTAINER CENTRAL =============== -->
-        <div class="span-22 prepend-1 append-1 last">
-            <div class="span-22 container-head">
+        <div class="clear span-22 prepend-1 append-1 last">
+<?php
+$seg = $this->uri->segment(1);
+$condition = $seg=="faq" || $seg=="sitemap";
+?>
+
+            <div class="span-22 container-head <?php if( $condition ) echo "height-inherit";?>">
                 <!-- ============= BANNER ============= -->
                 <?php
-                    if( strpos($tlp_section, "portfolio") ){
-                        require('includes/banner_portfolio_inc.php');
+                    if( !$condition ){
+                        switch( $seg ){
+                            case "portfolio":
+                                require('includes/banner_portfolio_inc.php');
+                            break;
+                            case "empresa":
+                                require('includes/banner_empresa_inc.php');
+                            break;
+                            case "disenio_web":
+                                require('includes/banner_disenioweb_inc.php');
+                            break;
+                            case "disenio_grafico":
+                                require('includes/banner_diseniograf_inc.php');
+                            break;
+                            case "marketing_online":
+                                require('includes/banner_markonline_inc.php');
+                            break;
+                            case "servicios_extra":
+                                require('includes/banner_servextra_inc.php');
+                            break;
+                        }
+
                     }else{
-                        require('includes/banner_inc.php');
+                        echo '<div class="content-special">';
+                        echo '<h1>'. $tlp_title_section .'</h1>';
+                        require($tlp_section);
+                        echo '</div>';
                     }
                 ?>
                 <!-- ============= FIN BANNER ============= -->
@@ -64,11 +92,13 @@
                 </div>
             </div>
 
-            <div class="span-22 last content">
-                <h1 class="title-section"><?=$tlp_title_section;?></h1>
+        <?php if( !$condition ){?>
+            <div class="clear span-22 last content">
+                <h1><?=$tlp_title_section;?></h1>
                 <?php require($tlp_section);?>
                 <div class="bg-bottom"></div>
             </div>
+        <?php }?>
         </div>
         <!-- ================  FIN MAIN CONTAINER  ================ -->
 

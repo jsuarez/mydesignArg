@@ -7,7 +7,7 @@ var Contact = new (function(){
 
     /* PUBLIC METHODS
      **************************************************************************/
-    this.initializer = function(mode){
+    this.initializer = function(){
         $.validator.setting('#formContact .validate', {
             effect_show     : 'slidefade',
             validateOne     : true

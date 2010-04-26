@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Error 404</title>
-    <base href="http://www.alquilerestemporarios.org" />
+    <base href="http://localhost/mydesign_ar.git" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <link href="images/favicon.ico" rel="stylesheet icon" type="image/ico" />
 
     <!-- Framework CSS (BLUE PRINT) -->
-    <link rel="stylesheet" href="css/blueprint/screen.min.css" type="text/css" media="screen, projection"/>
+    <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection"/>
     <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print"/>
     <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"/><![endif]-->
     <!-- END FRAMEWORK -->
@@ -47,21 +47,34 @@
 <body>
 
 <div class="container">
-    <div class="span-24 last">
-        <div class="clear span-24">
-            <div class="err404-container">
-                <a href="http://www.alquilerestemporarios.org"><img src="images/logo_error.png" alt="AlquileresTemporarios.org"/></a>
 
-                <p>La p&aacute;gina solicitada no est&aacute; disponible o no existe</p>
-                <p class="text-align"><br /><a href="http://www.alquilerestemporarios.org" class="link3">Volver al Inicio</a></p>
+<div class="span-24 last">
+    <!-- ================  HEADER  ================ -->
+    <div class="span-22 prepend-1 append-1 last header">
+        <?php require('includes/header_inc.php');?>
+    </div>
+    <!-- ================  FIN HEADER  ================ -->
+
+    <!-- =============== CONTAINER CENTRAL =============== -->
+    <div class="clear span-22 prepend-1 append-1 last">
+        <div class="span-22 container-head ">
+
+
+            <!-- ============= SOLICITAR INFO ============= -->
+            <div class="form-info">
+                <div class="form-top"><h4>Solicitar Informaci&oacute;n</h4></div>
+                <div class="form-center">
+                    <div id="si-mask" class="mask"></div>
+                    <div id="si-ajaxloader" class="ajaxloader"></div>
+                    <?php require('includes/solicitarinfo_inc.php');?>
+                </div>
+                <div class="form-bottom"></div>
             </div>
-        </div>
-        <div class="err404-footer">
-            <div class="float-left">Copyright &copy; 2009 - 2010 &nbsp; Alquilerestemporarios.org<br/></div>
-            <div class="float-right">Dise&ntilde;o y Desarrollo by <a href="http://www.mydesign.com.ar" target="_blank"><img src="images/mydesign_logo.png" alt="www.mydesign.com.ar" /></a></div>
+            <!-- ============= FIN SOLICITAR INFO ============= -->
         </div>
     </div>
-</div>
+
+
 
 </body>
 </html>

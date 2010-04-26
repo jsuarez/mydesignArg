@@ -5,6 +5,7 @@
 .float-right{float:right !important;}
 .text-center{text-align: center !important;}
 .border{border:1px solid red !important;}
+.height-inherit{height: inherit !important;}
 ul{margin-left: 0;}
 
 h1{
@@ -122,10 +123,35 @@ label.label-form{
 /*------------------------------------------------------------------------------
  - ESTILOS PARA LISTADOS
  -----------------------------------------------------------------------------*/
-.list-item li{
+ul.list-item li{
     list-style-type:disc !important;
     margin-left: 30px;
 }
+
+ul.list-faq li{
+    font-size: 110%;
+    width: 530px;
+    border-bottom: 1px dashed #778C9C;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+    ul.list-faq li span{
+        color:#F7941D;
+        font-weight:bold;
+        font-size: 110%;
+    }
+    ul.list-faq li a{
+        color: #1C3A50;
+    }
+        ul.list-faq li a:hover{
+            color: #1C3A50;
+            text-decoration: underline;
+        }
+    ul.list-faq li .result{
+        clear:left;
+        margin:5px 0 0 20px;
+        display: none;
+    }
 
 /*------------------------------------------------------------------------------
  - ESTILOS PARA EL HEADER
@@ -166,6 +192,9 @@ label.label-form{
     .header .menu ul{
         position: relative;
         margin:12px 0 0 48px;
+        width: 790px;
+        overflow: hidden;
+        /*border:1px solid red;*/
     }
         .header .menu ul li{
             width:156px;
@@ -173,6 +202,7 @@ label.label-form{
             float:left;
             text-align:center;
             background-color: transparent;
+            /*border:1px solid green;*/
         }
         .header .menu ul li.back {
             position: absolute;
@@ -246,6 +276,7 @@ label.label-form{
         width: 520px;
         height: 193px;
         padding:10px 0 0 15px;
+        overflow: hidden;
     }
     .container-head .banner-portfolio .container-slide{
         position:relative;
@@ -267,7 +298,7 @@ label.label-form{
                 width: 119px;
                 height: 85px;
                 margin:0 8px 8px 0;
-            }   
+            } 
     .container-head .banner-portfolio .arrows{
         clear:left;
         width: 500px;
@@ -284,6 +315,7 @@ label.label-form{
         height: 200px;
         top:95px;
         left:1px;
+        z-index: 1000;
     }
 
     /* FORMULARIO SOLICITAR INFORMACION
@@ -347,7 +379,7 @@ label.label-form{
         }
 
 /*------------------------------------------------------------------------------
- - ESTILOS PARA EL CONTENIDO DE CADA SECCION
+ - ESTILOS PARA EL CUERPO DE LAS SECCIONES
  -----------------------------------------------------------------------------*/
 .content{
     position: relative;
@@ -392,6 +424,11 @@ label.label-form{
             /*border:1px solid blue;*/
         }
 
+.content-special{
+    float:left;
+    margin:50px 0 0 50px;
+}
+
 /*------------------------------------------------------------------------------
  - ESTILOS PARA EL FOOTER
  -----------------------------------------------------------------------------*/
@@ -417,29 +454,72 @@ label.label-form{
  - ESTILOS PARA EL PORTFOLIO
  -----------------------------------------------------------------------------*/
 .portfolio-thumb{
+    position: relative;
     float:left;
-    width: 800px;
-    height: inherit;
+    width: 780px;
+    height: 540px;
     /*border:1px solid red;*/
+    overflow: hidden;
 }
-    .portfolio-thumb .thumb{
-        float:left;
-        width: 351px;
-        height: inherit;
-        margin:0 40px 15px 0;
+    .portfolio-thumb .container-slide{
+        position: relative;
+        left:0;top:0;
+        width: 2000px;
+        height: 800px;
+        /*border:1px solid green;*/
     }
-        .portfolio-thumb .thumb .frame{
-            background:url(../images/bg_images.png) no-repeat top center;
-            width: 382px;
-            height: 243px;
-            margin:-5px 0 0 -8px;
+        .portfolio-thumb .container-slide .slide{            
+            float: left;
+            width: 790px;
+            height: 530px;
+            /*border:1px solid red;*/
         }
-            .portfolio-thumb .thumb .frame .image{
+            .portfolio-thumb .container-slide .slide .thumb{
                 float:left;
-                margin:16px 0 0 15px;
+                width: 351px;
+                height: 255px;
+                margin:0 40px 15px 0;
+                /*border:1px solid blue;*/
             }
-    .portfolio-thumb .thumb .link-1{
-        float: left;
-        clear: left;
-        margin: -10px 0 0 10px;
-    }
+                .portfolio-thumb .container-slide .slide .thumb .frame{
+                    position: relative;
+                    background:url(../images/bg_images.png) no-repeat top center;
+                    width: 382px;
+                    height: 243px;
+                    margin:-5px 0 0 -8px;
+                }
+                    .portfolio-thumb .container-slide .slide .thumb .frame .image{
+                        float:left;
+                        margin:16px 0 0 15px;
+                    }
+            .portfolio-thumb .container-slide .slide .thumb .link-1{
+                float: left;
+                clear: left;
+                margin: -10px 0 0 10px;
+            }
+
+.portfolio-nav{
+    position: absolute;
+    width: 55px;
+    height: 530px;
+    top:34px;
+    z-index: 1000;
+    /*border:1px solid blue;*/
+}
+.portfolio-nav-prev{
+    background: transparent url(../images/arrow_previous.png) no-repeat center;
+    left:-6px;
+}
+.portfolio-nav-next{
+    background: transparent url(../images/arrow_next.png) no-repeat center;
+    left:812px;
+}
+.portfolio-ajaxloader{
+    position: absolute;
+    background: transparent url(../images/ajax-loader6.gif) no-repeat center;
+    top:15px;
+    left:15px;
+    width: 350px;
+    height: 210px;
+    z-index: 1100;
+}

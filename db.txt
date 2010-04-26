@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 22-04-2010 a las 19:28:48
+-- Tiempo de generación: 26-04-2010 a las 04:16:21
 -- Versión del servidor: 5.1.37
 -- Versión de PHP: 5.3.0
 
@@ -16,51 +16,27 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `ci_sessions`
+-- Estructura de tabla para la tabla `portfolio`
 --
 
-CREATE TABLE IF NOT EXISTS `ci_sessions` (
-  `session_id` varchar(40) NOT NULL DEFAULT '0',
-  `ip_address` varchar(16) NOT NULL DEFAULT '0',
-  `user_agent` varchar(50) NOT NULL,
-  `last_activity` int(10) unsigned NOT NULL DEFAULT '0',
-  `user_data` varchar(500) NOT NULL,
-  PRIMARY KEY (`session_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `portfolio` (
+  `portfolio_id` int(11) NOT NULL AUTO_INCREMENT,
+  `src` varchar(255) NOT NULL,
+  `alt` varchar(100) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `name_link` varchar(100) NOT NULL,
+  `link` varchar(100) NOT NULL,
+  PRIMARY KEY (`portfolio_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
--- Volcar la base de datos para la tabla `ci_sessions`
+-- Volcar la base de datos para la tabla `portfolio`
 --
 
-INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('56a55af2c56a9196e845a18d48abc9b4', '192.168.0.2', 'Mozilla/5.0 (X11; U; Linux i686; es-AR; rv:1.9.1.6', 1271956976, '');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `users`
---
-
-CREATE TABLE IF NOT EXISTS `users` (
-  `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(15) NOT NULL,
-  `password` varchar(64) NOT NULL,
-  `firstname` varchar(50) DEFAULT NULL,
-  `lastname` varchar(50) NOT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `phone` char(30) DEFAULT NULL,
-  `phone_area` char(10) NOT NULL,
-  `active` int(1) NOT NULL DEFAULT '0',
-  `fondo` int(6) NOT NULL DEFAULT '0',
-  `token` char(23) NOT NULL,
-  `level` int(1) NOT NULL DEFAULT '0' COMMENT '0=User, 1=Admin',
-  `date_added` datetime NOT NULL,
-  `last_modified` datetime NOT NULL,
-  PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Volcar la base de datos para la tabla `users`
---
-
+INSERT INTO `portfolio` (`portfolio_id`, `src`, `alt`, `title`, `name_link`, `link`) VALUES
+(1, 'images/img_portfolio1.jpg', '', '', 'www.azerconsultores.com', 'http://www.azerconsultores.com'),
+(2, 'images/img_portfolio2.jpg', '', '', 'www.consurpyme.com.ar', 'http://www.consurpyme.com.ar'),
+(3, 'images/img_portfolio3.jpg', '', '', 'www.argentinaesmendoza.com.ar', 'http://www.argentinaesmendoza.com.ar'),
+(4, 'images/img_portfolio4.jpg', '', '', 'www.aikidoargentina.com', 'http://www.aikidoargentina.com'),
+(5, 'images/img_portfolio1.jpg', '', '', 'www.azerconsultores.com', 'http://www.azerconsultores.com');
 

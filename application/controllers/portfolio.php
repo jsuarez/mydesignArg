@@ -6,9 +6,11 @@ class Portfolio extends Controller {
     function __construct(){
         parent::Controller();
 
+        $this->load->model('portfolio_model');
         $this->load->library('dataview', array(
             'tlp_section'     => 'frontpage/portfolio_view.php',
-            'tlp_title'       => TITLE_PORTFOLIO
+            'tlp_title'       => TITLE_PORTFOLIO,
+            'tlp_script'      => 'gallery'
         ));
         $this->_data = $this->dataview->get_data();
     }
@@ -20,8 +22,11 @@ class Portfolio extends Controller {
     /* PUBLIC FUNCTIONS
      **************************************************************************/
     public function index(){
+        $info = $this->portfolio_model->list_portfolio();
+
         $this->_data = $this->dataview->set_data(array(
-            'tlp_title_section' => 'Portfolio'
+            'tlp_title_section' => 'Portfolio',
+            'info'              => $info
         ));
         $this->load->view('template_frontpage_view', $this->_data);
     }
