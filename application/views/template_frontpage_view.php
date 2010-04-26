@@ -4,8 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
     <title><?=TITLE_GLOBAL . @$tlp_title;?></title>
-    <meta name="description" content="<?=META_DESCRIPTION;?>" />
-    <meta name="keywords" content="<?=META_KEYWORDS;?>" />
+    <meta name="description" content="<?=META_DESCRIPTION_GLOBAL . @$tlp_meta_description;?>" />
+    <meta name="keywords" content="<?=META_KEYWORDS_GLOBAL . @$tlp_meta_keywords;?>" />
     <?php require('includes/head_inc.php');?>
     <?php if( isset($tlp_script) && !empty($tlp_script) ) {
         if( !is_array($tlp_script) ) $tlp_script = array($tlp_script);
@@ -51,11 +51,11 @@ $condition = $seg=="faq" || $seg=="sitemap";
                             case "empresa":
                                 require('includes/banner_empresa_inc.php');
                             break;
-                            case "disenio_web":
+                            case "disenio_web": default:
                                 require('includes/banner_disenioweb_inc.php');
                             break;
                             case "disenio_grafico":
-                                require('includes/banner_diseniograf_inc.php');
+                                require('includes/banner_diseniografico_inc.php');
                             break;
                             case "marketing_online":
                                 require('includes/banner_markonline_inc.php');

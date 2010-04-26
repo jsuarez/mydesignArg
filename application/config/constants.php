@@ -131,8 +131,25 @@ define('TITLE_SITEMAP', '');
 | META - Palabras Claves y Descripcion de la web
 |--------------------------------------------------------------------------
 */
-define('META_KEYWORDS', '');
-define('META_DESCRIPTION', '');
+define('META_KEYWORDS_GLOBAL', '');
+define('META_KEYWORDS_DISENIOWEB', 'Dise&ntilde;o Web, Dise&ntilde;o Web Mendoza, Dise&ntilde;o de Paginas Web, Diseño de Paginas Web en Mendoza, Paginas web, Empresa de Dise&ntilde;o Web, Empresa de Dise&ntilde;o Web en Mendoza, Paginas Web');
+define('META_KEYWORDS_DISENIOGRAFICO', 'Diseño Grafico, Diseño Grafico Mendoza, Diseño de Logo, Diseño de Logo Mendoza, Paginas web, Empresa de Diseño Grafico, Empresa de Diseño Grafico en Mendoza');
+define('META_KEYWORDS_MARKETINGONLINE', 'Posicionamiento Web, Posicionamiento Web Mendoza, Marketing Online Paginas Web, Marketing Online en Mendoza, Diseño de newsletters, Diseño de Banners');
+define('META_KEYWORDS_SERVICIOSEXTRA', '');
+define('META_KEYWORDS_PORTFOLIO', '');
+define('META_KEYWORDS_EMPRESA', '');
+define('META_KEYWORDS_FAQ', '');
+define('META_KEYWORDS_SITEMAP', '');
+
+define('META_DESCRIPTION_GLOBAL', '');
+define('META_DESCRIPTION_DISENIOWEB', 'Diseño Web. Realizamos Dise&ntilde;o de Paginas Web optimizado para empresas y particulares, generando nuevas oportunidades de negocio.');
+define('META_DESCRIPTION_DISENIOGRAFICO', '');
+define('META_DESCRIPTION_MARKETINGONLINE', '');
+define('META_DESCRIPTION_SERVICIOSEXTRA', '');
+define('META_DESCRIPTION_PORTFOLIO', '');
+define('META_DESCRIPTION_EMPRESA', '');
+define('META_DESCRIPTION_FAQ', '');
+define('META_DESCRIPTION_SITEMAP', '');
 
 
 /* End of file constants.php */

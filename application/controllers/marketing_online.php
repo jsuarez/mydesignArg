@@ -7,9 +7,11 @@ class Marketing_online extends Controller {
         parent::Controller();
 
         $this->load->library('dataview', array(
-            'tlp_section'     =>  'frontpage/marketingonline_view.php',
-            'tlp_title'       =>  TITLE_MARKETINGONLINE,
-            'tlp_script'      => 'nivoslider'
+            'tlp_section'          =>  'frontpage/marketingonline_view.php',
+            'tlp_title'            =>  TITLE_MARKETINGONLINE,
+            'tlp_meta_keywords'    =>  META_KEYWORDS_MARKETINGONLINE,
+            'tlp_meta_description' =>  META_DESCRIPTION_MARKETINGONLINE,
+            'tlp_script'           => 'nivoslider'
         ));
         $this->_data = $this->dataview->get_data();
     }

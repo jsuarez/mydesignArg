@@ -8,9 +8,11 @@ class Portfolio extends Controller {
 
         $this->load->model('portfolio_model');
         $this->load->library('dataview', array(
-            'tlp_section'     => 'frontpage/portfolio_view.php',
-            'tlp_title'       => TITLE_PORTFOLIO,
-            'tlp_script'      => 'gallery'
+            'tlp_section'          => 'frontpage/portfolio_view.php',
+            'tlp_title'            => TITLE_PORTFOLIO,
+            'tlp_meta_keywords'    =>  META_KEYWORDS_PORTFOLIO,
+            'tlp_meta_description' =>  META_DESCRIPTION_PORTFOLIO,
+            'tlp_script'           => 'gallery'
         ));
         $this->_data = $this->dataview->get_data();
     }

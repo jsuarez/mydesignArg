@@ -7,9 +7,11 @@ class Index extends Controller {
         parent::Controller();
 
         $this->load->library('dataview', array(
-            'tlp_section'     =>  'frontpage/disenioweb_view.php',
-            'tlp_title'       =>  TITLE_DISENIOWEB,
-            'tlp_script'      => array('nivoslider', 'info')
+            'tlp_section'          =>  'frontpage/disenioweb_view.php',
+            'tlp_title'            =>  TITLE_DISENIOWEB,
+            'tlp_meta_keywords'    =>  META_KEYWORDS_DISENIOWEB,
+            'tlp_meta_description' =>  META_DESCRIPTION_DISENIOWEB,
+            'tlp_script'           => array('nivoslider', 'info')
         ));
         $this->_data = $this->dataview->get_data();
     }

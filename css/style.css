@@ -223,6 +223,7 @@ ul.list-faq li{
             display: block;
             color:#fff;
             z-index: 1010;
+            height: 30px;
         }
 
         

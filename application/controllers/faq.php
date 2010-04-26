@@ -7,8 +7,10 @@ class Faq extends Controller {
         parent::Controller();
 
         $this->load->library('dataview', array(
-            'tlp_section'     =>  'frontpage/faq_view.php',
-            'tlp_title'       =>  TITLE_FAQ
+            'tlp_section'          =>  'frontpage/faq_view.php',
+            'tlp_title'            =>  TITLE_FAQ,
+            'tlp_meta_keywords'    =>  META_KEYWORDS_FAQ,
+            'tlp_meta_description' =>  META_DESCRIPTION_FAQ
         ));
         $this->_data = $this->dataview->get_data();
     }

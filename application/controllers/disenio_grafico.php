@@ -7,9 +7,11 @@ class Disenio_grafico extends Controller {
         parent::Controller();
 
         $this->load->library('dataview', array(
-            'tlp_section'     =>  'frontpage/diseniografico_view.php',
-            'tlp_title'       =>  TITLE_DISENIOGRAFICO,
-            'tlp_script'      => 'nivoslider'
+            'tlp_section'          =>  'frontpage/diseniografico_view.php',
+            'tlp_title'            =>  TITLE_DISENIOGRAFICO,
+            'tlp_meta_keywords'    =>  META_KEYWORDS_DISENIOGRAFICO,
+            'tlp_meta_description' =>  META_DESCRIPTION_DISENIOGRAFICO,
+            'tlp_script'           => 'nivoslider'
         ));
         $this->_data = $this->dataview->get_data();
     }

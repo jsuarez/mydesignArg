@@ -7,9 +7,11 @@ class Servicios_extra extends Controller {
         parent::Controller();
 
         $this->load->library('dataview', array(
-            'tlp_section'     =>  'frontpage/serviciosextra_view.php',
-            'tlp_title'       =>  TITLE_SERVICIOSEXTRA,
-            'tlp_script'      => 'nivoslider'
+            'tlp_section'          =>  'frontpage/serviciosextra_view.php',
+            'tlp_title'            =>  TITLE_SERVICIOSEXTRA,
+            'tlp_meta_keywords'    =>  META_KEYWORDS_SERVICIOSEXTRA,
+            'tlp_meta_description' =>  META_DESCRIPTION_SERVICIOSEXTRA,
+            'tlp_script'           => 'nivoslider'
         ));
         $this->_data = $this->dataview->get_data();
     }
