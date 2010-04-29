@@ -1,5 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 
+<div id="nav-prev" class="portfolio-nav portfolio-nav-prev"><a href="#"><img src="images/arrow_previous.png" alt="Anterior" /></a></div>
 <div class="portfolio-thumb">
     <div id="gallery-portfolio" class="container-slide">
 <?php
@@ -20,30 +21,12 @@
             $n++;
         }
     }?>
-
     </div>
 </div>
-
-<div id="nav-prev" class="portfolio-nav portfolio-nav-prev"></div>
-<div id="nav-next" class="portfolio-nav portfolio-nav-next"></div>
+<div id="nav-next" class="portfolio-nav portfolio-nav-next"><a href="#"><img src="images/arrow_next.png" alt="Siguiente" /></a></div>
 
 <script type="text/javascript">
 <!--
-var Gallery1 = new ClassGallery({
-    selSlide      : '#gallery-clientes .slide',
-    selArrowPrev  : '#gallery-clientes .jq-prev',
-    selArrowNext  : '#gallery-clientes .jq-next'
-});
-var Gallery2 = new ClassGallery({
-    selSlide      : '#gallery-portfolio .slide',
-    selArrowPrev  : '#nav-prev',
-    selArrowNext  : '#nav-next',
-    controlNavHover : true,
-    thumbs          : '<?=json_encode($info);?>',
-    thumbsContainer : '.frame',
-    thumbsClassName : 'image',
-    thumbsBySlide   : 4,
-    cssAjaxLoader   : 'portfolio-ajaxloader'
-});
+Portfolio.initializer('<?=json_encode($info);?>');
 -->
 </script>

@@ -16,7 +16,10 @@ var ClassGallery = function(options){
          selSlide : '',
          selArrowPrev : '',
          selArrowNext : '',
-         controlNavHover : false,
+         controlNavHover    : false,
+         controlNavAutoHide : true,
+         controlNavHoverPrev : '',
+         controlNavHoverNext : '',
          animSpeed : 500,
          thumbs : null,  //json
          thumbsContainer : '',
@@ -30,19 +33,23 @@ var ClassGallery = function(options){
     var prev = function(e){
         e.preventDefault();
         if( working ) return false;
-        working=true;
-
-        index--;
-        move('+');
+        
+        if( index>1 ){
+            working=true;
+            index--;
+            move('+');
+        }
         return false;
     };
     var next = function(e){
         e.preventDefault();
         if( working ) return false;
-        working=true;
         
-        index++;
-        move('-');
+        if( index < slideCount ){
+            working=true;
+            index++;
+            move('-');
+        }
         return false;
     };
 
@@ -56,10 +63,19 @@ var ClassGallery = function(options){
     };
 
     var setVisibleNav = function(){
-        elem.navPrev.show();
-        elem.navNext.show();
-        if( index==slideCount ) elem.navNext.hide();
-        if( index==1 ) elem.navPrev.hide();
+        if( options.controlNavAutoHide ){
+            elem.navPrev.show();
+            elem.navNext.show();
+            if( index==slideCount ) elem.navNext.hide();
+            else if( index==1 ) elem.navPrev.hide();
+
+        }else{
+            eval(elem.navPrev.data('gallery-info').dataprev);
+            eval(elem.navNext.data('gallery-info').dataprev);
+
+            if( index==slideCount ) eval(elem.navNext.data('gallery-info').datanew);
+            else if( index==1 ) eval(elem.navPrev.data('gallery-info').datanew);
+        }
     };
 
     var setHiddenNav = function(){
@@ -123,7 +139,7 @@ var ClassGallery = function(options){
     elem.navPrev = $(options.selArrowPrev);
     elem.navNext = $(options.selArrowNext);
 
-    setHiddenNav();
+    if( options.controlNavAutoHide ) setHiddenNav();
     
     if( slideCount>1 ){
         if( elem.navPrev.find('a').length==1 ) elem.navPrev.find('a').bind('click', prev);
@@ -137,7 +153,42 @@ var ClassGallery = function(options){
             elem.navNext.hover(setVisibleNav, setHiddenNav);
             elem.navPrev.hover(setVisibleNav, setHiddenNav);
 
-        }else elem.navNext.show();
+        }else {
+            if( options.controlNavAutoHide ) elem.navNext.show();
+            else{
+                if( options.controlNavHoverPrev!='' && options.controlNavHoverNext!='' ){
+                    var dataprev = '', datanew = '', data='', nav=['elem.navPrev', 'elem.navNext'];
+
+                    // Sava data Button Prev
+                    $(nav).each(function(){                        
+                        eval("var obj = "+this);
+                        if( obj.is('img') ) {
+                            dataprev = this+".attr('src', '"+ obj.attr('src') +"')";
+                            datanew  = this+".attr('src', '"+ ((this.indexOf('Prev')!=-1) ? options.controlNavHoverPrev :  options.controlNavHoverNext) +"')";
+
+                        }else{
+                            data = obj.find('img').attr('src');
+                            
+                            if( data ) {
+                                dataprev = this+".find('img').attr('src', '"+ data +"')";
+                                datanew  = this+".find('img').attr('src', '"+ ((this.indexOf('Prev')!=-1) ? options.controlNavHoverPrev :  options.controlNavHoverNext) +"')";
+                            }else{
+                                dataprev = this+".attr('class', '"+ obj.attr('class') +"')";
+                                datanew  = this+".attr('class', '"+ ((this.indexOf('Prev')!=-1) ? options.controlNavHoverPrev :  options.controlNavHoverNext) +"')";
+                            }
+                        }
+                        
+                        obj.data('gallery-info', {
+                            dataprev : dataprev,
+                            datanew : datanew
+                        });
+                    });
+
+                    eval(elem.navPrev.data('gallery-info').datanew);
+                }
+            }
+
+        }
     }
     if( options.thumbs!=null ) showThumbs();
 

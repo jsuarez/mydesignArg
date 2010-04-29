@@ -56,6 +56,12 @@ input.input-formcontact{
     margin-top: 0 !important;
     width:186px;
 }
+input.input-captcha{
+    width: 186px;
+    font-size: 120%;
+    text-align: center;
+    letter-spacing: 5px;
+}
 textarea.textarea-formcontact{
     margin-top: 0 !important;
     width:186px;
@@ -128,26 +134,26 @@ ul.list-item li{
     margin-left: 30px;
 }
 
-ul.list-faq li{
+ul.list-faq li.item{
     font-size: 110%;
     width: 530px;
     border-bottom: 1px dashed #778C9C;
     margin-bottom: 5px;
     padding-bottom: 5px;
 }
-    ul.list-faq li span{
+    ul.list-faq li.item span{
         color:#F7941D;
         font-weight:bold;
         font-size: 110%;
     }
-    ul.list-faq li a{
+    ul.list-faq li.item a{
         color: #1C3A50;
     }
-        ul.list-faq li a:hover{
+        ul.list-faq li.item a:hover{
             color: #1C3A50;
             text-decoration: underline;
         }
-    ul.list-faq li .result{
+    ul.list-faq li.item .result{
         clear:left;
         margin:5px 0 0 20px;
         display: none;
@@ -233,7 +239,9 @@ ul.list-faq li{
 .container-head{
     position: relative;
     background:url(../images/bg_container_top.png) no-repeat top center;
-    height: 445px;
+    /*height: 445px;*/
+    height: 460px;
+    /*border:1px solid red;*/
 }
     /* BANNER COMUN
      ******************************************************************/
@@ -378,13 +386,18 @@ ul.list-faq li{
             width: 220px;
             height:20px;
         }
+        .container-head .form-info .captcha{
+            float:left;
+            margin-right: 5px;
+        }
 
 /*------------------------------------------------------------------------------
  - ESTILOS PARA EL CUERPO DE LAS SECCIONES
  -----------------------------------------------------------------------------*/
 .content{
     position: relative;
-    margin-top:-90px;
+    /*margin-top:-90px;*/
+    margin-top:0px;
     padding-left: 50px;
     z-index: 100;
 }
@@ -502,19 +515,20 @@ ul.list-faq li{
 .portfolio-nav{
     position: absolute;
     width: 55px;
-    height: 530px;
     top:34px;
+    padding-top:218px;
     z-index: 1000;
-    /*border:1px solid blue;*/
 }
 .portfolio-nav-prev{
-    background: transparent url(../images/arrow_previous.png) no-repeat center;
-    left:-6px;
+    left:-8px;
+    padding-top:218px;
 }
 .portfolio-nav-next{
-    background: transparent url(../images/arrow_next.png) no-repeat center;
-    left:812px;
+    left:800px;
+    padding-top:218px;
 }
+
+
 .portfolio-ajaxloader{
     position: absolute;
     background: transparent url(../images/ajax-loader6.gif) no-repeat center;

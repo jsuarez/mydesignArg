@@ -90,9 +90,18 @@
     <div id="cont6" class="span-10 row">
         <div class="col-1"><img src="images/img_web6.png" alt="Web Turismo"/></div>
         <h3>Web Turismo</h3>
-        <div class="jq-intro"><p>Ofrece una soluci&oacute;n absolutamente flexible y escalable. Tanto microempresas o agentes ...</p></div>
+        <div class="jq-intro"><p>Ofrece una soluci&oacute;n absolutamente flexible y escalable ...</p></div>
         <div class="jq-complete hide">
-            
+            <p>Ofrece una soluci&oacute;n absolutamente flexible y escalable. Tanto microempresas o agentes independientes como grandes organizaciones encuentran en &eacute;l, el sistema Web adecuado para la exposici&oacute;n de sus productos a trav&eacute;s de Internet. Desde una peque&ntilde;a cartera de anunciantes hasta una enorme cantidad de categor&iacute;as y destinos.</p>
+            <p>Es un sistema concebido con el objetivo de permitir a nuestros clientes la capacidad de contacto r&aacute;pido y directo mediante reservas on line. Desde su panel de control podr&aacute;, de forma interactiva y modificar los contenidos, adem&aacute;s de agregar y editar anunciantes, categor&iacute;as, ubicaciones y destacados.</p>
+            El sistema incluye entre otros:<br />
+            <ul class="list-item">
+                <li>Gesti&oacute;n de anunciantes.</li>
+                <li>Gesti&oacute;n de categor&iacute;a y destinos.</li>
+                <li>Formulario de reservas personalizable.</li>
+                <li>Gesti&oacute;n de publicidades.</li>
+                <li>Gesti&oacute;n de idiomas y monedas.</li>
+            </ul>
         </div>
         <a href="javascript:void(Info.show('cont6'));" class="link-moreinfo">M&aacute;s info</a>
     </div>

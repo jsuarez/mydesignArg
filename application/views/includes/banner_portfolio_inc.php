@@ -32,8 +32,8 @@
         </div>
 
         <div class="arrows">
-            <div class="float-left jq-prev"><a href="#" onmouseover="this.firstChild.src='images/arrow_left_over.png'" onmouseout="this.firstChild.src='images/arrow_left.png'"><img src="images/arrow_left.png" alt="Anterior"/></a></div>
-            <div class="float-right jq-next"><a href="#" onmouseover="this.firstChild.src='images/arrow_right_over.png'" onmouseout="this.firstChild.src='images/arrow_right.png'"><img src="images/arrow_right.png" alt="Siguiente"/></a></div>
+            <div class="float-left jq-prev"><a href="#"><img src="images/arrow_left.png" alt="Anterior"/></a></div>
+            <div class="float-right jq-next"><a href="#"><img src="images/arrow_right.png" alt="Siguiente"/></a></div>
         </div>
     </div>
     <div class="bg bg-bottom"></div>

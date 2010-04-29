@@ -12,7 +12,7 @@ var Contact = new (function(){
             effect_show     : 'slidefade',
             validateOne     : true
         });
-        $('#formContact input[name=txtName], #formContact textarea[name=txtConsult]').validator({
+        $('#formContact input[name=txtName], #formContact textarea[name=txtConsult], #formContact input[name=txtCaptcha]').validator({
             v_required  : true
         });
         $('#formContact input[name=txtEmail]').validator({
@@ -24,25 +24,33 @@ var Contact = new (function(){
 
     this.send = function(){
         if( working ) return false;
-        working=true;
-        
+
+        ajaxloader.show();
+
         $.validator.validate('#formContact .validate', function(error){
              if( !error ){
-                 $('#si-mask, #si-ajaxloader').show();
-                 
                  $.post(baseURI+'index.php/index/ajax_sendform', $('#formContact').serialize(), function(data){
-                     $('#formContact').hide();
+                    ajaxloader.hidden();
+
                      if( data=="ok" ){
+                         $('#formContact').hide();
                          $('#si-msg, #si-msg .si-success').show();
-                         
+
+                     }else if( data=="errorcaptcha" ){
+                        $.validator.show($('#txtCaptcha'),{
+                            message : 'El c&oacute;digo ingresado es incorrecto.'
+                        });
+
+                     }else if( data=="errormail" ){
+                         $('#formContact').hide();
+                         $('#si-msg, #si-msg .si-error').show();
+
                      }else{
-                         $('#si-msg, #si-msg .si-error').show();                         
+                         alert("ERROR:\n"+data);
                      }
-                      $('#si-mask, #si-ajaxloader').hide();
-                 });
+                });
 
-
-             }else working=false;
+             }else ajaxloader.hidden();
          });
 
          return false;
@@ -54,5 +62,16 @@ var Contact = new (function(){
 
     /* PRIVATE METHODS
      **************************************************************************/
+    var ajaxloader={
+        show : function(){
+            working=true;
+            $('#si-mask, #si-ajaxloader').show();
+        },
+        hidden : function(){
+            working=false;
+            $('#si-mask, #si-ajaxloader').hide();
+        }
+    };
+
 
 })();

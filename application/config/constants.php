@@ -70,8 +70,6 @@ define('ERR_PROP_DELETE', 'La propiedad no pudo ser eliminada. Si el error conin
 */
 
 $msg = '
-    <p><img src="http://www.demomydesign.com.ar/mydesign/images/logo.png" alt="MyDesign" /></p>
-
     <b>Fecha/Hora:</b>   %s<br /><br />
     <b>Nombre:</b>   %s<br /><br />
     <b>Email:</b>   %s<br /><br />

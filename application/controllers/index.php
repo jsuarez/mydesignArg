@@ -33,6 +33,8 @@ class Index extends Controller {
      **************************************************************************/
     public function ajax_sendform(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
+            $this->load->library('captcha/securimage');
+            if( !$this->securimage->check($_POST['txtCaptcha']) ) die("errorcaptcha");
             
             $this->load->library('email');
             $this->load->helper('form');
@@ -44,15 +46,23 @@ class Index extends Controller {
                     $_POST['txtPhone'],
                     nl2br($_POST['txtConsult'])
             );
+            
+            $config['protocol'] = 'mail';
+            $config['charset'] = 'UTF-8';
+            $config['wordwrap'] = TRUE;
+            $config['mailtype'] = 'html';
+            $this->email->initialize($config);
 
             $this->email->from($_POST['txtEmail'], $_POST['txtName']);
             $this->email->to(EMAIL_CONTACT_TO);
             $this->email->subject(EMAIL_CONTACT_SUBJECT);
             $this->email->message($message);
+
+  
             if( $this->email->send() ){
                 die("ok");
             }else {
-                die("error");
+                die("errormail");
             }
         }
         

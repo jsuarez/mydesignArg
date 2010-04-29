@@ -12,7 +12,7 @@ class Portfolio extends Controller {
             'tlp_title'            => TITLE_PORTFOLIO,
             'tlp_meta_keywords'    =>  META_KEYWORDS_PORTFOLIO,
             'tlp_meta_description' =>  META_DESCRIPTION_PORTFOLIO,
-            'tlp_script'           => 'gallery'
+            'tlp_script'           => 'portfolio'
         ));
         $this->_data = $this->dataview->get_data();
     }
