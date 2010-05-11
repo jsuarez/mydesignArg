@@ -5,16 +5,16 @@
     <div id="gallery-portfolio" class="container-slide">
 <?php
     $n=1;
-    for( $i=0; $i<=count($info)-1; $i++ ) {
+    for( $i=0; $i<=count($info_portfolio)-1; $i++ ) {
         if( $n==1 ) echo '<div class="slide">';
 ?>
             <div class="thumb">
                 <div class="frame"></div>
-                <a href="<?=$info[$i]['link'];?>" class="link-1" target="_blank"><?=$info[$i]['name_link'];?></a>
+                <a href="<?=$info_portfolio[$i]['link'];?>" class="link-1" target="_blank"><?=$info_portfolio[$i]['name_link'];?></a>
             </div>
 
 <?php   
-        if( $n==4 || ($i+1)==count($info) ) {
+        if( $n==4 || ($i+1)==count($info_portfolio) ) {
             echo '</div>';
             $n=1;
         }else{
@@ -27,6 +27,6 @@
 
 <script type="text/javascript">
 <!--
-Portfolio.initializer('<?=json_encode($info);?>');
+Portfolio.initializer('<?=json_encode($info_portfolio);?>');
 -->
 </script>

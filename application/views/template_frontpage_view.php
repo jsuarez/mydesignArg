@@ -75,7 +75,7 @@ $condition = $seg=="faq" || $seg=="sitemap";
                 <!-- ============= FIN BANNER ============= -->
 
                 <!-- ============= SOLICITAR INFO ============= -->
-                <div class="form-info">
+                <div class="sidebar">
                     <div class="form-top"><h4>Solicitar Informaci&oacute;n</h4></div>
                     <div class="form-center">
                         <div id="si-mask" class="mask"></div>
@@ -95,7 +95,30 @@ $condition = $seg=="faq" || $seg=="sitemap";
         <?php if( !$condition ){?>
             <div class="clear span-22 last content">
                 <h1><?=$tlp_title_section;?></h1>
+
+        <?php if( $seg=='' || $seg=='disenio_web' || $seg=='disenio_grafico' || $seg=='marketing_online' || $seg=='servicios_extra' ){?>
+                <div class="column-left">
+                    <?php require($tlp_section);?>
+                </div>
+                <div class="column-right">
+                    <div class="sidebar">
+                        <div class="form-top"><h4>Testimonios</h4></div>
+                        <div class="form-center">
+                            <ul class="list-item">
+                                <li>Es la mejor empresa del mundo...</li>
+                                <li>Es la mejor empresa del mundo...</li>
+                                <li>Es la mejor empresa del mundo...</li>
+                                <li>Es la mejor empresa del mundo...</li>
+                                <li>Es la mejor empresa del mundo...</li>
+                            </ul>
+                        </div>
+                        <div class="form-bottom"></div>
+                    </div>
+                </div>
+        <?php }else{?>
                 <?php require($tlp_section);?>
+        <?php }?>
+
                 <div class="bg-bottom"></div>
             </div>
         <?php }?>

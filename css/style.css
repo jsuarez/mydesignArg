@@ -89,14 +89,14 @@ button.button-small{
  - ESTILOS PARA LINK
  -----------------------------------------------------------------------------*/
 a.link-moreinfo{
+    float:right;
+    clear:left;
     color:#F7941D;
     font-weight:bold;
     font-size: 90%;
     font-style: italic;
     text-decoration: underline;
-    float:right;
-    clear:left;
-    margin-right: 170px;
+    margin-right: 10px;
 }
 a.link-1{
     font-family:"Book Antiqua", Times, serif;
@@ -212,12 +212,12 @@ ul.list-faq li.item{
         }
         .header .menu ul li.back {
             position: absolute;
-            background: url(../images/lava.gif) no-repeat right -30px;
+            background: url(../images/bg_menu_over.jpg) no-repeat right;
             width: 9px;
             height: 30px;
         }
             .header .menu ul li.back .left {
-                background: url(../images/lava.gif) no-repeat top left;
+                background: url(../images/bg_menu_over.jpg) no-repeat top left;
                 height: 30px;
                 margin-right: 9px; /* 7px is the width of the rounded shape */
             }
@@ -230,6 +230,12 @@ ul.list-faq li.item{
             color:#fff;
             z-index: 1010;
             height: 30px;
+        }
+            .header .menu ul li a:hover{
+                color:#000;
+            }
+        .header .menu ul li.current a{
+            color:#000;
         }
 
         
@@ -278,6 +284,8 @@ ul.list-faq li.item{
         background-color:#F1F7F9;
         width: 535px;
         height:230px;
+                border:1px solid red;
+
     }
     .container-head .banner-portfolio .gallery{
         float:left;
@@ -286,6 +294,7 @@ ul.list-faq li.item{
         height: 193px;
         padding:10px 0 0 15px;
         overflow: hidden;
+        /*border:1px solid red;*/
     }
     .container-head .banner-portfolio .container-slide{
         position:relative;
@@ -312,6 +321,7 @@ ul.list-faq li.item{
         clear:left;
         width: 500px;
         margin: 0 auto;
+        border:1px solid red;
     }
 
     
@@ -329,66 +339,37 @@ ul.list-faq li.item{
 
     /* FORMULARIO SOLICITAR INFORMACION
      *****************************************************************/
-    .container-head .form-info{
-        float:right;
+    .container-head .sidebar{
         margin:32px 50px 0 0;
     }
-        .container-head .form-info .form-top{
-            float: left;
-            background:url(../images/form_top.jpg) no-repeat top left #F1F7F9;
-            width: 220px;
-            height:45px;
-            text-align:center;
-            padding-top:10px;
+        .container-head .sidebar .form-center .mask{
+            position: absolute;
+            left:0;top:0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 100;
+            display: none;
         }
-        .container-head .form-info .form-center{
-            position: relative;
-            float: left;
-            clear:left;
-            width: 206px;
-            height: auto;
-            padding-left: 14px;
-            background-color:#F1F7F9;
+        .container-head .sidebar .form-center .ajaxloader{
+            position: absolute;
+            left:0;top:0;
+            width: 100%;
+            height: 100%;
+            background:url(../images/ajax-loader4.gif) no-repeat center;
+            z-index: 110;
+            display: none;
         }
-            .container-head .form-info .form-center .mask{
-                position: absolute;
-                left:0;top:0;
-                width: 100%;
-                height: 100%;
-                background-color: #fff;
-                z-index: 100;
-                display: none;
-            }
-            .container-head .form-info .form-center .ajaxloader{
-                position: absolute;
-                left:0;top:0;
-                width: 100%;
-                height: 100%;
-                background:url(../images/ajax-loader4.gif) no-repeat center;
-                z-index: 110;
-                display: none;
-            }
-            .container-head .form-info .form-center .msg{ /* Estilo para mensaje de error o exito del envio */
-                float: left;
-                width: 215px;
-                height: 128px;
-                margin-left: -12px;
-                padding-top: 80px;
-                font-size: 100%;
-                color:#19529A;
-                text-align: center;
-                display:none;
-            }
-        .container-head .form-info .form-bottom{
+        .container-head .sidebar .form-center .msg{ /* Estilo para mensaje de error o exito del envio */
             float: left;
-            clear: left;
-            background:url(../images/form_bottom.jpg) no-repeat top left;
-            width: 220px;
-            height:20px;
-        }
-        .container-head .form-info .captcha{
-            float:left;
-            margin-right: 5px;
+            width: 215px;
+            height: 128px;
+            margin-left: -12px;
+            padding-top: 80px;
+            font-size: 100%;
+            color:#19529A;
+            text-align: center;
+            display:none;
         }
 
 /*------------------------------------------------------------------------------
@@ -396,8 +377,7 @@ ul.list-faq li.item{
  -----------------------------------------------------------------------------*/
 .content{
     position: relative;
-    /*margin-top:-90px;*/
-    margin-top:0px;
+    margin-top:-90px;
     padding-left: 50px;
     z-index: 100;
 }
@@ -409,33 +389,46 @@ ul.list-faq li.item{
         height: 69px;
         margin-left: -20px;
     }
-    .content .column-content{
-        position: relative;
+    .content .column-left{
         float:left;
-        width: 380px;
+        width: 535px;
         height:inherit;
-        margin-right: 20px;
+        margin-left: -2px;
+        /*border:1px solid red;*/
     }
-        .content .column-content .jq-intro,
-        .content .column-content .jq-complete{
+        .content .column-left .jq-intro,
+        .content .column-left .jq-complete{
             font-size: 90%;
             margin: -10px 0 10px 0 !important;
         }
-        .content .column-content .separator{border-bottom: 1px dashed #778C9C;}
+        .content .column-left .separator{border-bottom: 1px dashed #778C9C;}
 
-        .content .column-content .col-1{
+        .content .column-left .col-1{
             float:left;
             margin: -2px 10px 0 0;
         }
-        .content .column-content .row{
-            float: left;
-            height: 130px;
+        .content .column-left .row{
             position: relative;
+            float: left;
+            clear:left;
+            width:534px;
+            height: 130px;
             padding:10px 0 10px 0;
             background-color: #D3E8EC;
             z-index: 100;
             overflow: hidden;
             /*border:1px solid blue;*/
+        }
+        
+    .content .column-right{
+        float:right;
+        width: 230px;
+        height:inherit;
+        margin-right: 90px;
+        /*border:1px solid red;*/
+    }
+        .content .column-right .sidebar{
+            margin-right: 10px;
         }
 
 .content-special{
@@ -463,6 +456,39 @@ ul.list-faq li.item{
         position: relative;
         top:4px;
     }
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA EL SIDEBAR
+ -----------------------------------------------------------------------------*/
+.sidebar{
+    float:right;
+}
+    .sidebar .form-top{
+        float: left;
+        background:url(../images/form_top.jpg) no-repeat top left #F1F7F9;
+        width: 220px;
+        height:45px;
+        text-align:center;
+        padding-top:10px;
+    }
+    .sidebar .form-center{
+        position: relative;
+        float: left;
+        clear:left;
+        width: 206px;
+        height: auto;
+        padding-left: 14px;
+        background-color:#F1F7F9;
+    }
+    .sidebar .form-bottom{
+        float: left;
+        clear: left;
+        background:url(../images/form_bottom.jpg) no-repeat top left;
+        width: 220px;
+        height:20px;
+    }
+
+
 
 /*------------------------------------------------------------------------------
  - ESTILOS PARA EL PORTFOLIO

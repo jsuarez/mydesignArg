@@ -12,7 +12,7 @@ var Contact = new (function(){
             effect_show     : 'slidefade',
             validateOne     : true
         });
-        $('#formContact input[name=txtName], #formContact textarea[name=txtConsult], #formContact input[name=txtCaptcha]').validator({
+        $('#formContact input[name=txtName], #formContact textarea[name=txtConsult]').validator({
             v_required  : true
         });
         $('#formContact input[name=txtEmail]').validator({

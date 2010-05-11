@@ -10,7 +10,15 @@ class Portfolio_model extends Model {
     /* PUBLIC FUNCTIONS
      **************************************************************************/
     public function list_portfolio(){
-        return $this->db->get(TBL_PORTFOLIO)->result_array();
+        $this->db->order_by('order', 'asc');
+        $query = $this->db->get(TBL_PORTFOLIO);
+        return $query->result_array();
+    }
+
+    public function list_clients(){
+        $this->db->order_by('order', 'asc');
+        $query = $this->db->get(TBL_CLIENTS);
+        return $query->result_array();
     }
 
 

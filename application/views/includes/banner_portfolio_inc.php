@@ -6,28 +6,22 @@
     <div id="gallery-clientes" class="bg-center">
         <div class="gallery">
             <div class="container-slide">
-                <div class="slide">
-                    <div class="thumb"><a href="#" onmouseover="this.firstChild.src='images/img_cliente1_over.png'" onmouseout="this.firstChild.src='images/img_cliente1.png'"><img src="images/img_cliente1.png" alt="azer consultora" width="119" height="85" /></a></div>
-                    <div class="thumb"><a href="#" onmouseover="this.firstChild.src='images/img_cliente1_over.png'" onmouseout="this.firstChild.src='images/img_cliente1.png'"><img src="images/img_cliente1.png" alt="azer consultora" width="119" height="85" /></a></div>
-                    <div class="thumb"><a href="#" onmouseover="this.firstChild.src='images/img_cliente1_over.png'" onmouseout="this.firstChild.src='images/img_cliente1.png'"><img src="images/img_cliente1.png" alt="azer consultora" width="119" height="85" /></a></div>
-                    <div class="thumb"><a href="#" onmouseover="this.firstChild.src='images/img_cliente1_over.png'" onmouseout="this.firstChild.src='images/img_cliente1.png'"><img src="images/img_cliente1.png" alt="azer consultora" width="119" height="85" /></a></div>
+<?php
+    $n=0;
+    foreach( $info_clients as $info ){
+        $n++;
+        if( $n==1 ) echo '<div class="slide">';
 
-                    <div class="thumb"><a href="#" onmouseover="this.firstChild.src='images/img_cliente1_over.png'" onmouseout="this.firstChild.src='images/img_cliente1.png'"><img src="images/img_cliente1.png" alt="azer consultora" width="119" height="85" /></a></div>
-                    <div class="thumb"><a href="#" onmouseover="this.firstChild.src='images/img_cliente1_over.png'" onmouseout="this.firstChild.src='images/img_cliente1.png'"><img src="images/img_cliente1.png" alt="azer consultora" width="119" height="85" /></a></div>
-                    <div class="thumb"><a href="#" onmouseover="this.firstChild.src='images/img_cliente1_over.png'" onmouseout="this.firstChild.src='images/img_cliente1.png'"><img src="images/img_cliente1.png" alt="azer consultora" width="119" height="85" /></a></div>
-                    <div class="thumb"><a href="#" onmouseover="this.firstChild.src='images/img_cliente1_over.png'" onmouseout="this.firstChild.src='images/img_cliente1.png'"><img src="images/img_cliente1.png" alt="azer consultora" width="119" height="85" /></a></div>
-                </div>
-                <div class="slide">
-                    <div class="thumb"><a href="#" onmouseover="this.firstChild.src='images/img_cliente1_over.png'" onmouseout="this.firstChild.src='images/img_cliente1.png'"><img src="images/img_grafico1.png" alt="azer consultora" width="119" height="85" /></a></div>
-                    <div class="thumb"><a href="#" onmouseover="this.firstChild.src='images/img_cliente1_over.png'" onmouseout="this.firstChild.src='images/img_cliente1.png'"><img src="images/img_grafico1.png" alt="azer consultora" width="119" height="85" /></a></div>
-                    <div class="thumb"><a href="#" onmouseover="this.firstChild.src='images/img_cliente1_over.png'" onmouseout="this.firstChild.src='images/img_cliente1.png'"><img src="images/img_grafico1.png" alt="azer consultora" width="119" height="85" /></a></div>
-                    <div class="thumb"><a href="#" onmouseover="this.firstChild.src='images/img_cliente1_over.png'" onmouseout="this.firstChild.src='images/img_cliente1.png'"><img src="images/img_grafico1.png" alt="azer consultora" width="119" height="85" /></a></div>
+        $img_over = substr($info['src'], 0, -5)."_over.png";
 
-                    <div class="thumb"><a href="#" onmouseover="this.firstChild.src='images/img_cliente1_over.png'" onmouseout="this.firstChild.src='images/img_cliente1.png'"><img src="images/img_grafico1.png" alt="azer consultora" width="119" height="85" /></a></div>
-                    <div class="thumb"><a href="#" onmouseover="this.firstChild.src='images/img_cliente1_over.png'" onmouseout="this.firstChild.src='images/img_cliente1.png'"><img src="images/img_grafico1.png" alt="azer consultora" width="119" height="85" /></a></div>
-                    <div class="thumb"><a href="#" onmouseover="this.firstChild.src='images/img_cliente1_over.png'" onmouseout="this.firstChild.src='images/img_cliente1.png'"><img src="images/img_grafico1.png" alt="azer consultora" width="119" height="85" /></a></div>
-                    <div class="thumb"><a href="#" onmouseover="this.firstChild.src='images/img_cliente1_over.png'" onmouseout="this.firstChild.src='images/img_cliente1.png'"><img src="images/img_grafico1.png" alt="azer consultora" width="119" height="85" /></a></div>
-                </div>
+        echo '<div class="thumb"><a href="#" onmouseover="this.firstChild.src=\''. $img_over .'\'" onmouseout="this.firstChild.src=\''. $info['src'] .'\'"><img src="'. $info['src'] .'" alt="'. $info['name'] .'" width="119" height="85" /></a></div>';
+
+        if( $n==8 || $n==count($info_clients) ) {
+            echo '</div>';
+            $n=0;
+        }
+    }
+?>
             </div>
         </div>
 

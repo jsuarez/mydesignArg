@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 26-04-2010 a las 04:16:21
+-- Tiempo de generación: 11-05-2010 a las 19:22:25
 -- Versión del servidor: 5.1.37
 -- Versión de PHP: 5.3.0
 
@@ -12,6 +12,63 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- Base de datos: `mydesign_ar`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ci_sessions`
+--
+
+CREATE TABLE IF NOT EXISTS `ci_sessions` (
+  `session_id` varchar(40) NOT NULL DEFAULT '0',
+  `ip_address` varchar(16) NOT NULL DEFAULT '0',
+  `user_agent` varchar(50) NOT NULL,
+  `last_activity` int(10) unsigned NOT NULL DEFAULT '0',
+  `user_data` varchar(500) NOT NULL,
+  PRIMARY KEY (`session_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `ci_sessions`
+--
+
+INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
+('cbc9d9969edb1b3cad3489f933db5ff2', '192.168.0.2', 'Mozilla/5.0 (X11; U; Linux i686; es-AR; rv:1.9.1.6', 1273598124, ''),
+('5362e80fd3195361e0ca481b06ebdb34', '127.0.0.1', 'Mozilla/5.0 (X11; U; Linux i686; es-AR; rv:1.9.1.6', 1273588913, '');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `clients`
+--
+
+CREATE TABLE IF NOT EXISTS `clients` (
+  `cliente_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `src` varchar(255) NOT NULL,
+  `order` int(3) NOT NULL,
+  PRIMARY KEY (`cliente_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+
+--
+-- Volcar la base de datos para la tabla `clients`
+--
+
+INSERT INTO `clients` (`cliente_id`, `name`, `src`, `order`) VALUES
+(1, 'Aikido Argentina', 'images/banner_portfolio/img1.png', 1),
+(2, 'Alquileres Temporarios', 'images/banner_portfolio/img1.png', 2),
+(3, 'Azer', 'images/banner_portfolio/img3.png', 3),
+(4, 'Argentina es Mendoza', 'images/banner_portfolio/img4.png', 4),
+(5, 'Consurpyme', 'images/banner_portfolio/img5.png', 5),
+(6, 'Federico Azpilcueta', 'images/banner_portfolio/img6.png', 6),
+(7, 'FundaProAmbiente', 'images/banner_portfolio/img7.png', 7),
+(8, 'FundasDakar', 'images/banner_portfolio/img8.png', 8),
+(9, 'Getsouth', 'images/banner_portfolio/img9.png', 9),
+(10, 'Greenfields', 'images/banner_portfolio/img10.png', 10),
+(11, 'La Primevera', 'images/banner_portfolio/img11.png', 11),
+(12, 'L&C', 'images/banner_portfolio/img12.png', 12),
+(13, 'Respat S.A.', 'images/banner_portfolio/img13.png', 13),
+(14, 'VSI Soluciones', 'images/banner_portfolio/img14.png', 14);
 
 -- --------------------------------------------------------
 
@@ -26,6 +83,7 @@ CREATE TABLE IF NOT EXISTS `portfolio` (
   `title` varchar(100) NOT NULL,
   `name_link` varchar(100) NOT NULL,
   `link` varchar(100) NOT NULL,
+  `order` int(3) NOT NULL,
   PRIMARY KEY (`portfolio_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
@@ -33,10 +91,39 @@ CREATE TABLE IF NOT EXISTS `portfolio` (
 -- Volcar la base de datos para la tabla `portfolio`
 --
 
-INSERT INTO `portfolio` (`portfolio_id`, `src`, `alt`, `title`, `name_link`, `link`) VALUES
-(1, 'images/img_portfolio1.jpg', '', '', 'www.azerconsultores.com', 'http://www.azerconsultores.com'),
-(2, 'images/img_portfolio2.jpg', '', '', 'www.consurpyme.com.ar', 'http://www.consurpyme.com.ar'),
-(3, 'images/img_portfolio3.jpg', '', '', 'www.argentinaesmendoza.com.ar', 'http://www.argentinaesmendoza.com.ar'),
-(4, 'images/img_portfolio4.jpg', '', '', 'www.aikidoargentina.com', 'http://www.aikidoargentina.com'),
-(5, 'images/img_portfolio1.jpg', '', '', 'www.azerconsultores.com', 'http://www.azerconsultores.com');
+INSERT INTO `portfolio` (`portfolio_id`, `src`, `alt`, `title`, `name_link`, `link`, `order`) VALUES
+(1, 'images/portfolio/img1.jpg', '', '', 'www.azerconsultores.com', 'http://www.azerconsultores.com', 2),
+(2, 'images/portfolio/img2.jpg', '', '', 'www.consurpyme.com.ar', 'http://www.consurpyme.com.ar', 3),
+(3, 'images/portfolio/img3.jpg', '', '', 'www.argentinaesmendoza.com.ar', 'http://www.argentinaesmendoza.com.ar', 4),
+(4, 'images/portfolio/img4.jpg', '', '', 'www.aikidoargentina.com', 'http://www.aikidoargentina.com', 5),
+(5, 'images/portfolio/img5.png', '', '', 'www.alquilerestemporarios.org', 'http://www.alquilerestemporarios.org', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(15) NOT NULL,
+  `password` varchar(64) NOT NULL,
+  `firstname` varchar(50) DEFAULT NULL,
+  `lastname` varchar(50) NOT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `phone` char(30) DEFAULT NULL,
+  `phone_area` char(10) NOT NULL,
+  `active` int(1) NOT NULL DEFAULT '0',
+  `fondo` int(6) NOT NULL DEFAULT '0',
+  `token` char(23) NOT NULL,
+  `level` int(1) NOT NULL DEFAULT '0' COMMENT '0=User, 1=Admin',
+  `date_added` datetime NOT NULL,
+  `last_modified` datetime NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Volcar la base de datos para la tabla `users`
+--
+
 

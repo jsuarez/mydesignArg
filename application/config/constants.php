@@ -43,6 +43,7 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',	'x+b');
 |--------------------------------------------------------------------------
 */
 define('TBL_PORTFOLIO', 'portfolio');
+define('TBL_CLIENTS', 'clients');
 
 
 /*

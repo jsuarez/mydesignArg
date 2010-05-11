@@ -24,11 +24,10 @@ class Portfolio extends Controller {
     /* PUBLIC FUNCTIONS
      **************************************************************************/
     public function index(){
-        $info = $this->portfolio_model->list_portfolio();
-
         $this->_data = $this->dataview->set_data(array(
             'tlp_title_section' => 'Portfolio',
-            'info'              => $info
+            'info_portfolio'    => $this->portfolio_model->list_portfolio(),
+            'info_clients'      => $this->portfolio_model->list_clients()
         ));
         $this->load->view('template_frontpage_view', $this->_data);
     }
