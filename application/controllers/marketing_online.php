@@ -6,6 +6,8 @@ class Marketing_online extends Controller {
     function __construct(){
         parent::Controller();
 
+        $this->load->model('content_model');
+
         $this->load->library('dataview', array(
             'tlp_section'          =>  'frontpage/marketingonline_view.php',
             'tlp_title'            =>  TITLE_MARKETINGONLINE,
@@ -24,7 +26,8 @@ class Marketing_online extends Controller {
      **************************************************************************/
     public function index(){
         $this->_data = $this->dataview->set_data(array(
-            'tlp_title_section' => 'Marketing Online'
+            'tlp_title_section' => 'Marketing Online',
+            'info'              => $this->content_model->get_markonline()
         ));
         $this->load->view('template_frontpage_view', $this->_data);
     }

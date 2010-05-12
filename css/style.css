@@ -6,6 +6,7 @@
 .text-center{text-align: center !important;}
 .border{border:1px solid red !important;}
 .height-inherit{height: inherit !important;}
+.reset-cursor{cursor:default !important;}
 ul{margin-left: 0;}
 
 h1{
@@ -284,7 +285,7 @@ ul.list-faq li.item{
         background-color:#F1F7F9;
         width: 535px;
         height:230px;
-                border:1px solid red;
+        /*border:1px solid red;*/
 
     }
     .container-head .banner-portfolio .gallery{
@@ -316,12 +317,12 @@ ul.list-faq li.item{
                 width: 119px;
                 height: 85px;
                 margin:0 8px 8px 0;
-            } 
+            }
     .container-head .banner-portfolio .arrows{
         clear:left;
         width: 500px;
         margin: 0 auto;
-        border:1px solid red;
+        /*border:1px solid red;*/
     }
 
     
@@ -544,13 +545,14 @@ ul.list-faq li.item{
     top:34px;
     padding-top:218px;
     z-index: 1000;
+    /*border:1px solid red;*/
 }
 .portfolio-nav-prev{
-    left:-8px;
+    left:-2px;
     padding-top:218px;
 }
 .portfolio-nav-next{
-    left:800px;
+    left:805px;
     padding-top:218px;
 }
 

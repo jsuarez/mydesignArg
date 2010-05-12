@@ -6,6 +6,8 @@ class Servicios_extra extends Controller {
     function __construct(){
         parent::Controller();
 
+        $this->load->model('content_model');
+
         $this->load->library('dataview', array(
             'tlp_section'          =>  'frontpage/serviciosextra_view.php',
             'tlp_title'            =>  TITLE_SERVICIOSEXTRA,
@@ -24,7 +26,8 @@ class Servicios_extra extends Controller {
      **************************************************************************/
     public function index(){
         $this->_data = $this->dataview->set_data(array(
-            'tlp_title_section' => 'Servicios Extra'
+            'tlp_title_section' => 'Servicios Extra',
+            'info'              => $this->content_model->get_servextra()
         ));
         $this->load->view('template_frontpage_view', $this->_data);
     }

@@ -6,12 +6,14 @@ class Disenio_grafico extends Controller {
     function __construct(){
         parent::Controller();
 
+        $this->load->model('content_model');
+
         $this->load->library('dataview', array(
-            'tlp_section'          =>  'frontpage/diseniografico_view.php',
+            'tlp_section'          =>  'frontpage/content_view.php',
             'tlp_title'            =>  TITLE_DISENIOGRAFICO,
             'tlp_meta_keywords'    =>  META_KEYWORDS_DISENIOGRAFICO,
             'tlp_meta_description' =>  META_DESCRIPTION_DISENIOGRAFICO,
-            'tlp_script'           => 'nivoslider'
+            'tlp_script'           => array('nivoslider', 'info')
         ));
         $this->_data = $this->dataview->get_data();
     }
@@ -24,7 +26,8 @@ class Disenio_grafico extends Controller {
      **************************************************************************/
     public function index(){
         $this->_data = $this->dataview->set_data(array(
-            'tlp_title_section' => 'Dise&ntilde;o Gr&aacute;fico'
+            'tlp_title_section' => 'Dise&ntilde;o Gr&aacute;fico',
+            'info'              => $this->content_model->get_diseniografico()
         ));
         $this->load->view('template_frontpage_view', $this->_data);
     }

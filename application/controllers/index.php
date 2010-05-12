@@ -6,8 +6,10 @@ class Index extends Controller {
     function __construct(){
         parent::Controller();
 
+        $this->load->model('content_model');
+
         $this->load->library('dataview', array(
-            'tlp_section'          =>  'frontpage/disenioweb_view.php',
+            'tlp_section'          =>  'frontpage/content_view.php',
             'tlp_title'            =>  TITLE_DISENIOWEB,
             'tlp_meta_keywords'    =>  META_KEYWORDS_DISENIOWEB,
             'tlp_meta_description' =>  META_DESCRIPTION_DISENIOWEB,
@@ -24,7 +26,8 @@ class Index extends Controller {
      **************************************************************************/
     public function index(){
         $this->_data = $this->dataview->set_data(array(
-            'tlp_title_section' => 'Dise&ntilde;o Web'
+            'tlp_title_section' => 'Dise&ntilde;o Web',
+            'info'              => $this->content_model->get_disenioweb()
         ));
         $this->load->view('template_frontpage_view', $this->_data);
     }

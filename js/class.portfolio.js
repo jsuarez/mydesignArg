@@ -33,6 +33,9 @@ var Portfolio = new (function(){
 
         $('#gallery-clientes .jq-prev').hover(hover_in, hover_out);
         $('#gallery-clientes .jq-next').hover(hover_in, hover_out);
+
+        $('#nav-prev').hover(hover_in, hover_out);
+        $('#nav-next').hover(hover_in, hover_out);
     };
 
 
@@ -50,7 +53,11 @@ var Portfolio = new (function(){
 
     var hover_out = function(){
         var img = $(this).find('img');
-        img.attr('src', $(this).data('srcprev'));
+        var src = img.attr('src');
+        
+        if( src.indexOf('disabled')==-1 ){
+            img.attr('src', $(this).data('srcprev'));
+        }
     };
 
 

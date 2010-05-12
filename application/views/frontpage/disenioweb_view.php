@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 
 <div id="cont1" class="row separator">
-    <div class="col-1"><img src="images/img_web5.png" alt="Web Institucional"/></div>
+    <div class="col-1"><img src="images/thumbs_disenioweb/img_web5.png" alt="Web Institucional"/></div>
     <h3>Web Institucional</h3>
     <div class="jq-intro"><p>Para poder insertar su Pyme o simplemente tener su pagina personal. Obteniendo ...</p></div>
     <div class="jq-complete hide">
@@ -14,7 +14,7 @@
 </div>
 
 <div id="cont2" class="row separator">
-    <div class="col-1"><img src="images/img_web2.png" alt="Web Autoadministrable"/></div>
+    <div class="col-1"><img src="images/thumbs_disenioweb/img_web2.png" alt="Web Autoadministrable"/></div>
     <h3>Web Autoadministrable</h3>
     <div class="jq-intro"><p>Cuenta con una interfaz para poder modificar el contenido sin causar ning&uacute;n efecto en el dise&ntilde;o ...</p></div>
     <div class="jq-complete hide">
@@ -27,7 +27,7 @@
 </div>
 
 <div id="cont3" class="span-10 row">
-    <div class="col-1"><img src="images/img_web1.png" alt="Web Imobiliaria"/></div>
+    <div class="col-1"><img src="images/thumbs_disenioweb/img_web1.png" alt="Web Imobiliaria"/></div>
     <h3>Web Inmobiliaria</h3>
     <div class="jq-intro"><p>A trav&eacute;s de nuestro sistema <b>Inmobiliario</b> logre una mayor din&aacute;mica en la compra, venta ...</p></div>
     <div class="jq-complete hide">
@@ -47,7 +47,7 @@
 </div>
 
 <div id="cont4" class="row separator">
-    <div class="col-1"><img src="images/img_web4.png" alt="Sistema catalogo de productos"/></div>
+    <div class="col-1"><img src="images/thumbs_disenioweb/img_web4.png" alt="Sistema catalogo de productos"/></div>
     <h3>Cat&aacute;logo de Productos</h3>
     <div class="jq-intro"><p>Ideal para empresas con una amplia gama de productos o servicios. Este sistema le permitir&aacute; listar detalladamente ...</p></div>
     <div class="jq-complete hide">
@@ -66,7 +66,7 @@
 </div>
 
 <div id="cont5" class="row separator">
-    <div class="col-1"><img src="images/img_web3.png" alt="Carrito de Compras"/></div>
+    <div class="col-1"><img src="images/thumbs_disenioweb/img_web3.png" alt="Carrito de Compras"/></div>
     <h3>Carrito de Compras</h3>
     <div class="jq-intro"><p>Venda sus productos a todo el mundo. Nuestra soluci&oacute;n de comercio electr&oacute;nico ...</p></div>
     <div class="jq-complete hide">
@@ -85,7 +85,7 @@
 </div>
 
 <div id="cont6" class="row">
-    <div class="col-1"><img src="images/img_web6.png" alt="Web Turismo"/></div>
+    <div class="col-1"><img src="images/thumbs_disenioweb/img_web6.png" alt="Web Turismo"/></div>
     <h3>Web Turismo</h3>
     <div class="jq-intro"><p>Ofrece una soluci&oacute;n absolutamente flexible y escalable ...</p></div>
     <div class="jq-complete hide">

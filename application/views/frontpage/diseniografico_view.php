@@ -2,7 +2,7 @@
 
 <div class="column-content">
     <div class="span-10 row separator">
-        <div class="col-1"><img src="images/img_web5.png" alt="Web Institucional"/></div>
+        <div class="col-1"><img src="images/thumbs_diseniografico/img5.png" alt="Diseño Logotipo"/></div>
         <h3>Dise&ntilde;o Logotipo</h3>
         <div class="jq-intro"><p>El logotipo de su compa&ntilde;&iacute;a ser&aacute; la imagen que lo acompa&ntilde;ar&aacute; durante todo el crecimiento y desarrollo de su empresa ...</p></div>
         <div class="jq-complete hide">
@@ -14,7 +14,7 @@
     </div>
 
     <div class="span-10 row separator">
-        <div class="col-1"><img src="images/img_web2.png" alt="Web Autoadministrable"/></div>
+        <div class="col-1"><img src="images/thumbs_diseniografico/img2.png" alt="Diseño Impresos"/></div>
         <h3>Dise&ntilde;o Impresos</h3>
         <div class="jq-intro"><p>Disponer de un <b>dise&ntilde;o de papeler&iacute;a</b> de calidad, har&aacute; transmitir los valores de su empresa eficazmente ...</p></div>
         <div class="jq-complete hide">
@@ -32,7 +32,7 @@
     </div>
 
     <div class="span-10 row">
-        <div class="col-1"><img src="images/img_web1.png" alt="Web Imobiliaria"/></div>
+        <div class="col-1"><img src="images/thumbs_diseniografico/img1.png" alt="Diseño Cartelería"/></div>
         <h3>Dise&ntilde;o Carteler&iacute;a</h3>
         <div class="jq-intro"><p>Es la cara visible de todo local comercial de vista al publico ...</p></div>
         <div class="jq-complete hide">
@@ -46,7 +46,7 @@
 
 <div class="column-content">
     <div class="span-10 row separator">
-        <div class="col-1"><img src="images/img_web4.png" alt="Sistema catalogo de productos"/></div>
+        <div class="col-1"><img src="images/thumbs_diseniografico/img4.png" alt="Diseño Packaging"/></div>
         <h3>Dise&ntilde;o Packaging</h3>
         <div class="jq-intro"><p>Dise&ntilde;amos packaging para todo tipo de productos ...</p></div>
         <div class="jq-complete hide">
@@ -58,7 +58,7 @@
     </div>
 
     <div class="span-10 row separator">
-        <div class="col-1"><img src="images/img_web3.png" alt="Carrito de Compras"/></div>
+        <div class="col-1"><img src="images/thumbs_diseniografico/img3.png" alt="Diseño Publicidad"/></div>
         <h3>Dise&ntilde;o Publicidad</h3>
         <div class="jq-intro"><p>Realizamos campa&ntilde;as exitosas que provocan decisiones de compra en el consumidor ...</p></div>
         <div class="jq-complete hide">
@@ -75,8 +75,8 @@
     </div>
 
     <div class="span-10 row">
-        <div class="col-1"><img src="images/img_web6.png" alt="Web Turismo"/></div>
-        <h3>Dise&ntilde;o Multimedia  </h3>
+        <div class="col-1"><img src="images/thumbs_diseniografico/img6.png" alt="Diseño Multimedia"/></div>
+        <h3>Dise&ntilde;o Multimedia</h3>
         <div class="jq-intro"><p>El dise&ntilde;o multimedia sirve como una importante herramienta de marketing ...</p></div>
         <div class="jq-complete hide">
             <p>El dise&ntilde;o multimedia sirve como una importante herramienta de marketing que suma multiples recursos como el dise&ntilde;o, la animaci&oacute;n, el video, la fotograf&iacute;a y hasta la interacci&oacute;n con el cliente.</p>

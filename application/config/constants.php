@@ -44,6 +44,10 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',	'x+b');
 */
 define('TBL_PORTFOLIO', 'portfolio');
 define('TBL_CLIENTS', 'clients');
+define('TBL_DISWEB', 'content_disenioweb');
+define('TBL_DISGRAF', 'content_diseniografico');
+define('TBL_MARKONL', 'content_markonline');
+define('TBL_SERVEXTRA', 'content_servextra');
 
 
 /*

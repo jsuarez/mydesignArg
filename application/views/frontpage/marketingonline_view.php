@@ -2,7 +2,7 @@
 
 <div class="column-content">
     <div class="span-10 row separator">
-        <div class="col-1"><img src="images/img_web5.png" alt="Web Institucional"/></div>
+        <div class="col-1"><img src="images/thumbs_marketing/img5.png" alt="Web Institucional"/></div>
         <h3>Search Engine Marketing</h3>
         <div class="jq-intro"><p>Planificaremos y gestionaremos su campa&ntilde;a de publicidad en buscadores mediante el sistema de pago por clic ...</p></div>
         <div class="jq-complete hide">
@@ -19,7 +19,7 @@
     </div>
 
     <div class="span-10 row separator">
-        <div class="col-1"><img src="images/img_web2.png" alt="Web Autoadministrable"/></div>
+        <div class="col-1"><img src="images/thumbs_marketing/img2.png" alt="Web Autoadministrable"/></div>
         <h3>Search Engine Optimization  </h3>
         <div class="jq-intro"><p>Aumente el tr&aacute;fico cualificado hacia su web mediante la optimizaci&oacute;n de la estructura y contenidos de la misma ...</p></div>
         <div class="jq-complete hide">
@@ -37,7 +37,7 @@
     </div>
 
     <div class="span-10 row">
-        <div class="col-1"><img src="images/img_web1.png" alt="Web Imobiliaria"/></div>
+        <div class="col-1"><img src="images/thumbs_marketing/img1.png" alt="Web Imobiliaria"/></div>
         <div class="col-2">
             <h3>E-mail Marketing</h3>
             <div class="jq-intro"><p>Es una poderosa herramienta de marketing directo que permite ...</p></div>
@@ -60,7 +60,7 @@
 
 <div class="column-content">
     <div class="span-10 row separator">
-        <div class="col-1"><img src="images/img_web4.png" alt="Sistema catalogo de productos"/></div>
+        <div class="col-1"><img src="images/thumbs_marketing/img4.png" alt="Sistema catalogo de productos"/></div>
         <h3>Banners Publicitarios</h3>
         <div class="jq-intro"><p>Las campa&ntilde;as publicitarias realizadas por Banners se apoyan en todos los medios disponibles ...</p></div>
         <div class="jq-complete hide">
@@ -77,7 +77,7 @@
     </div>
 
     <div class="span-10 row separator">
-        <div class="col-1"><img src="images/img_web3.png" alt="Carrito de Compras"/></div>
+        <div class="col-1"><img src="images/thumbs_marketing/img3.png" alt="Carrito de Compras"/></div>
         <h3>Dise&ntilde;o de Newsletters</h3>
         <div class="jq-intro"><p>El e-mail se ha convertido en un medio muy eficaz para la promoci&oacute;n de productos y servicios ...</p></div>
         <div class="jq-complete hide">
@@ -94,7 +94,7 @@
     </div>
 
     <div class="span-10 row">
-        <div class="col-1"><img src="images/img_web6.png" alt="Web Turismo"/></div>
+        <div class="col-1"><img src="images/thumbs_marketing/img6.png" alt="Web Turismo"/></div>
         <h3>Marketing Viral</h3>
         <div class="jq-intro"><p>Mediante una campa&ntilde;a de marketing viral se busca que la misma llegue a la mayor cantidad de usuarios ...</p></div>
         <div class="jq-complete hide">

@@ -8,15 +8,17 @@
             <div class="container-slide">
 <?php
     $n=0;
-    foreach( $info_clients as $info ){
+    for( $i=0; $i<=count($info_clients)-1; $i++ ){
         $n++;
+        $info = $info_clients[$i];
+
         if( $n==1 ) echo '<div class="slide">';
 
-        $img_over = substr($info['src'], 0, -5)."_over.png";
+        $img_over = substr($info['src'], 0, -4)."_over.png";
 
-        echo '<div class="thumb"><a href="#" onmouseover="this.firstChild.src=\''. $img_over .'\'" onmouseout="this.firstChild.src=\''. $info['src'] .'\'"><img src="'. $info['src'] .'" alt="'. $info['name'] .'" width="119" height="85" /></a></div>';
+        echo '<div class="thumb"><a href="javascript:void(0);" onmouseover="this.firstChild.src=\''. $img_over .'\'" onmouseout="this.firstChild.src=\''. $info['src'] .'\'" class="reset-cursor"><img src="'. $info['src'] .'" alt="'. $info['name'] .'" width="119" height="85" /></a></div>';
 
-        if( $n==8 || $n==count($info_clients) ) {
+        if( $n==8 || $i==count($info_clients)-1 ) {
             echo '</div>';
             $n=0;
         }
@@ -26,8 +28,8 @@
         </div>
 
         <div class="arrows">
-            <div class="float-left jq-prev"><a href="#"><img src="images/arrow_left.png" alt="Anterior"/></a></div>
-            <div class="float-right jq-next"><a href="#"><img src="images/arrow_right.png" alt="Siguiente"/></a></div>
+            <div class="float-left jq-prev"><a href="javascript:void(0);"><img src="images/arrow_left.png" alt="Anterior"/></a></div>
+            <div class="float-right jq-next"><a href="javascript:void(0);"><img src="images/arrow_right.png" alt="Siguiente"/></a></div>
         </div>
     </div>
     <div class="bg bg-bottom"></div>

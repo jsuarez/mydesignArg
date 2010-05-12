@@ -2,7 +2,7 @@
 
 <div class="column-content">
     <div class="span-10 row separator">
-        <div class="col-1"><img src="images/img_web5.png" alt="Web Institucional"/></div>
+        <div class="col-1"><img src="images/thumbs_serviciosextra/img5.png" alt="Registro de Dominios" /></div>
         <h3>Registro de Dominios</h3>
         <div class="jq-intro"><p>Su dominio ser&aacute; su marca e identidad en el mundo virtual, y como tal, lo llevar&aacute; a identificarse y obtener ...</p></div>
         <div class="jq-complete hide">
@@ -14,7 +14,7 @@
     </div>
 
     <div class="span-10 row separator">
-        <div class="col-1"><img src="images/img_web2.png" alt="Web Autoadministrable"/></div>
+        <div class="col-1"><img src="images/thumbs_serviciosextra/img2.png" alt="Generación de Contenidos" /></div>
         <h3>Generaci&oacute;n de Contenidos</h3>
         <div class="jq-intro"><p>Para generar un flujo constante de usuarios, es necesario que la informaci&oacute;n disponible est&eacute; de acuerdo con su imagen ...</p></div>
         <div class="jq-complete hide">
@@ -26,7 +26,7 @@
     </div>
 
     <div class="span-10 row">
-        <div class="col-1"><img src="images/img_web1.png" alt="Web Imobiliaria"/></div>
+        <div class="col-1"><img src="images/thumbs_serviciosextra/img1.png" alt="Servicio de Traducción" /></div>
         <h3>Servicio de Traducci&oacute;n</h3>
         <div class="jq-intro"><p>Es una soluci&oacute;n especial para quien est&aacute; pensando en expandir su propuesta comercial y promocionar ...</p></div>
         <div class="jq-complete hide">
@@ -46,7 +46,7 @@
 
 <div class="column-content">
     <div class="span-10 row separator">
-        <div class="col-1"><img src="images/img_web4.png" alt="Sistema catalogo de productos"/></div>
+        <div class="col-1"><img src="images/thumbs_serviciosextra/img4.png" alt="Diseño de Blogs"/></div>
         <h3>Dise&ntilde;o de Blogs</h3>
         <div class="jq-intro"><p>Los blogs se presentan hoy en d&iacute;a como un canal publicitario ideal, debido a su fuerte presencia en Internet ...</p></div>
         <div class="jq-complete hide">
@@ -58,7 +58,7 @@
     </div>
 
     <div class="span-10 row separator">
-        <div class="col-1"><img src="images/img_web3.png" alt="Carrito de Compras"/></div>
+        <div class="col-1"><img src="images/thumbs_serviciosextra/img3.png" alt="Rediseño Web"/></div>
         <h3>Redise&ntilde;o Web</h3>
         <div class="jq-intro"><p>Los blogs se presentan hoy en d&iacute;a como un canal publicitario ideal, debido a su fuerte presencia en Internet ...</p></div>
         <div class="jq-complete hide">
@@ -70,7 +70,7 @@
     </div>
 
     <div class="span-10 row">
-        <div class="col-1"><img src="images/img_web6.png" alt="Web Turismo"/></div>
+        <div class="col-1"><img src="images/thumbs_serviciosextra/img6.png" alt="Mantenimiento Web"/></div>
         <h3>Mantenimiento Web</h3>
         <div class="jq-intro"><p>Podemos dar una respuesta en 24/48 horas a todos los cambios o modificaciones que nos son requeridos ...</p></div>
         <div class="jq-complete hide">
