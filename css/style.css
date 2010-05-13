@@ -40,7 +40,6 @@ h4{
     font-weight:bold;
 }
 
-
 /*------------------------------------------------------------------------------
  - ESTILOS PARA INPUT y TEXTAREA
  -----------------------------------------------------------------------------*/
@@ -107,6 +106,15 @@ a.link-1{
     font-size: 130%;
 }
     a.link-1:hover{font-weight: bold;}
+
+a.link-2{
+    font-family:"Book Antiqua", Times, serif;
+    color:#F8831A;
+    font-style:italic;
+    font-weight: bold;
+    font-size: 120%;
+}
+    a.link-2:hover{text-decoration: underline;}
 
 /*------------------------------------------------------------------------------
  - ESTILOS PARA LABEL
@@ -432,9 +440,17 @@ ul.list-faq li.item{
             margin-right: 10px;
         }
 
-.content-special{
+.content-special{ /** Utilizada para acomadar el texto cuando se trate de alguna seccion sin banner **/
     float:left;
     margin:50px 0 0 50px;
+}
+.content-err404{ /** Utilizada para el ERRO404 **/
+    width: 530px;
+    padding-top:70px;
+    font-size: 130% !important;
+    color:#195086;
+    text-align: center;
+    /*border:1px solid red;*/
 }
 
 /*------------------------------------------------------------------------------

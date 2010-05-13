@@ -7,13 +7,14 @@ class Servicios_extra extends Controller {
         parent::Controller();
 
         $this->load->model('content_model');
+        $this->load->model('banner_model');
 
         $this->load->library('dataview', array(
-            'tlp_section'          =>  'frontpage/serviciosextra_view.php',
+            'tlp_section'          =>  'frontpage/content_view.php',
             'tlp_title'            =>  TITLE_SERVICIOSEXTRA,
             'tlp_meta_keywords'    =>  META_KEYWORDS_SERVICIOSEXTRA,
             'tlp_meta_description' =>  META_DESCRIPTION_SERVICIOSEXTRA,
-            'tlp_script'           => 'nivoslider'
+            'tlp_script'           => array('nivoslider', 'info')
         ));
         $this->_data = $this->dataview->get_data();
     }
@@ -27,7 +28,8 @@ class Servicios_extra extends Controller {
     public function index(){
         $this->_data = $this->dataview->set_data(array(
             'tlp_title_section' => 'Servicios Extra',
-            'info'              => $this->content_model->get_servextra()
+            'info_content'      => $this->content_model->get_servextra(),
+            'info_banner'       => $this->banner_model->get_servextra()
         ));
         $this->load->view('template_frontpage_view', $this->_data);
     }

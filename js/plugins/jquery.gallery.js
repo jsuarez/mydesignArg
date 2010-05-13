@@ -104,8 +104,11 @@ var ClassGallery = function(options){
                     contThumbs.eq(n-1).append(div, img);
 
                     img.load(function(){
-                        $(this).parent().find('.'+options.cssAjaxLoader).remove();
-                        $(this).show();
+                        var t = $(this);
+                        t.parent().find('.'+options.cssAjaxLoader).remove();
+                        t.show();
+                        t.attr('width', this.width);
+                        t.attr('height', this.height);
                     });
 
                     if( this.alt ) img.attr('alt', this.alt);

@@ -1,12 +1,12 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 
-    <p class="text-center">www.mydesign.com.ar &copy; Copyright 2003 - 2010 - Todos los derechos reservados - <img src="images/mydesign_logo.png" alt="MyDesign" /></p>
+<p class="text-center">www.mydesign.com.ar &copy; Copyright 2003 - 2010 - Todos los derechos reservados - <img src="images/mydesign_logo.png" alt="MyDesign" width="83" height="9" /></p>
     <div class="cont-links">
         <div class="col">
             <b>MyDesign</b>
             <ul>
                 <li><a href="<?=site_url('empresa');?>">La Empresa</a></li>
-                <li><a href="<?=site_url('blog');?>">Blog</a></li>
+                <li><a href="http://www.mydesign.com.ar/blog/">Blog</a></li>
                 <li><a href="<?=site_url('faq');?>">F.A.Q.</a></li>
                 <li><a href="<?=site_url('portfolio');?>">Portfolio</a></li>
             </ul>
@@ -30,14 +30,14 @@
             </ul>
         </div>
         <div class="col">
-            <img src="images/icon_msn.png" alt="msn" class="icon" /> info@mydesign.com.ar<br />
-            <img src="images/icon_skype.png" alt="skype" class="icon" /> infomydesign<br />
-            <img src="images/twitter.gif" alt="twitter" width="25px" class="icon" /> mydesignes<br />
+            <img src="images/icon_msn.png" alt="msn" class="icon" width="19" height="20" /> info@mydesign.com.ar<br />
+            <img src="images/icon_skype.png" alt="skype" class="icon" width="19" height="20" /> infomydesign<br />
+            <img src="images/twitter.gif" alt="twitter" class="icon" width="25" height="20" /> mydesignes<br />
         </div>
     </div>
     <div class="clear span-22 last text-center">
-        <a href="http://validator.w3.org/check?uri=referer"><img src="images/valid_xhtml.jpg" alt="Valid XHTML 1.0 Strict" /></a>&nbsp;&nbsp;
-        <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="images/valid_css.jpg" alt="¡CSS Válido!" /></a>
+        <a href="http://validator.w3.org/check?uri=referer"><img src="images/valid_xhtml.jpg" alt="Valid XHTML 1.0 Strict" width="102" height="16" /></a>&nbsp;&nbsp;
+        <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="images/valid_css.jpg" alt="¡CSS Válido!" width="102" height="16" /></a>
     </div>
     <div class="clear span-20 append-1 last text-center">
         Webs Amigas:

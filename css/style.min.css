@@ -3,6 +3,7 @@
 .text-center{text-align:center!important}
 .border{border:1px solid red!important}
 .height-inherit{height:inherit!important}
+.reset-cursor{cursor:default!important}
 ul{margin-left:0}
 h1{font-size:190%;color:#0C2131;font-weight:700;font-family:"Book Antiqua", Times, serif}
 h2{font-family:"Book Antiqua", Times, serif;font-weight:700;font-style:normal;color:#fff;font-size:140%}
@@ -80,7 +81,7 @@ ul.list-faq li.item .result{clear:left;display:none;margin:5px 0 0 20px}
 .portfolio-thumb .container-slide .slide .thumb .frame .image{float:left;margin:16px 0 0 15px}
 .portfolio-thumb .container-slide .slide .thumb .link-1{float:left;clear:left;margin:-10px 0 0 10px}
 .portfolio-nav{position:absolute;width:55px;top:34px;padding-top:218px;z-index:1000}
-.portfolio-nav-prev{left:-8px;padding-top:218px}
-.portfolio-nav-next{left:800px;padding-top:218px}
+.portfolio-nav-prev{left:-2px;padding-top:218px}
+.portfolio-nav-next{left:805px;padding-top:218px}
 .portfolio-ajaxloader{position:absolute;background:transparent url(../images/ajax-loader6.gif) no-repeat center;top:15px;left:15px;width:350px;height:210px;z-index:1100}
 .header .menu ul li a:hover,.header .menu ul li.current a{color:#000}

@@ -28,8 +28,8 @@
         </div>
 
         <div class="arrows">
-            <div class="float-left jq-prev"><a href="javascript:void(0);"><img src="images/arrow_left.png" alt="Anterior"/></a></div>
-            <div class="float-right jq-next"><a href="javascript:void(0);"><img src="images/arrow_right.png" alt="Siguiente"/></a></div>
+            <div class="float-left jq-prev"><a href="javascript:void(0);"><img src="images/arrow_left.png" alt="Anterior" width="17" height="20" /></a></div>
+            <div class="float-right jq-next"><a href="javascript:void(0);"><img src="images/arrow_right.png" alt="Siguiente" width="17" height="20" /></a></div>
         </div>
     </div>
     <div class="bg bg-bottom"></div>

@@ -19,7 +19,7 @@
 <noscript>
     <p>Bienvenido a MyDesign</p>
     <p>
-        La página que estás viendo requiere para su funcionamiento el uso de JavaScript.
+        La p&aacute;gina que est&aacute;s viendo requiere para su funcionamiento el uso de JavaScript.
         Si lo has deshabilitado intencionadamente, por favor vuelve a activarlo.
     </p>
 </noscript>
@@ -45,23 +45,14 @@ $condition = $seg=="faq" || $seg=="sitemap";
                 <?php
                     if( !$condition ){
                         switch( $seg ){
+                            default:
+                                require('includes/banner_content_inc.php');
+                            break;
                             case "portfolio":
                                 require('includes/banner_portfolio_inc.php');
                             break;
                             case "empresa":
                                 require('includes/banner_empresa_inc.php');
-                            break;
-                            case "disenio_web": default:
-                                require('includes/banner_disenioweb_inc.php');
-                            break;
-                            case "disenio_grafico":
-                                require('includes/banner_diseniografico_inc.php');
-                            break;
-                            case "marketing_online":
-                                require('includes/banner_markonline_inc.php');
-                            break;
-                            case "servicios_extra":
-                                require('includes/banner_servextra_inc.php');
                             break;
                         }
 
@@ -87,8 +78,8 @@ $condition = $seg=="faq" || $seg=="sitemap";
                 <!-- ============= FIN SOLICITAR INFO ============= -->
 
                 <div class="solapas">
-                    <a href="<?=site_url('empresa');?>" onmouseover="this.firstChild.src='images/button_empresa_over.png'" onmouseout="this.firstChild.src='images/button_empresa.png'"><img src="images/button_empresa.png" alt="Empresa"/></a>
-                    <a href="blog/" onmouseover="this.firstChild.src='images/button_blog_over.png'" onmouseout="this.firstChild.src='images/button_blog.png'"><img src="images/button_blog.png" alt="Blog"/></a>
+                    <a href="<?=site_url('empresa');?>" onmouseover="this.firstChild.src='images/button_empresa_over.png'" onmouseout="this.firstChild.src='images/button_empresa.png'"><img src="images/button_empresa.png" alt="Empresa" width="32" height="85" /></a>
+                    <a href="http://www.mydesign.com.ar/blog/" onmouseover="this.firstChild.src='images/button_blog_over.png'" onmouseout="this.firstChild.src='images/button_blog.png'"><img src="images/button_blog.png" alt="Blog" width="32" height="85" /></a>
                 </div>
             </div>
 
@@ -102,14 +93,12 @@ $condition = $seg=="faq" || $seg=="sitemap";
                 </div>
                 <div class="column-right">
                     <div class="sidebar">
-                        <div class="form-top"><h4>Testimonios</h4></div>
+                        <div class="form-top"><h4>Ultimos Post</h4></div>
                         <div class="form-center">
                             <ul class="list-item">
-                                <li>Es la mejor empresa del mundo...</li>
-                                <li>Es la mejor empresa del mundo...</li>
-                                <li>Es la mejor empresa del mundo...</li>
-                                <li>Es la mejor empresa del mundo...</li>
-                                <li>Es la mejor empresa del mundo...</li>
+                                <li><a href="http://www.mydesign.com.ar/blog/2010/03/23/etiquetas-para-e-commerce/">Etiquetas para E-commerce</a></li>
+                                <li><a href="http://www.mydesign.com.ar/blog/2010/02/15/10-plugins-jquery-para-google-maps/">10 Plugins JQuery para Google Maps</a></li>
+                                <li><a href="http://www.mydesign.com.ar/blog/2010/01/29/para-que-podemos-usar-twitter/">PARA QUÉ PODEMOS USAR TWITTER?</a></li>
                             </ul>
                         </div>
                         <div class="form-bottom"></div>

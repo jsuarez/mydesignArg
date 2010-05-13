@@ -48,6 +48,10 @@ define('TBL_DISWEB', 'content_disenioweb');
 define('TBL_DISGRAF', 'content_diseniografico');
 define('TBL_MARKONL', 'content_markonline');
 define('TBL_SERVEXTRA', 'content_servextra');
+define('TBL_BANNER_DISWEB', 'banner_disenioweb');
+define('TBL_BANNER_DISGRAF', 'banner_diseniografico');
+define('TBL_BANNER_MARKONL', 'banner_markonline');
+define('TBL_BANNER_SERVEXTRA', 'banner_servextra');
 
 
 /*

@@ -7,6 +7,7 @@ class Index extends Controller {
         parent::Controller();
 
         $this->load->model('content_model');
+        $this->load->model('banner_model');
 
         $this->load->library('dataview', array(
             'tlp_section'          =>  'frontpage/content_view.php',
@@ -27,7 +28,8 @@ class Index extends Controller {
     public function index(){
         $this->_data = $this->dataview->set_data(array(
             'tlp_title_section' => 'Dise&ntilde;o Web',
-            'info'              => $this->content_model->get_disenioweb()
+            'info_content'      => $this->content_model->get_disenioweb(),
+            'info_banner'       => $this->banner_model->get_disenioweb()
         ));
         $this->load->view('template_frontpage_view', $this->_data);
     }
