@@ -14,7 +14,7 @@
             </div>
 
 <?php   
-        if( $n==4 || ($i+1)==count($info_portfolio) ) {
+        if( $n==2 || $i==count($info_portfolio)-1 ) {
             echo '</div>';
             $n=1;
         }else{

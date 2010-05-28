@@ -299,9 +299,9 @@ ul.list-faq li.item{
     .container-head .banner-portfolio .gallery{
         float:left;
         position: relative;
-        width: 520px;
+        width: 510px;
         height: 193px;
-        padding:10px 0 0 15px;
+        margin:10px 0 0 15px;
         overflow: hidden;
         /*border:1px solid red;*/
     }
@@ -315,7 +315,8 @@ ul.list-faq li.item{
         .container-head .banner-portfolio .container-slide .slide{
             position:relative;
             float:left;
-            width: 535px;
+            /*width: 535px;*/
+            width: 128px;
             height: 190px;
             left:0px;top: 0;
             /*border:1px solid;*/
@@ -525,9 +526,10 @@ ul.list-faq li.item{
         height: 800px;
         /*border:1px solid green;*/
     }
-        .portfolio-thumb .container-slide .slide{            
+        .portfolio-thumb .container-slide .slide{
             float: left;
-            width: 790px;
+            /*width: 790px;*/
+            width: 370px;
             height: 530px;
             /*border:1px solid red;*/
         }
@@ -568,7 +570,7 @@ ul.list-faq li.item{
     padding-top:218px;
 }
 .portfolio-nav-next{
-    left:805px;
+    left:835px;
     padding-top:218px;
 }
 

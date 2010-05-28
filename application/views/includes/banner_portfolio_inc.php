@@ -18,7 +18,7 @@
 
         echo '<div class="thumb"><a href="javascript:void(0);" onmouseover="this.firstChild.src=\''. $img_over .'\'" onmouseout="this.firstChild.src=\''. $info['src'] .'\'" class="reset-cursor"><img src="'. $info['src'] .'" alt="'. $info['name'] .'" width="119" height="85" /></a></div>';
 
-        if( $n==8 || $i==count($info_clients)-1 ) {
+        if( $n==2 || $i==count($info_clients)-1 ) {
             echo '</div>';
             $n=0;
         }

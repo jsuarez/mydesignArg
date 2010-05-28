@@ -24,6 +24,9 @@ class Portfolio extends Controller {
     /* PUBLIC FUNCTIONS
      **************************************************************************/
     public function index(){
+
+        //print_array($this->portfolio_model->list_portfolio(), true);
+
         $this->_data = $this->dataview->set_data(array(
             'tlp_title_section' => 'Portfolio',
             'info_portfolio'    => $this->portfolio_model->list_portfolio(),

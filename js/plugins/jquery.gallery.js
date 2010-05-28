@@ -12,6 +12,7 @@ var ClassGallery = function(options){
      var index=1;
      var slideWidth=0;
      var slideCount = 0;
+     var resto=0;
      var DEFAULT={
          selSlide : '',
          selArrowPrev : '',
@@ -37,6 +38,7 @@ var ClassGallery = function(options){
         if( index>1 ){
             working=true;
             index--;
+            resto-=slideWidth;
             move('+');
         }
         return false;
@@ -44,18 +46,19 @@ var ClassGallery = function(options){
     var next = function(e){
         e.preventDefault();
         if( working ) return false;
-        
-        if( index < slideCount ){
+
+        if( (elem.slideparent.width()-resto) > elem.slideparent2.width() ){
             working=true;
             index++;
+            resto+=slideWidth;
             move('-');
         }
         return false;
     };
 
     var move = function(sig){
-        elem.slideFirst.animate({
-            marginLeft : sig+'='+slideWidth
+        elem.slideparent.animate({
+            left : sig+'='+slideWidth
         }, options.animSpeed, function(){
             setVisibleNav();
             working=false;
@@ -63,17 +66,18 @@ var ClassGallery = function(options){
     };
 
     var setVisibleNav = function(){
+        var condition = (elem.slideparent.width()-(resto)) <= elem.slideparent2.width();
+
         if( options.controlNavAutoHide ){
             elem.navPrev.show();
             elem.navNext.show();
-            if( index==slideCount ) elem.navNext.hide();
+            if( condition ) elem.navNext.hide();
             else if( index==1 ) elem.navPrev.hide();
 
         }else{
             eval(elem.navPrev.data('gallery-info').dataprev);
             eval(elem.navNext.data('gallery-info').dataprev);
-
-            if( index==slideCount ) eval(elem.navNext.data('gallery-info').datanew);
+            if( condition ) eval(elem.navNext.data('gallery-info').datanew);
             else if( index==1 ) eval(elem.navPrev.data('gallery-info').datanew);
         }
     };
@@ -130,15 +134,17 @@ var ClassGallery = function(options){
     options = $.extend({}, DEFAULT, {}, options);
 
     elem.slide = $(options.selSlide);
-    elem.slideFirst = elem.slide.eq(0);
+    elem.slideparent = elem.slide.parent();
+    elem.slideparent2 = elem.slide.parent().parent();
+    elem.lastSlide = elem.slide.eq(elem.slide.length-1);
     slideCount = elem.slide.length;
-    slideWidth = elem.slideFirst.innerWidth();
+    slideWidth = elem.slide.eq(0).innerWidth();
 
-    elem.slideFirst.parent().css({
+    elem.slideparent.css({
         width : (slideWidth*slideCount)+"px",
         position : 'relative'
     });
-
+    
     elem.navPrev = $(options.selArrowPrev);
     elem.navNext = $(options.selArrowNext);
 
@@ -152,7 +158,7 @@ var ClassGallery = function(options){
         else elem.navNext.bind('click', next);
 
         if( options.controlNavHover ) {
-            elem.slideFirst.parent().hover(setVisibleNav, setHiddenNav);
+            elem.slideparent.hover(setVisibleNav, setHiddenNav);
             elem.navNext.hover(setVisibleNav, setHiddenNav);
             elem.navPrev.hover(setVisibleNav, setHiddenNav);
 

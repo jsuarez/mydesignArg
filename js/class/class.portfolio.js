@@ -12,6 +12,7 @@ var Portfolio = new (function(){
             selSlide      : '#gallery-clientes .slide',
             selArrowPrev  : '#gallery-clientes .jq-prev',
             selArrowNext  : '#gallery-clientes .jq-next',
+            thumbsBySlide   : 2,
             controlNavAutoHide : false,
             controlNavHoverPrev : 'images/arrow_left_disabled.png',
             controlNavHoverNext : 'images/arrow_right_disabled.png'
@@ -23,7 +24,7 @@ var Portfolio = new (function(){
             thumbs          : json,
             thumbsContainer : '.frame',
             thumbsClassName : 'image',
-            thumbsBySlide   : 4,
+            thumbsBySlide   : 2,
             cssAjaxLoader   : 'portfolio-ajaxloader',
             controlNavAutoHide : false,
             controlNavHoverPrev : 'images/arrow_previous_disabled.png',
