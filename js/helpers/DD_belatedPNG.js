@@ -303,5 +303,5 @@ DD_belatedPNG.createVmlNameSpace();
 DD_belatedPNG.createVmlStyleSheet();
 
 window.attachEvent("onload", function(){
-	DD_belatedPNG.fix('img, div');
+	DD_belatedPNG.fix('img, div, span');
 });

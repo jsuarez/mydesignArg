@@ -7,6 +7,11 @@ function print_array($arr, $die=FALSE){
     if( $die ) die();
 }
 
+function is_localhost(){
+    $hostname = $_SERVER['SERVER_NAME'];
+    return $hostname=="localhost" || preg_match("/192.168/", $hostname);
+}
+
 function file_search_special($dir, $filename_search){
     if( substr($dir,-1)=="/" ) $dir = substr($dir, 0, strlen($dir)-1);
     if( is_dir($dir) ){
@@ -42,7 +47,7 @@ function file_search_special($dir, $filename_search){
  }
 
 function delete_images_temp(){
-    $d = opendir(UPLOAD_DIR_TMP);
+    $d = opendir(UPLOAD_DIR_OBRAS.".tmp/");
     $CI =& get_instance();
     while( $file = readdir($d) ){
         if( $file!="." AND $file!=".." ){
@@ -80,11 +85,20 @@ function display_error($file, $function, $err, $param=array()){
     show_error($err);
 }
 
-function add_date($givendate, $day=0, $mth=0, $yr=0) {
+function add_date($givendate, $format='d-m-Y h:i:s', $params=array('d'=>0, 'm'=>0, 'y'=>0, 'h'=>0, 'i'=>0, 's'=>0)) {
+    $p = array(
+        'd' => !isset($params['d']) ? 0 : $params['d'],
+        'm' => !isset($params['m']) ? 0 : $params['m'],
+        'y' => !isset($params['y']) ? 0 : $params['y'],
+        'h' => !isset($params['h']) ? 0 : $params['h'],
+        'i' => !isset($params['i']) ? 0 : $params['i'],
+        's' => !isset($params['s']) ? 0 : $params['s']
+    );
+
     $cd = strtotime($givendate);
-    $newdate = date('d-m-Y h:i:s', mktime(date('h',$cd),
-    date('i',$cd), date('s',$cd), date('m',$cd)+$mth,
-    date('d',$cd)+$day, date('Y',$cd)+$yr));
+    $newdate = date($format, mktime(date('h',$cd)+$p['h'],
+    date('i',$cd)+$p['i'], date('s',$cd)+$p['s'], date('m',$cd)+$p['m'],
+    date('d',$cd)+$p['d'], date('Y',$cd)+$p['y']));
     return $newdate;
 }
 
@@ -106,36 +120,123 @@ function arr_search ( $array, $expression ) {
     return $result;
 }
 
-function construct_bloq($config){
-    // ===== [config] =====
-    // result            : array
-    // tag_open          : string
-    // tag_close         : string
-    // tag_open_special  : string
-    // tag_link          : boolean
-    // field             : string
-    // total_row         : integer
+function array_insert(&$array, $elemento, $pos) {
 
-    $col=$n=0;
-    foreach( $config['result'] as $row ){
-        $n++;
-        if( $n==1 ){
-            $col++;
-            if( $col==1 ) echo $config['tag_open'];
-            else echo $config['tag_open_special'];
-        }
+    if($pos < 0) {
+        return;
+    }
 
-        if( $n<=$config['total_row'] ){
-            $name = $row[$config['field']];
-            $tag = isset($config['tag_link']) ? '<a href="'. site_url('index/searcher/city/'.$name) .'" class="link1">'.$name.'</a>' : $name;
-            echo '<li>'. $tag .'</li>';
-        }
+    ## si la posicion es mayor que el tamaño de la lista
+    ## el nodo se inserta al final
+    if($pos>=count($array) ) {
+        array_push($array,$elemento);
+        return;
+    }
 
-        if( $n==$config['total_row'] || $n==count($config['result']) ){
-            echo $config['tag_close'];
-            $n=0;
+    $listaaux=array(); # array auxiliar
+        ## buscamos la posicion en el array, para ello las posiciones anteriores
+        ## las guardamos en el array auxiliar
+    for($cont=0;$cont<$pos;$cont++) {
+        $listaaux[] = array_shift($array);
+    }
+
+        ## ahora se inserta el elemento al principio del array original
+    array_unshift($array,$elemento);
+
+        ## ahora recorremos el array auxiliar desde el final y vamos insertando
+        ## sus elementos al principio del array original
+    if(count($listaaux)>0) {
+        for($i=count($listaaux)-1;$i>=0;$i--) {
+            array_unshift($array,$listaaux[$i]);
         }
     }
+}
+
+function array_implode($parent, $arr){
+    $ret="";
+    foreach( $arr as $key=>$val ){
+        if( !empty($val) ) $ret.= $key . $parent . $val . $parent;
+        else $ret.= $key . $parent;
+    }
+    return $ret;
+}
+
+function EmailMessageConstructor($data, $arr){
+    $ret = array();
+    foreach( $arr as $key=>$val ){
+        if( isset($data[$key]) ){
+            if( is_array($data[$key]) ){
+                foreach( $data[$key] as $v ) $val = sprintf($val, $v);
+                $ret[] = $val;
+            }else{
+                if( !empty($data[$key]) && $data[$key]!='null' )
+                    $ret[] = sprintf($val, $data[$key]);
+            }
+        }
+    }
+    return implode("", $ret);
+}
+
+function normalize($text, $separator = "-"){
+    $isUTF8 = (mb_detect_encoding($text." ",'UTF-8,ISO-8859-1') == 'UTF-8');
+
+    $text = ($isUTF8) ? utf8_decode($text) : $text;
+    $text = trim($text);
+
+    $_a = utf8_decode("ÁÀãâàá");
+    $_e = utf8_decode("ÉÈéè");
+    $_i = utf8_decode("ÍÌíì");
+    $_o = utf8_decode("ÓÒóò");
+    $_u = utf8_decode("ÚÙúù");
+    $_n = utf8_decode("Ññ");
+    $_c = utf8_decode("Çç");
+    $_b = utf8_decode("ß");
+    $_dash = "\.,_ ";
+
+    $text = preg_replace("/[$_a]/", "a", $text );
+    $text = preg_replace("/[$_e]/", "e", $text );
+    $text = preg_replace("/[$_i]/", "i", $text );
+    $text = preg_replace("/[$_o]/", "o", $text );
+    $text = preg_replace("/[$_u]/", "u", $text );
+    $text = preg_replace("/[$_n]/", "n", $text );
+    $text = preg_replace("/[$_c]/", "c", $text );
+    $text = preg_replace("/[$_b]/", "ss", $text );
+
+    $text = preg_replace("/[$_dash]/", $separator, $text );
+    $text = preg_replace("/[^a-zA-Z0-9\-]/", "", $text );
+
+    $text = strtolower($text);
+
+    return ($isUTF8) ? utf8_encode($text) : $text;
+}
+
+function get_def_post($val, $def){
+    $val = trim($_POST[$val]);
+    if( empty($val) ){
+        return trim($def);
+    }else{
+        return $val;
+    }
+}
+
+function getval($val, $def, $t=''){
+    return $val==$t ? $def : '';
+}
+
+function calc_age($date){
+    if( empty($date) || is_null($date) ) return '';
+
+    $day = date('d', $date);
+    $month = date('m', $date);
+    $year = date('Y', $date);
+
+    $year_dif = date("Y") - (int)$year;
+    $month_dif = date("m") - (int)$month;
+    $day_dif = date("d") - (int)$day;
+
+    if ($day_dif < 0 || $month_dif < 0) $year_dif--;
+
+    return $year_dif;
 }
 
 ?>

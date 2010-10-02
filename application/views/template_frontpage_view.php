@@ -1,125 +1,63 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <title><?=TITLE_GLOBAL . @$tlp_title;?></title>
+    <base href="<?=base_url();?>" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="<?=META_DESCRIPTION_GLOBAL . @$tlp_meta_description;?>" />
     <meta name="keywords" content="<?=META_KEYWORDS_GLOBAL . @$tlp_meta_keywords;?>" />
-    <?php require('includes/head_inc.php');?>
-    <?php if( isset($tlp_script) && !empty($tlp_script) ) {
-        if( !is_array($tlp_script) ) $tlp_script = array($tlp_script);
-        foreach( $tlp_script as $file ){
-            require('js/includes/'.$file.'_inc.php');
-        }
-    }?>
-</head>
-
-<body>
-<noscript>
-    <p>Bienvenido a MyDesign</p>
-    <p>
-        La p&aacute;gina que est&aacute;s viendo requiere para su funcionamiento el uso de JavaScript.
-        Si lo has deshabilitado intencionadamente, por favor vuelve a activarlo.
-    </p>
-</noscript>
-
-<div class="container">
-
-    <div class="span-24 last">
-        <!-- ================  HEADER  ================ -->
-        <div class="span-22 prepend-1 append-1 last header">
-            <?php require('includes/header_inc.php');?>
-        </div>
-        <!-- ================  FIN HEADER  ================ -->
-
-        <!-- =============== CONTAINER CENTRAL =============== -->
-        <div class="clear span-22 prepend-1 append-1 last">
+    <meta name="robots" content="index,follow" />
+    <link href="images/favicon.ico" rel="stylesheet icon" type="image/ico" />    
 <?php
-$seg = $this->uri->segment(1);
-$condition = $seg=="faq" || $seg=="sitemap";
+    //INCLUYE LOS SCRIPT CSS
+    if( isset($tlp_script) && !empty($tlp_script) ) $tlp_script = implode('/', $tlp_script);
+    echo '<link rel="stylesheet" href="'.site_url('/load/css/initializer/'.@$tlp_script).'" type="text/css" media="screen, projection" />'.chr(13);
 ?>
-
-            <div class="span-22 container-head <?php if( $condition ) echo "height-inherit";?>">
-                <!-- ============= BANNER ============= -->
-                <?php
-                    if( !$condition ){
-                        switch( $seg ){
-                            default:
-                                require('includes/banner_content_inc.php');
-                            break;
-                            case "portfolio":
-                                require('includes/banner_portfolio_inc.php');
-                            break;
-                            case "empresa":
-                                require('includes/banner_empresa_inc.php');
-                            break;
-                        }
-
-                    }else{
-                        echo '<div class="content-special">';
-                        echo '<h1>'. $tlp_title_section .'</h1>';
-                        require($tlp_section);
-                        echo '</div>';
-                    }
-                ?>
-                <!-- ============= FIN BANNER ============= -->
-
-                <!-- ============= SOLICITAR INFO ============= -->
-                <div class="sidebar">
-                    <div class="form-top"><h4>Solicitar Informaci&oacute;n</h4></div>
-                    <div class="form-center">
-                        <div id="si-mask" class="mask"></div>
-                        <div id="si-ajaxloader" class="ajaxloader"></div>
-                        <?php require('includes/solicitarinfo_inc.php');?>
-                    </div>
-                    <div class="form-bottom"></div>
-                </div>
-                <!-- ============= FIN SOLICITAR INFO ============= -->
-
-                <div class="solapas">
-                    <a href="<?=site_url('empresa');?>" onmouseover="this.firstChild.src='images/button_empresa_over.png'" onmouseout="this.firstChild.src='images/button_empresa.png'"><img src="images/button_empresa.png" alt="Empresa" width="32" height="85" /></a>
-                    <a href="http://www.mydesign.com.ar/blog/" onmouseover="this.firstChild.src='images/button_blog_over.png'" onmouseout="this.firstChild.src='images/button_blog.png'"><img src="images/button_blog.png" alt="Blog" width="32" height="85" /></a>
-                </div>
-            </div>
-
-        <?php if( !$condition ){?>
-            <div class="clear span-22 last content">
-                <h1><?=$tlp_title_section;?></h1>
-
-        <?php if( $seg=='' || $seg=='disenio_web' || $seg=='disenio_grafico' || $seg=='marketing_online' || $seg=='servicios_extra' ){?>
-                <div class="column-left">
-                    <?php require($tlp_section);?>
-                </div>
-                <div class="column-right">
-                    <div class="sidebar">
-                        <div class="form-top"><h4>Ultimos Post</h4></div>
-                        <div class="form-center">
-                            <ul class="list-item">
-                                <li><a href="http://www.mydesign.com.ar/blog/2010/03/23/etiquetas-para-e-commerce/">Etiquetas para E-commerce</a></li>
-                                <li><a href="http://www.mydesign.com.ar/blog/2010/02/15/10-plugins-jquery-para-google-maps/">10 Plugins JQuery para Google Maps</a></li>
-                                <li><a href="http://www.mydesign.com.ar/blog/2010/01/29/para-que-podemos-usar-twitter/">PARA QUÉ PODEMOS USAR TWITTER?</a></li>
-                            </ul>
-                        </div>
-                        <div class="form-bottom"></div>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif" />
+    <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"/><![endif]-->
+    <!--[if IE 6]>
+    <link href="css/style_ie6.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if IE 7]>
+    <link href="css/style_ie7.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <script type="text/javascript" src="<?=site_url("load/js/initializer")?>"></script>
+<?php
+    //INCLUYE LOS SCRIPT JS
+    if( isset($tlp_script) && !empty($tlp_script) )
+        echo '<script type="text/javascript" src="'. site_url('load/js/'.implode('/', $tlp_script)) .'"></script>'.chr(13);
+?>    <!--[if IE 6]>
+    <script type="text/javascript">var IE6UPDATE_OPTIONS={icons_path:"js/plugins/ie6update/ie6update/images/"}</script>
+    <script type="text/javascript" src="js/plugins/ie6update/ie6update/ie6update.js"></script>
+    <script type="text/javascript" src="js/helpers/DD_belatedPNG.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container">
+        <div class="span-24 last header">
+            <?php require('includes/header_inc.php')?>
+        </div>
+        <div class="clear span-24 last main-container">
+            <div class="column-container">
+                <div class="top"></div>
+                <div class="middle">
+                    <h1 class="title"><?=@$tlp_title_section?></h1>
+                    <div class="clear">
+                    <?php require($tlp_section)?>
                     </div>
                 </div>
-        <?php }else{?>
-                <?php require($tlp_section);?>
-        <?php }?>
-
-                <div class="bg-bottom"></div>
+                <div class="bottom"></div>
+                <div class="iso iso1"></div>
             </div>
-        <?php }?>
+            <div class="column-sidebar">
+                <?php require('includes/sidebar_inc.php')?>
+            </div>
         </div>
-        <!-- ================  FIN MAIN CONTAINER  ================ -->
-
-        <!-- =============== FOOTER =============== -->
-        <div class="clear span-22 prepend-1 append-1 last footer">
-            <?php require('includes/footer_inc.php');?>
-        </div>
-        <!-- =============== FIN FOOTER =============== -->
     </div>
-</div>
+    <div class="footer"> 
+        <?php require('includes/footer_inc.php')?>
+    </div>
 </body>
 </html>

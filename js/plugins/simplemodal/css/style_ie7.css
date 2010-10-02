@@ -1,0 +1,15 @@
+/*
+ * SimpleModal Basic Modal Dialog
+ * http://www.ericmmartin.com/projects/simplemodal/
+ * http://code.google.com/p/simplemodal/
+ *
+ * Copyright (c) 2009 Eric Martin - http://ericmmartin.com
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+ * Revision: $Id: basic_ie.css 187 2009-02-10 00:01:01Z emartin24 $
+ *
+ */
+
+#simplemodal-container #basic-modal-content {padding-right: 40px; width: 550px !important; height:310px; overflow:auto;}

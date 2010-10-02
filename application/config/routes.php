@@ -43,7 +43,5 @@
 $route['default_controller'] = "index";
 $route['scaffolding_trigger'] = "";
 
-$route['disenio_web'] = 'index';
-
 /* End of file routes.php */
 /* Location: ./system/application/config/routes.php */
