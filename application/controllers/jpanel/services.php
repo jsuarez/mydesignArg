@@ -47,15 +47,14 @@ class Services extends Controller {
                 'reference'            => $params['reference']
             ));
             if( is_numeric($id) ){ //EDIT
-                $info = $this->services_model->get_info($id);
+                $info = $this->services_model->get_service($id);
                 $data['tlp_title_section'] = "Editar - ".$info['title'];
-                $data['tlp_script'] = array('class_services');
                 $data['info'] = $info;
             }else{                 //NUEVO
                 $data['tlp_title_section'] = "Nuevo";
-                $data['tlp_script'] = array('helpers_json', 'class_services', 'plugins_validator', 'plugins_picturegallery');
-                $data['tlp_script_special'] = array('plugins_tiny_mce', 'plugins_jqui_sortable');
             }
+            $data['tlp_script'] = array('helpers_json', 'plugins_validator', 'plugins_picturegallery',  'class_services');
+            $data['tlp_script_special'] = array('plugins_tiny_mce', 'plugins_jqui_sortable');
             $this->load->view('template_panel_view', $data);
 
         }
@@ -63,6 +62,7 @@ class Services extends Controller {
 
     public function create(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
+           // print_array($_POST["json"]);die();
             $res = $this->services_model->create();
             if( !$res ){
                 $this->session->set_flashdata('status', "error");

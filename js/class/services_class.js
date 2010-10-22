@@ -52,6 +52,7 @@ var Services=new(function(){
             // Configura el editor
             TinyMCE_init.width = '300px';
             TinyMCE_init.height = '250px';
+
             tinyMCE.init(TinyMCE_init);
 
             // ESTO ES PARA EL UPLOAD SIMPLE

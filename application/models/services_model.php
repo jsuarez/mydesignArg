@@ -1,5 +1,5 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-class Services_model extends Model {
+class services_model extends Model {
 
     /* CONSTRUCTOR
      **************************************************************************/
@@ -10,6 +10,7 @@ class Services_model extends Model {
     /* PRIVATE PROPERTIES
      **************************************************************************/
     private $reference;
+    private $_path;
 
     /* PUBLIC FUNCTIONS
      **************************************************************************/
@@ -52,9 +53,18 @@ class Services_model extends Model {
         print_array($json);
 
         $this->reference = $this->input->post('reference');
+
+        /*
+         * `content_id`, `codlang`, `reference`, `reference2`, `title`,
+         *  `content_intro`, `content_full`, `thumb`, `thumb_gallery1`,
+         * `thumb_gallery2`, `thumb_gallery3`, `thumb_gallery1_w`,
+         * `thumb_gallery1_h`, `thumb_gallery2_w`, `thumb_gallery2_h`,
+         * `thumb_gallery3_w`,
+         * `thumb_gallery3_h`, `order`, `date_added`, `last_modified`
+         */
         $data = array(
             'codlang'       => 1,
-            'reference'     => normalize($this->reference),
+            'reference'     => $this->reference,
             'reference2'    => normalize($this->input->post('txtTitle')),
             'title'         => $this->input->post('txtTitle'),
             'content_intro' => $this->input->post('txtDescription'),
@@ -65,14 +75,61 @@ class Services_model extends Model {
         );
 
          $this->db->trans_start(); // INICIO TRANSACCION
+         $this->_path = UPLOAD_PATH_SERVICES_THUMBS .$this->reference;
          if( $this->db->insert(TBL_CONTENTS_SERVICES, $data) ){
              $id = $this->db->insert_id();
 
-             if( !@copy(urldecode($json->image_thumb->href_image_full), UPLOAD_PATH_SERVICES_THUMBS .$ref."/". urldecode($json->image_thumb->filename_image)) ) return false;
+             if( !@copy(urldecode($json->image_thumb->href_image_full),  $this->_path."/". urldecode($json->image_thumb->filename_image)) ) return false;
              if( !$this->_copy_images($json->gallery->images_new, $id) ) return false;
              
          }
          $this->db->trans_complete(); // COMPLETO LA TRANSACCION
+         $this->_delete_images_tmp();
+die();
+         return true;
+    }
+    public function edit(){
+        print_array($_POST)."<br>";
+        print_array($json);
+        $json = json_decode($this->input->post('json'));
+        $content_id = $this->input->post('content_id');
+
+
+        $this->reference = $this->input->post('reference');
+
+        /*
+         * `content_id`, `codlang`, `reference`, `reference2`, `title`,
+         *  `content_intro`, `content_full`, `thumb`, `thumb_gallery1`,
+         * `thumb_gallery2`, `thumb_gallery3`, `thumb_gallery1_w`,
+         * `thumb_gallery1_h`, `thumb_gallery2_w`, `thumb_gallery2_h`,
+         * `thumb_gallery3_w`,
+         * `thumb_gallery3_h`, `order`, `date_added`, `last_modified`
+         */
+        $data = array(
+            'codlang'       => 1,
+            'reference'     => $this->reference,
+            'reference2'    => normalize($this->input->post('txtTitle')),
+            'title'         => $this->input->post('txtTitle'),
+            'content_intro' => $this->input->post('txtDescription'),
+            'content_full'  => $this->input->post('txtContent'),
+            'thumb'         => $json->image_thumb->filename_image,
+            'order'         => $this->_get_num_order(TBL_CONTENTS_SERVICES),
+            'date_added'    => strtotime(date('d-m-Y'))
+        );
+
+         $this->db->trans_start(); // INICIO TRANSACCION
+         $this->_path = UPLOAD_PATH_SERVICES_THUMBS .$this->reference;
+         if( $this->db->update(TBL_CONTENTS_SERVICES, $data, array('content_id' => $content_id)) ){
+             if( !@copy(urldecode($json->image_thumb->href_image_full),  $this->_path."/". urldecode($json->image_thumb->filename_image)) ) {
+                    return false;
+              }
+              else{
+                  @unlink(urldecode($_POST['image_thumb_old']));
+              }
+              if( !$this->_copy_images($json->gallery->images_new, $content_id) ) return false;
+         }
+         $this->db->trans_complete(); // COMPLETO LA TRANSACCION
+         $this->_delete_images_tmp();
 die();
          return true;
     }
@@ -107,6 +164,21 @@ die();
         }
 
         return true;
+    }
+
+    /* PRIVATE FUNCTIONS
+     **************************************************************************/
+    private function _delete_images_tmp(){
+        $dir = $this->_path."/.tmp";
+        echo "directorio: ".$dir."_";
+        $d = opendir($dir);
+        while( $file = readdir($d) ){
+            if( $file!="." AND $file!=".." ){
+                if( preg_replace('/_.*$/', '', $file)==$this->session->userdata('users_id') )
+                    @unlink($dir."/".$file);
+            }
+        }
+
     }
 
 }
