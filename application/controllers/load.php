@@ -35,6 +35,7 @@ class Load extends Controller {
                     $indexphp = index_page();
                     if( !empty($indexphp) ) $indexphp.="/";
                     echo 'var baseURI = document.getElementsByTagName("base")[0].getAttribute("href")+"'.$indexphp.'";';
+                    echo 'var url_suffix = "'.$this->config->item('url_suffix').'";';
                 }
                 echo read_file('./js/'.$val.".js");
             }
@@ -52,6 +53,10 @@ class Load extends Controller {
             if( $filename=="initializer" ){
                $output.= read_file('./css/blueprint/screen'.$this->config->item('sufix_pack_css').'.css');
                $output.= read_file('./css/style'.$this->config->item('sufix_pack_css').'.css');
+            }elseif( $filename=="initializer_panel" ){
+               $output.= read_file('./css/blueprint/screen'.$this->config->item('sufix_pack_css').'.css');
+               $output.= read_file('./css/style'.$this->config->item('sufix_pack_css').'.css');
+               $output.= read_file('./css/style_panel'.$this->config->item('sufix_pack_css').'.css');
 
             }else{
                 require('./js/includes/'.$filename.'_inc.php');

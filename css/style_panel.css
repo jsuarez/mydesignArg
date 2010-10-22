@@ -1,0 +1,90 @@
+.thumbframe1{
+    padding: 5px;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+
+
+/* CONTAINER PACK
+ -----------------------------------------------------------------------------*/
+.main-container .cont-pack .cont-icons{
+    position: absolute;
+    left:0;
+    top:250px;
+}
+    .main-container .cont-pack .cont-icons a{
+        margin-right: 10px;
+    }
+    .main-container .cont-pack .cont-icons img{
+        position: relative;
+        top:4px;
+    }
+.main-container .cont-pack a.handler{
+    position: absolute;
+    left:15px;
+    top:15px;
+    width: 200px;
+    height: 120px;
+    z-index: 1000;
+}
+    .main-container .cont-pack a.handler:hover{
+        background: transparent url({BASE_URL}img/icon_move.png) no-repeat center;
+    }
+
+/* ESTILOS PARA EL FORMULARIO "SERVICIOS"
+ -----------------------------------------------------------------------------*/
+.form-services label{
+    width: 120px;
+}
+.form-services input{
+    width: 300px;
+}
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA LA GALERIA DE IMAGEN
+ -----------------------------------------------------------------------------*/
+fieldset{
+    padding: 10px;
+    border:2px solid #501B23;
+}
+    fieldset legend{
+        font-size: 100%;
+        padding: 0 5px 0 5px;
+    }
+
+fieldset.gallery-panel{
+    float:left;
+    width: 500px;
+    height: 250px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+    fieldset.gallery-panel .cont{
+        float: left;
+        width: 500px;
+        height: 250px;
+        position: relative;
+        overflow: auto;
+        /*border: 1px solid red;*/
+    }
+
+    fieldset.gallery-panel ul{
+        margin:0;
+        padding:0;
+    }
+        fieldset.gallery-panel ul li{
+            list-style-type: none;
+            display: inline;
+            float:left;
+            width: 120px;
+            height: 100px;
+            margin: 0 8px 8px 0;
+            padding:5px;
+            background-color: #EEF3F6;
+            border: 2px solid #A5A5A5;
+            text-align: center;
+        }
+            fieldset.gallery-panel ul li .d1{
+                clear: both;
+                margin-top: 5px;
+            }

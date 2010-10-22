@@ -1,13 +1,13 @@
 // VALORES POR DEFECTO
 var jQueryValidatorOptDef = {
-    success: function(label) {
-        label.text('Ok!').addClass('valid-success');
-    },
     errorPlacement: function(error, element) {
+        var a=$('#txtPhoneCode');
+        var left = -190;
+        var top = element.attr('id')=="txtConsult" ? element.offset().top-145 : element.offset().top-160;
         error.css({
             position : 'absolute',
-            left : element.offset().left + element.innerWidth()+3,
-            top  : element.offset().top-3
+            left : left,
+            top  : top
         })
         element.parent().append(error);
     },
@@ -27,15 +27,9 @@ jQuery.validator.addMethod("password", function(value, element, param) {
         eval('var RegExPattern = new RegExp(/(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{'+ 8 +','+ 10 +'})$/);');
         return value.match(RegExPattern);
     }
-}, "El password debe tener entre 8 y 10 caracteres, por lo menos un dígito y un alfanumérico,<br /> y no puede contener caracteres espaciales.");
+}, "El password debe tener entre 8 y 10 caracteres, por lo menos un dígito y un alfanumérico, y no puede contener caracteres espaciales.");
 
-jQuery.validator.addMethod("username", function(value, element, param) {
-    if( value.length>0 && param ){
-        eval('var RegExPattern = new RegExp(/^[a-z0-9ü][a-z0-9ü_]{5,10}$/);');
-        return value.match(RegExPattern);
-    }
-}, "El usuario debe tener entre 5 y 10 caracteres, debe ser en min&uacute;scula y<br /> no puede contener caracteres espaciales.");
+jQuery.validator.addMethod("tinymce_required", function(value, element, param) {
+    return tinyMCE.get(element.id).getContent().length>0;
 
-jQuery.validator.addMethod("required_list", function(value, element, param) {
-    return $(element).find('option').length>0;
 }, "Este campo es obligatorio.");

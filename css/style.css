@@ -12,16 +12,27 @@ h1.title, h2.title, h3.title, h4.title{
     float: left;
 }
 h1.title{
-    font-size: 200%;
-    margin: -30px 0 20px -18px;
+    font-size: 190%;
+    margin: -30px 0 15px -18px;
     padding: 0 100px 8px 70px;
+    border-bottom: 1px dashed #1C3A50;
+}
+h2.title{
+    font-size: 150%;
+    width: 100%;
+    padding-bottom: 2px;
     border-bottom: 1px dashed #1C3A50;
 }
 h3.title{
     font-size: 120%;
-    margin: 0 0 10px -10px;
+    margin: 0 0 5px -10px;
     padding: 0 0 5px 10px;
     width:210px;
+    border-bottom: 1px dashed #1C3A50;
+}
+h3.title2{
+    font-size: 150%;
+    padding-bottom: 5px;
     border-bottom: 1px dashed #1C3A50;
 }
 h4.title{
@@ -38,13 +49,14 @@ h4.title{
  - ESTILO PARA MENSAJES DEL VALIDADOR
  -----------------------------------------------------------------------------*/
 .valid-success{
-    background: transparent url(../img/icon_success.png) no-repeat left !important;
+    background: transparent url({BASE_URL}img/icon_success.png) no-repeat left !important;
     width: 16px;
     height: 16px;
     padding: 0 0 0 18px !important;
     color: #264409 !important;
     border: none !important;
     font-size: 100% !important;
+    z-index: 100;
 }
 .valid-error{
     background: #FBE3E4;
@@ -54,9 +66,10 @@ h4.title{
     margin-left: 5px;
     font-size: 90%;
     font-weight: normal;
-    min-width: 150px;
-    max-width: 230px;
+    min-width: 180px;
+    max-width: 180px;
     text-align: left;
+    z-index: 100;
 }
 .valid-highlight{border-style: dashed !important;}
 .valid-unhighlight{border-style: solid !important;}
@@ -64,14 +77,26 @@ h4.title{
 /*------------------------------------------------------------------------------
  - ESTILOS PARA LINK
  -----------------------------------------------------------------------------*/
-a.link-moreinfo{
-    float: right;
-    background: url({BASE_URL}img/icon-arrow.png) no-repeat right bottom;
+a.link-moreinfo, a.link-back{
     color:#F69924;
     font-weight: bold;
     font-style: italic;
     font-size: 110%;
+}
+a.link-moreinfo{
+    position: absolute;
+    display: block;
+    left:130px;
+    top:250px;
+    background: url({BASE_URL}img/icon-arrow-right.png) no-repeat right bottom;
     padding: 0 9px 4px 0;
+    font-size: 100%;
+}
+a.link-back{
+    float: left;
+    background: url({BASE_URL}img/icon-arrow-left.png) no-repeat left bottom;
+    padding:0 0 2px 10px;
+    margin-right: 10px;
 }
 a.link-img{
     color:#A62D38 !important;
@@ -82,6 +107,19 @@ a.link-img{
         top:3px;
     }
     a.link-img:hover{color:#581B23 !important;}
+
+a.link-arrow-left{
+    float: left;
+    background: url({BASE_URL}img/icon-arrow-left2.png) no-repeat left bottom;
+    padding: 0 0 5px 10px;
+}
+a.link-arrow-right{
+    float: right;
+    background: url({BASE_URL}img/icon-arrow-right2.png) no-repeat right bottom;
+    padding: 0 10px 5px 0;
+}    
+a.link-arrow-left, a.link-arrow-right:hover{color: #273B56}
+
 
 /*------------------------------------------------------------------------------
  - ESTILOS PARA LABEL
@@ -165,18 +203,34 @@ button{
 .header .menu{
     clear: both;
     float: left;
+    position: relative;
+    z-index: 10;
     background: url({BASE_URL}img/menu.png) no-repeat;
     width: 974px;
     height: 62px;
     margin-top: 15px;
+    z-index: 300;
 }
     .header .menu ul,.header .menu li{
         margin: 0;
         padding: 0;
         list-style-type: none;
     }
+    .header .menu ul li.back {
+        background: #FCDB89 url({BASE_URL}img/menu-right.png) no-repeat right top;
+        z-index: 11;
+        position: absolute;
+    }
+        .header .menu ul li.back .left {
+            background: url({BASE_URL}img/menu-left.png) no-repeat;
+            height: 37px;
+            width: 27px;
+        }
+
     .header .menu ul{
-        margin: 12px 0 0 18px;
+        margin: 10px 0 0 18px;
+        position: relative;
+        overflow: hidden;
         /*border: 1px solid red;*/
     }
     .header .menu li{
@@ -185,13 +239,26 @@ button{
         text-align: center;
     }
     .header .menu a{
+        position: relative;
         display: block;
-        padding: 5px 27px 0 27px;
-        height: 30px;
+        float: left;
+        padding: 9px 26px 0 26px;
+        height: 26px;
+        z-index: 20;
         /*border: 1px solid green;*/
     }
+    .header .menu a:hover h1{
+        color:#1C3A50 !important;
+    }
+        .header .menu li.current h1{
+            color:#1C3A50;
+        }
     .header .menu .line{
-        background: url({BASE_URL}img/menu-separator.jpg) no-repeat right top;
+        float: right;
+        background: url({BASE_URL}img/menu-separator.jpg) no-repeat;
+        width: 1px;
+        height: 37px;
+        margin-right: -2px;
     }
     .header .menu h1{
         font-size: 170%;
@@ -210,7 +277,7 @@ button{
         float: left;
         position: relative;
         width: 730px;
-        z-index: 10;
+        z-index: 200;
         /*border: 1px solid red;*/
     }
         .main-container .column-container .top{
@@ -229,6 +296,7 @@ button{
             width:670px;
             padding: 0 30px 0 30px;
             z-index: 10;
+            font-size: 110%;
     }
         .main-container .column-container .bottom{
             position: relative;
@@ -239,56 +307,67 @@ button{
             height: 24px;
             z-index: 10;
         }
-        .main-container .column-container .iso{
-            position: relative;
-            z-index: 0;
-            clear: left;
+        .main-container .column-container .content-moreinfo{
             float: left;
+            width: 500px;
+            height: auto;
         }
-        .main-container .column-container .iso1{
-            background: url({BASE_URL}img/iso-01.png) no-repeat;
-            width: 381px;
-            height: 336px;
-            margin: -328px 0 0 -158px;
-        }
-        
+
+
 /* CONTAINER PACK
  -----------------------------------------------------------------------------*/
     .main-container .cont-pack{
+        position: relative;
         float: left;
-        width: 202px;
-        height: 268px;
-        margin: 0 20px 10px 0;
+        width: 205px;
+        height: 280px;
+        margin: 0 26px 0 0;
         /*border: 1px solid green;*/
     }
-        .main-container .cont-pack .thumb{
+        .main-container .cont-pack .cont-thumb{
+            position: relative;
+            width: 230px;
+            height: 150px;
             display: block;
-            width: 200px;
-            height: 120px;
-            margin-bottom: 8px;
-            border: 1px solid red;
+            margin: 0 0 3px -15px;
+            /*border:1px solid red;*/
         }
+            .main-container .cont-pack .cont-thumb .mask{
+                position: relative;
+                background: transparent url({BASE_URL}img/mask-thumb.png) no-repeat;
+                width: 230px;
+                height: 150px;
+                z-index: 100;
+            }
+            .main-container .cont-pack .cont-thumb .image{
+                position: absolute;
+                left:15px;
+                top:15px;
+                z-index: 0;
+            }
         .main-container .cont-pack h2{
-            font-size: 150%;
+            font-size: 130%;
             padding-bottom: 2px;
-            margin-bottom: 8px;
+            margin-bottom: 0;
             width: 200px;
             border-bottom: 1px dashed #1C3A50;
+            white-space: nowrap;
         }
         .main-container .cont-pack p{
             clear: left;
-            font-size: 115%;
-            margin: 0 0 4px 0 !important;
+            font-size: 100%;
+            margin: -5px 0 0 0 !important;
         }
 
 
 /* SIDEBAR
  -----------------------------------------------------------------------------*/
     .main-container .column-sidebar{
-        float: right;
-        position: relative;
-        right: 12px;
+        float: left;
         width:245px;
+        margin-left: -8px;
+        position: relative;
+        z-index: 200;
         /*border: 1px solid red;*/
     }
 /* SIDEBAR - SOPORTE
@@ -297,8 +376,8 @@ button{
             float: left;
             background: url({BASE_URL}img/bg-soporte.png) no-repeat;
             width:245px;
-            height: 42px;
-            padding-top:11px;
+            height: 38px;
+            padding-top:12px;
             font-size: 150%;
             color:#1B3A50;
             text-align: center;
@@ -335,6 +414,16 @@ button{
             .main-container .column-sidebar .form-contact p{
                 margin: 4px 0 4px 0 !important;
             }
+            .main-container .column-sidebar .form-contact .fc-message{
+                font-size: 110%;
+                text-align: center;
+                padding-top: 60px;
+                display: none;
+            }
+                .main-container .column-sidebar .form-contact .fc-message img{
+                    margin-top: 5px;
+                }
+
 
         /* SIDEBAR - CONT TESTIMONIAL
          ---------------------------------------------------------------------*/
@@ -354,7 +443,7 @@ button{
             }
                 .main-container .column-sidebar .cont-testimonial .info .col1{
                     float: left;
-                    width: 140px;
+                    width: 143px;
                 }
                 .main-container .column-sidebar .cont-testimonial .info p{
                     clear: left;
@@ -363,16 +452,143 @@ button{
                     text-align: right;
                 }
 
+        /* SIDEBAR - CONT TESTIMONIAL
+         ---------------------------------------------------------------------*/
+        .main-container .column-sidebar .cont-banner{
+            position: relative;
+            clear: left;
+            float:left;
+            margin-left: 10px;
+            overflow: hidden;
+            /*border:1px solid red;*/
+        }
+            .main-container .column-sidebar .cont-banner .mask{
+                position: relative;
+                background: url({BASE_URL}img/mask-banner.png) no-repeat;
+                width: 250px;
+                height: 197px;
+                z-index: 110;
+                margin-left: -10px;
+            }
+            .main-container .column-sidebar .cont-banner .cont-images{
+                position: absolute;
+                width: 250px;
+                height: 197px;
+                top:0;
+                left:-10px;
+                overflow: hidden;
+            }
 
 /*------------------------------------------------------------------------------
  - ESTILO QUE ESTAN EN EL "FOOTER"
  -----------------------------------------------------------------------------*/
 .footer{
     clear: both;
-    background: url({BASE_URL}img/bg-footer.jpg) no-repeat;
-    width: 1360px;
+    position: relative;
+    z-index: 10;
+    width: 100%;
     height: 295px;
-    margin: 0 auto;
+    margin: 5px auto;
+}
+    .footer .cont{
+        width: 978px;
+        margin:0 auto;
+        color:#fff;
+        font-size: 110%;
+        /*border:1px solid red;*/
+    }
+        .footer .cont a,.footer .cont a:link{
+            color:#fff;
+        }
+        .footer .cont a:hover{
+            text-decoration: underline;
+        }
+        .footer .cont h4{
+            color:#fff;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 110%;
+            margin: 0 0 8px 0;
+        }
+        .footer .cont a.link-footer{
+            color:#97A2B2 !important;
+        }
+        .footer .cont a.link-webamiga, .footer .cont a.link-webamiga:link{
+            color: #6F9FD0;
+        }
+        .footer .cont strong{
+            color:#306186;
+        }
+        .footer .cont .col1, .footer .cont .col2, .footer .cont .col3, .footer .cont .col4{
+            float:left;
+            margin-right: 15px;
+            padding-right: 15px;
+        }
+        .footer .cont ul.list, .footer .cont ul.list li{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .footer .cont ul.list li{
+            margin:0 0 5px 20px;
+        }
+            .footer .cont ul.list li img{
+                position: relative;
+                top:4px;
+                right:4px;
+            }
+
+    .footer .line-h{
+        width: 100%;
+        float: left;
+        clear: left;
+        margin: 15px 0 15px 0;
+        border-bottom: 1px dashed #BACAD8;
+    }
+    .footer .line-v2{
+        border-right: 2px solid #97A2B2;
+    }
+    .footer .line-v1{
+        border-left: 1px dashed #BACAD8;
+    }
+
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA LOS ISO
+ -----------------------------------------------------------------------------*/
+.cont-iso{
+    float: left;
+    clear: left;
+    position: relative;
+    width: 730px;
+    z-index: 0;
+}
+.iso{
+    position: absolute;
+    z-index: 0;
+}
+.iso1{
+    background: url({BASE_URL}img/iso-01.png) no-repeat;
+    width: 381px;
+    height: 336px;
+    top:-328px;
+    left:-158px;
+    /*margin: -328px 0 0 -158px;*/
+}
+.iso2{
+    background: url({BASE_URL}img/iso-02.png) no-repeat;
+    width: 280px;
+    height: 246px;
+    left: 560px;
+    top: -200px;
+}
+.iso3{
+    background: url({BASE_URL}img/iso-03.png) no-repeat;
+    width: 318px;
+    height: 280px;
+    top:20px;
+    left:930px;
+    /*margin: -328px 0 0 -158px;*/
 }
 
 
@@ -390,3 +606,64 @@ button{
 .table-contents .cell2{
     text-align: center;
 }
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA EL LISTADO DE PREGUNTAS FRECUENTES
+ -----------------------------------------------------------------------------*/
+ul.list-faq, ul.list-faq >li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+ul.list-faq >li{
+    float: left;
+    clear: left;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    color:#1C3A50;
+    font-size: 120%;
+}
+    ul.list-faq >li a{
+        font-size: 120%;
+        color:#1C3A50;
+    }
+    ul.list-faq >li a:hover{text-decoration: underline;}
+    ul.list-faq >li span{
+        float: left;
+        color: #BAC3CA;
+        font-size: 180%;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+    ul.list-faq >li div div{
+        padding-top: 5px;
+        display: none;
+    }
+    ul.list-faq >li >div{
+        padding-top: 5px;
+    }
+    ul.list-faq p{
+        margin: 4px 0 4px 0;
+    }
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA LOGIN
+ -----------------------------------------------------------------------------*/
+.contlogin{
+    width: 300px;
+    margin: 0 auto;
+}
+.contlogin .form{
+    float: left;
+    width: 300px;
+    height: auto;
+    border:1px dashed #273B56;
+    background-color: #C5DBE5;
+    padding: 5px;
+}
+    .contlogin input{
+        width: 120px;
+    }
+    .contlogin label{
+        width: 100px;
+    }

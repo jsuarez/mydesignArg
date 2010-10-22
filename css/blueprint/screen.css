@@ -5,6 +5,14 @@
    
 -------------------------------------------------------------- */
 
+@font-face {
+    font-family: 'SansationRegular';
+    src: url('{BASE_URL}css/tipografia/sansation_regular-webfont.eot');
+    src: local('☺'), url('{BASE_URL}css/tipografia/sansation_regular-webfont.woff') format('woff'), url('{BASE_URL}css/tipografia/sansation_regular-webfont.ttf') format('truetype'), url('{BASE_URL}css/tipografia/sansation_regular-webfont.svg#webfontL33a9kCw') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, code,
@@ -49,8 +57,9 @@ html { font-size:100.01%; }
 body { 
   font-size: 75%;
   color: #1C3A50;
-  background: #D3E8ED;
-  font-family: "Crimson Text", Arial, Helvetica, sans-serif;
+  /*background: #D3E8ED;*/
+  background: #D3E8ED url({BASE_URL}img/bg-footer.jpg) no-repeat bottom center;
+  font-family: "SansationRegular", Arial, Helvetica, sans-serif;
 }
 
 
@@ -81,7 +90,7 @@ p img.right { float: right; margin: 1.5em 0 1.5em 1.5em; }
 
 a:focus, 
 a:hover     { color: #000; }
-a           { color: #009; text-decoration: none; }
+a           { color: #1C3A50; text-decoration: none; }
 
 blockquote  { margin: 1.5em; color: #666; font-style: italic; }
 strong      { font-weight: bold; }
@@ -168,7 +177,7 @@ caption     { background: #eee; }
 }
 
 /* The last column in a row needs this class. */
-.last, div.last { margin-right: 0; }
+.last, div.last { margin-right: 0 !important; }
 
 /* Use these classes to set the width of a column. */
 .span-1  { width: 35px; }
@@ -465,7 +474,7 @@ form.inline p { margin-bottom:0; }
 
 .error,
 .notice, 
-.success    { padding: .8em; margin-bottom: 1em; border: 2px solid #ddd; }
+.success    { padding: 2px; margin-bottom: 1em; border: 2px solid #ddd; }
 
 .error      { background: #FBE3E4; color: #8a1f11; border-color: #FBC2C4; }
 .notice     { background: #FFF6BF; color: #514721; border-color: #FFD324; }

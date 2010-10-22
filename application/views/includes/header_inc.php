@@ -8,12 +8,14 @@
     </div>
 </div>
 <div class="menu">
-    <ul>
-        <li><a href="<?=site_url('/disenio_web/')?>" class="line"><h1>Dise&ntilde;o Web</h1></a></li>
-        <li><a href="<?=site_url('/disenio_grafico/')?>" class="line"><h1>Dise&ntilde;o Gr&aacute;fico</h1></a></li>
-        <li><a href="<?=site_url('/marketing_online/')?>" class="line"><h1>Marketing Online</h1></a></li>
-        <li><a href="<?=site_url('/portfolio/')?>" class="line"><h1>Portfolio</h1></a></li>
-        <li><a href="<?=site_url('/empresa/')?>" class="line"><h1>Empresa</h1></a></li>
+    <ul id="lavaLamp">
+<?php $page = $this->uri->segment(1)?>
+        <li <?php if( $page=="disenio_web" ) echo 'class="current"'?>><a href="<?=site_url('/disenio_web/')?>"><h1>Dise&ntilde;o Web</h1></a><div class="line"></div></li>
+        <li <?php if( $page=="disenio_grafico" ) echo 'class="current"'?>><a href="<?=site_url('/disenio_grafico/')?>"><h1>Dise&ntilde;o Gr&aacute;fico</h1></a><div class="line"></div></li>
+        <li <?php if( $page=="marketing_online" ) echo 'class="current"'?>><a href="<?=site_url('/marketing_online/')?>"><h1>Marketing Online</h1></a><div class="line"></div></li>
+        <li <?php if( $page=="portfolio" ) echo 'class="current"'?>><a href="<?=site_url('/portfolio/')?>"><h1>Portfolio</h1></a><div class="line"></div></li>
+        <li <?php if( $page=="empresa" ) echo 'class="current"'?>><a href="<?=site_url('/empresa/')?>"><h1>Empresa</h1></a><div class="line"></div></li>
         <li><a href="/blog"><h1>Blog</h1></a></li>
     </ul>
 </div>
+<div class="iso iso3"></div>

@@ -37,8 +37,8 @@ class Simplelogin{
 
         if( $query->num_rows > 0 ) {
             $row = $query->row_array();
-            //Check against password
 
+            //Check against password
             if( $password != $this->CI->encpss->decode($row['password']) ) {
                 return array('status'=>'error', 'error'=>'loginfaild');
             }
@@ -49,15 +49,14 @@ class Simplelogin{
             //Create a fresh, brand new session
             $this->CI->session->sess_create();
 
+            //Remove the password field
+            unset($row['password']);
+
             //Set session data
-            $data = array();
-            $data['logged_in'] = true;
-            if( isset($row['level']) ) $data['level'] = $row['level'];
-            if( isset($row['bodas_id']) ) $data['bodas_id'] = $row['bodas_id'];
-            if( isset($row['users_id']) ) $data['users_id'] = $row['users_id'];
-            $data['username'] = $row['username'];
-            
-            $this->CI->session->set_userdata($data);
+            $this->CI->session->set_userdata($row);
+
+            //Set logged_in to true
+            $this->CI->session->set_userdata(array('logged_in' => true));
 
             //Login was successful
             return array('status'=>'ok');

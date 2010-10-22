@@ -28,10 +28,16 @@ class Contents_model extends Model {
         return $content;
     }
 
-     public function get_list(){
-         $query = $this->db->get_where(TBL_CONTENTS);
-         return $query->result_array();
-     }
+    public function get_list_banners($reference){
+        $this->db->order_by('order', 'asc');
+        $query = $this->db->get_where(TBL_BANNERS, array('codlang'=>LANG, 'reference'=>$reference));
+        return $query->result_array();
+    }
+
+    public function get_list(){
+        $query = $this->db->get_where(TBL_CONTENTS);
+        return $query->result_array();
+    }
     
 }
 ?>

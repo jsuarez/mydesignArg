@@ -42,6 +42,17 @@
 
 $route['default_controller'] = "index";
 $route['scaffolding_trigger'] = "";
+$route['disenio_web'] = "index/show/disenio_web";
+$route['disenio_grafico'] = "index/show/disenio_grafico";
+$route['marketing_online'] = "index/show/marketing_online";
+$route['disenio_web/:any'] = "index/moreinfo/$1";
+$route['disenio_grafico/:any'] = "index/moreinfo/$1";
+$route['marketing_online/:any'] = "index/moreinfo/$1";
+
+$route['empresa'] = "content/index/empresa";
+$route['terminos-y-condiciones'] = "content/index/terminos-y-condiciones";
+$route['politicas-de-privacidad'] = "content/index/politicas-de-privacidad";
+$route['preguntas-frecuentes'] = "content/index/preguntas-frecuentes";
 
 /* End of file routes.php */
 /* Location: ./system/application/config/routes.php */
