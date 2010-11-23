@@ -7,14 +7,22 @@
     width: 100%;
     margin: 8px 0 8px 0;
 }
+.trow-contact{
+    float:left;
+    clear: both;
+    width: 100%;
+    margin: 2px 0 2px 0;
+    white-space: nowrap;
+}
 h1.title, h2.title, h3.title, h4.title{
     font-weight: bold;
     float: left;
 }
 h1.title{
+    position: relative;
     font-size: 190%;
     margin: -30px 0 15px -18px;
-    padding: 0 100px 8px 70px;
+    padding: 0 100px 5px 70px;
     border-bottom: 1px dashed #1C3A50;
 }
 h2.title{
@@ -31,9 +39,12 @@ h3.title{
     border-bottom: 1px dashed #1C3A50;
 }
 h3.title2{
+    float: left;
     font-size: 150%;
-    padding-bottom: 5px;
+    padding: 0 100px 5px 46px;
+    margin-left: -17px;
     border-bottom: 1px dashed #1C3A50;
+    white-space: nowrap;
 }
 h4.title{
     font-size: 110%;
@@ -44,6 +55,7 @@ h4.title{
     border-bottom: 1px dashed #fff;
 }
 
+.textformat{font-family: Verdana, Arial, Helvetica, sans-serif !important;}
 
 /*------------------------------------------------------------------------------
  - ESTILO PARA MENSAJES DEL VALIDADOR
@@ -71,8 +83,43 @@ h4.title{
     text-align: left;
     z-index: 100;
 }
+.valid-error2{
+    float: left;
+    border: none;
+    background: transparent;
+    color: red;
+    padding: 0;
+    margin-top: 8px;
+    text-align: left;
+    z-index: 100;
+    font-size: 90%;
+    font-weight: normal;
+}
+
 .valid-highlight{border-style: dashed !important;}
 .valid-unhighlight{border-style: solid !important;}
+.valid-msgleft{
+    float: left;
+    /*background: url({BASE_URL}img/msg-left.png) no-repeat;*/
+    background: url({BASE_URL}img/msg-left-2.png) no-repeat;
+    width: 10px;
+    height: 32px;
+}
+.valid-msgmiddle{
+    float: left;
+    /*background: url({BASE_URL}img/msg-middle.png) repeat-x;*/
+    background: url({BASE_URL}img/msg-middle-2.png) repeat-x;
+    width: auto;
+    height: 32px;
+}
+.valid-msgright{
+    float: left;
+    /*background: url({BASE_URL}img/msg-right.png) no-repeat;*/
+    background: url({BASE_URL}img/msg-right-2.png) no-repeat;
+    width: 18px;
+    height: 32px;
+}
+
 
 /*------------------------------------------------------------------------------
  - ESTILOS PARA LINK
@@ -88,6 +135,7 @@ a.link-moreinfo{
     display: block;
     left:130px;
     top:250px;
+    white-space: nowrap;
     background: url({BASE_URL}img/icon-arrow-right.png) no-repeat right bottom;
     padding: 0 9px 4px 0;
     font-size: 100%;
@@ -174,7 +222,8 @@ button{
 }
     .header .cont-phone{
         float: right;
-        width: 250px;
+        width: 293px;
+        height: 60px;
         color: #365265;
     }
         .header .cont-phone p{
@@ -222,15 +271,15 @@ button{
         position: absolute;
     }
         .header .menu ul li.back .left {
+            float: left;
             background: url({BASE_URL}img/menu-left.png) no-repeat;
             height: 37px;
             width: 27px;
         }
 
     .header .menu ul{
-        margin: 10px 0 0 18px;
-        position: relative;
-        overflow: hidden;
+        float: left;
+        margin-top: 10px;
         /*border: 1px solid red;*/
     }
     .header .menu li{
@@ -241,28 +290,35 @@ button{
     .header .menu a{
         position: relative;
         display: block;
-        float: left;
-        padding: 9px 26px 0 26px;
-        height: 26px;
+        padding: 9px 25px 9px 25px;
         z-index: 20;
+        color: #fff;
         /*border: 1px solid green;*/
     }
-    .header .menu a:hover h1{
+    .header .menu a:hover{
         color:#1C3A50 !important;
     }
-        .header .menu li.current h1{
+        .header .menu li.current h1,
+        .header .menu li.current h1 a{
             color:#1C3A50;
         }
-    .header .menu .line{
-        float: right;
-        background: url({BASE_URL}img/menu-separator.jpg) no-repeat;
-        width: 1px;
-        height: 37px;
-        margin-right: -2px;
-    }
     .header .menu h1{
         font-size: 170%;
-        color: #fff;
+        white-space: nowrap;
+        padding-right: 2px;
+        background: url({BASE_URL}img/menu-separator.jpg) no-repeat right top;
+    }
+    .header .menu h1.outline{
+        background: none;
+        padding-right: 0;
+    }
+    .header .menu .contmenu{
+        float: left;
+        position: relative;
+        overflow: hidden;
+        width: 935px;
+        height: 62px;
+        margin-left: 20px;
     }
 
 /*------------------------------------------------------------------------------
@@ -311,6 +367,15 @@ button{
             float: left;
             width: 500px;
             height: auto;
+            margin-bottom: 22px;
+            font-family: Verdana, Arial, Helvetica, sans-serif !important;
+        }
+        .main-container .column-container .container-gallery{
+            clear: both;
+            position: relative;
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
         }
 
 
@@ -355,8 +420,9 @@ button{
         }
         .main-container .cont-pack p{
             clear: left;
-            font-size: 100%;
+            font-size: 90%;
             margin: -5px 0 0 0 !important;
+            font-family: Verdana, Arial, Helvetica, sans-serif !important;
         }
 
 
@@ -495,6 +561,9 @@ button{
         margin:0 auto;
         color:#fff;
         font-size: 110%;
+        text-align: left;
+        position: relative;
+        z-index: 1000;
         /*border:1px solid red;*/
     }
         .footer .cont a,.footer .cont a:link{
@@ -540,10 +609,12 @@ button{
 
     .footer .line-h{
         width: 100%;
+        height: 10px;
         float: left;
         clear: left;
-        margin: 15px 0 15px 0;
+        margin-bottom: 18px;
         border-bottom: 1px dashed #BACAD8;
+        font-size: 0;
     }
     .footer .line-v2{
         border-right: 2px solid #97A2B2;
@@ -579,8 +650,10 @@ button{
     background: url({BASE_URL}img/iso-02.png) no-repeat;
     width: 280px;
     height: 246px;
-    left: 560px;
-    top: -200px;
+    /*left: 560px;
+    top: -200px;*/
+    left: 765px;
+    top: -126px;
 }
 .iso3{
     background: url({BASE_URL}img/iso-03.png) no-repeat;
@@ -591,21 +664,6 @@ button{
     /*margin: -328px 0 0 -158px;*/
 }
 
-
-/*------------------------------------------------------------------------------
- - ESTILO PARA TABLAS
- -----------------------------------------------------------------------------*/
-
-
-/*------------------------------------------------------------------------------
- - ESTILO PARA TABLA "CONTENT"
- -----------------------------------------------------------------------------*/
-.table-contents .cell1{
-    width: 750px;
-}
-.table-contents .cell2{
-    text-align: center;
-}
 
 /*------------------------------------------------------------------------------
  - ESTILO PARA EL LISTADO DE PREGUNTAS FRECUENTES
@@ -621,7 +679,7 @@ ul.list-faq >li{
     padding-bottom: 5px;
     margin-bottom: 5px;
     color:#1C3A50;
-    font-size: 120%;
+    font-size: 100%;
 }
     ul.list-faq >li a{
         font-size: 120%;
@@ -645,6 +703,71 @@ ul.list-faq >li{
     ul.list-faq p{
         margin: 4px 0 4px 0;
     }
+/*------------------------------------------------------------------------------
+ - ESTILO PARA LISTADOS DEL PORTFOLIO
+ -----------------------------------------------------------------------------*/
+#portfolio-filter{
+    list-style-type: none;
+    clear: both;
+    margin-left: 30px;
+}
+    #portfolio-filter li{
+        display: inline;
+        padding-right: 10px;
+        margin-right: 10px;
+        border-right: 1px dashed #778C9C;
+    }
+        #portfolio-filter li a{
+            font-size: 120%;
+        }
+        #portfolio-filter li a.current{
+            font-weight: bold;
+        }
+
+#portfolio-list{
+    clear: both;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    list-style-type: none;
+}
+    #portfolio-list li{
+        display: inline;
+        float: left;
+        width: 213px;
+        height: 146px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        /*border: 1px solid red;*/
+    }
+    #portfolio-list .info{
+        position: absolute;
+        width: 194px;
+        height: 136px;
+        left:11px;
+        top:0;
+        overflow: hidden;
+        /*border:1px solid red;*/
+    }
+    #portfolio-list .message{
+        position: relative;
+        display: none;
+        width: 194px;
+        left:0;
+        top:0;
+        background-color: #000;
+        font-size: 80%;
+        color:#fff;
+        padding: 5px;
+    }
+        #portfolio-list .message a,
+        #portfolio-list .message a:link{
+            color:#fff;
+        }
+        #portfolio-list .message a:hover{
+            text-decoration: underline;
+        }
 
 /*------------------------------------------------------------------------------
  - ESTILO PARA LOGIN
@@ -666,4 +789,52 @@ ul.list-faq >li{
     }
     .contlogin label{
         width: 100px;
+    }
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA PORTFOLIO
+ -----------------------------------------------------------------------------*/
+.portfolio-clientes{
+    float: left;
+    margin:0 0 40px 20px;
+}
+    .portfolio-clientes .cont{
+        float: left;
+        position: relative;
+        overflow: hidden;
+        width: 586px;
+        height: 93px;
+        /*border: 1px solid green;*/
+    }
+    .portfolio-clientes .back{
+        float: left;
+        width: 2000px;
+    }
+    .portfolio-clientes ul{
+        position: relative;
+        top:0;left:0;
+        width: 600px;
+        /*border: 1px solid green;*/
+    }
+    .portfolio-clientes li{float: left}
+    .portfolio-clientes .prev,
+    .portfolio-clientes .next{
+        display: block;
+        width: 20px;
+        height: 103px;
+        margin-top: -5px;
+    }
+    .portfolio-clientes .next{
+        margin-left: 10px;
+    }
+    .portfolio-clientes .prev{
+        margin-right: 1px;
+    }
+    .portfolio-clientes .line{
+        float: left;
+        border-right: 1px dashed #778C9C;
+        width:1px;
+        height: 58px;
+        margin-top: 17px;
+        font-size: 0; /*IE6*/
     }

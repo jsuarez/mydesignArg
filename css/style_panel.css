@@ -7,29 +7,34 @@
 
 /* CONTAINER PACK
  -----------------------------------------------------------------------------*/
-.main-container .cont-pack .cont-icons{
-    position: absolute;
-    left:0;
-    top:250px;
+.list-pack, .list-pack li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
-    .main-container .cont-pack .cont-icons a{
-        margin-right: 10px;
+    .list-pack .cont-icons{
+        position: absolute;
+        left:0;
+        top:250px;
     }
-    .main-container .cont-pack .cont-icons img{
-        position: relative;
-        top:4px;
+        .list-pack .cont-icons a{
+            margin-right: 10px;
+        }
+        .list-pack .cont-icons img{
+            position: relative;
+            top:4px;
+        }
+    .list-pack a.handler{
+        position: absolute;
+        left:15px;
+        top:15px;
+        width: 200px;
+        height: 120px;
+        z-index: 1000;
     }
-.main-container .cont-pack a.handler{
-    position: absolute;
-    left:15px;
-    top:15px;
-    width: 200px;
-    height: 120px;
-    z-index: 1000;
-}
-    .main-container .cont-pack a.handler:hover{
-        background: transparent url({BASE_URL}img/icon_move.png) no-repeat center;
-    }
+        .list-pack .cont-pack a.handler:hover{
+            background: transparent url({BASE_URL}img/icon_move.png) no-repeat center;
+        }
 
 /* ESTILOS PARA EL FORMULARIO "SERVICIOS"
  -----------------------------------------------------------------------------*/
@@ -88,3 +93,31 @@ fieldset.gallery-panel{
                 clear: both;
                 margin-top: 5px;
             }
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA TABLAS
+ -----------------------------------------------------------------------------*/
+table{
+    background-color: #E9D4B0;
+    width: 100%;
+}
+table thead td{
+    font-weight: bold;
+}
+table td{
+    /*border: 1px solid #C7A773;*/
+    border: 1px solid #D9BA83;
+}
+table tbody tr.row-even{
+    background-color: #F7F0E3;
+}
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA TABLA "CONTENT"
+ -----------------------------------------------------------------------------*/
+.table-contents .cell1{
+    width: 800px;
+}
+.table-contents .cell2{
+    text-align: center;
+}

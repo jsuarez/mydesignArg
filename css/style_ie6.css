@@ -1,0 +1,71 @@
+h1.title{
+    margin: -30px 0 15px -10px;
+}
+h3.title{
+    margin: 10px 0 5px 8px;
+}
+h3.title2{
+    margin-left: -8px;
+}
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA LINK
+ -----------------------------------------------------------------------------*/
+a.link-moreinfo:hover , a.link-back:hover{
+    color:#F69924;
+}
+
+/* MENU
+ -----------------------------------------------------------------------------*/
+.header .menu .contmenu{
+    margin-left: 10px;
+}
+
+/*------------------------------------------------------------------------------
+ - ESTILO QUE ESTAN EN EL "MAIN CONTAINER"
+ -----------------------------------------------------------------------------*/
+.main-container{
+    margin-top:-330px;
+    width: 1000px;
+}
+    .main-container .cont-pack{
+        margin: 0 16px 0 0;
+    }
+/* SIDEBAR
+ -----------------------------------------------------------------------------*/
+.main-container .column-sidebar{
+    float: left;
+    width:245px;
+    margin-left: -14px;
+    position: relative;
+    z-index: 200;
+    /*border: 1px solid red;*/
+}
+    /* SIDEBAR - FORMULARIO DE CONTACTO
+     ---------------------------------------------------------------------*/
+    .main-container .column-sidebar .form-contact{
+        width: 250px;
+        height: 300px;
+        padding: 0;
+        padding-top:10px;
+        margin-top: -10px;
+        z-index: 20;
+    }
+        .main-container .column-sidebar .form-contact form{
+            width: 200px;
+            margin: 10px 0 0 23px;
+        }
+           .main-container .column-sidebar .form-contact input {
+                border:1px solid #19517F;
+            }
+        .main-container .column-sidebar .cont-banner{
+            margin-left: 5px;
+            z-index: 10;
+        }
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA PORTFOLIO
+ -----------------------------------------------------------------------------*/
+.portfolio-clientes{
+    margin:0 0 40px 4px;
+}

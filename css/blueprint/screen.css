@@ -58,7 +58,7 @@ body {
   font-size: 75%;
   color: #1C3A50;
   /*background: #D3E8ED;*/
-  background: #D3E8ED url({BASE_URL}img/bg-footer.jpg) no-repeat bottom center;
+  background: #D3E8ED url({BASE_URL}img/bg-footer.jpg) repeat-x bottom center;
   font-family: "SansationRegular", Arial, Helvetica, sans-serif;
 }
 
@@ -490,3 +490,9 @@ form.inline p { margin-bottom:0; }
 .align-center{text-align: center !important;}
 .align-right{text-align: right !important;}
 .border{border:1px solid red !important;}
+.outline{border:none !important;}
+ul.resetlist, ul.resetlist li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
