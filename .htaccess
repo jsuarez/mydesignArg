@@ -1,5 +1,4 @@
-AddHandler x-httpd-php5 .php
-
+AddHandler application/x-httpd-php5 .php5
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 	RewriteCond %{REQUEST_FILENAME} !-f
@@ -84,6 +83,10 @@ AddHandler x-httpd-php5 .php
 	RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR]
 	RewriteCond %{HTTP_USER_AGENT} ^Zeus
 	RewriteRule .* - [F]
+
+    ##### sin-www a www #####
+    RewriteCond %{HTTP_HOST} ^demo.mydesign.com.ar/mydesign [NC]
+    RewriteRule ^(.*)$ http://www.demo.mydesign.com.ar/mydesign/$1 [L,R=301]
 </IfModule>
 <IfModule !mod_rewrite.c>
  # If we don’t have mod_rewrite installed, all 404’s

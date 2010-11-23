@@ -640,7 +640,7 @@ $.extend($.validator, {
 				}
 				if ( !this.labelContainer.append(label).length )
 					this.settings.errorPlacement
-						? this.settings.errorPlacement(label, $(element) )
+						? this.settings.errorPlacement(label, $(element))
 						: label.insertAfter(element);
 			}
 			if ( !message && this.settings.success ) {

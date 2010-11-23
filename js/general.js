@@ -43,8 +43,7 @@ $(function(){
                 });
             });
         },
-        invalidHandler : function(){
-        }
+        errorClass : 'valid-error2'
     });
     $('#form-contact').validate(o);
 

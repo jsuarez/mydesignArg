@@ -44,15 +44,13 @@ var Services=new(function(){
                     $('#json').val(JSON.encode(out));
                     form.submit();
                 },
-                invalidHandler : function(){
-                }
+                errorClass : 'valid-error'
             });
             $('#form1').validate(o);
 
             // Configura el editor
             TinyMCE_init.width = '300px';
             TinyMCE_init.height = '250px';
-
             tinyMCE.init(TinyMCE_init);
 
             // ESTO ES PARA EL UPLOAD SIMPLE
@@ -107,8 +105,14 @@ var Services=new(function(){
             });
 
             $("#gallery-image").sortable({
-                revert: true,
+                revert : true,
                 handle : '.handle'
+            }).disableSelection();
+
+        }else{
+           $("#sortable").sortable({
+                revert : true,
+                handle : '.handler'
            }).disableSelection();
 
         }
@@ -148,6 +152,12 @@ var Services=new(function(){
         _ajaxupload_working=true;
         _ajaxupload_div = me;
         return false;
+    };
+
+    this.del = function(ref, id){
+        if( confirm('¿Estás seguro de eliminar?') ){
+            location.href = get_url('/jpanel/services/delete/'+ref+'/'+id);
+        }
     };
 
 

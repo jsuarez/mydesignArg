@@ -54,6 +54,7 @@
 (function($) {
 $.fn.lavaLamp = function(o) {
     o = $.extend({ fx: "linear", speed: 500, click: function(){} }, o || {});
+    var fhover;
 
     return this.each(function() {
         var me = $(this), noop = function(){},
@@ -61,12 +62,13 @@ $.fn.lavaLamp = function(o) {
             $li = $("li", this), curr = $("li.current", this)[0] || $($li[0]).addClass("current")[0];
 
         $li.not(".back").hover(function() {
-            $(curr).find('h1').css('color', '#fff');
+            fhover=false;
+            $(curr).find('a').css('color', '#fff');
             move(this);
         }, noop);
 
         $(this).hover(noop, function() {
-            $(curr).find('h1').css('color', '#1C3A50');
+            fhover = function(){$(curr).find('a').css('color', '#1C3A50')};            
             move(curr);
         });
 
@@ -88,7 +90,9 @@ $.fn.lavaLamp = function(o) {
             ).animate({
                 width: el.offsetWidth,
                 left: el.offsetLeft
-            }, o.speed, o.fx);
+            }, o.speed, o.fx, function(){
+                if( typeof(fhover)=="function" ) fhover();
+            });
         };
 
     });

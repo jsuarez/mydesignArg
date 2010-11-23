@@ -29,9 +29,6 @@ jQuery.validator.setDefaults({
         },
         txtPassOld:{
             remote : 'La contrase&ntilde;a es incorrecta.'
-        },
-        txtCaptcha:{
-            remote : 'El c&oacute;digo ingresado no es v&aacute;lido.'
         }
     }
 });

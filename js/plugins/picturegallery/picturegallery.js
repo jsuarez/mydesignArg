@@ -25,6 +25,9 @@ var PictureGallery = new (function(){
        $(params.sel_gallery+' li a.jq-removeimg').bind('click', _remove_image);
   };
 
+  /* PUBLIC PROPERTIES
+   **************************************************************************/
+
   /* PUBLIC METHODS
    **************************************************************************/
    this.upluad = function(){
@@ -56,21 +59,23 @@ var PictureGallery = new (function(){
         $(params.sel_gallery + ' li').each(function(){
             var li = $(this);
             var tagA = li.find('a.jq-image');
-            var tagImg = tagA.find('img');
+            var tagImg = li.find('img:first');
 
             if( li.data('au-newimg') ){
-                var newImg = new Image();
-                newImg.src = tagImg.attr('src');
-
+                var a=li.data('au-data');
+                
                 data.push({
-                    image_full  : _get_filename(tagA.attr('href')),
-                    image_thumb : _get_filename(tagImg.attr('src')),
-                    width       : newImg.width,
-                    height      : newImg.height
+                    image_full       : _get_filename(tagA.attr('href')),
+                    image_thumb      : _get_filename(tagImg.attr('src')),
+                     width           : a.width,
+                     height          : a.height,
+                     width_complete  : a.width_complete,
+                     height_complete : a.height_complete
                 });
             }
         });
-       return data;
+
+        return data;
    };
 
    this.get_images_del = function(){
@@ -84,11 +89,11 @@ var PictureGallery = new (function(){
             n++;
             var li = $(this);
             data.push({
-                image_full : _get_filename(li.find('a.jq-image').attr('href')),
-                order      : n
+                image : _get_filename(li.find('img:first').attr('src')),
+                order : n
             });
         });
-        return data;
+       return data;
    };
 
 
@@ -98,6 +103,7 @@ var PictureGallery = new (function(){
     var array_images_del = new Array();
     var _form=false;
     var _iframe=false;
+    var _working=false;
 
    /* PRIVATE METHODS
     **************************************************************************/
@@ -131,6 +137,9 @@ var PictureGallery = new (function(){
             li.find('a.jq-image').attr('href', output['href_image_full']);
             var img = li.find('img:first');
                 img.attr('src', output['href_image_thumb']);
+                img.error(function(){
+                    ul.find('li:last img:first').attr('src', output['href_image_full']);
+                });
 
             if( !params.defined_size ){
                 img.attr('width', output['thumb_width']).attr('height', output['thumb_height']);
@@ -138,7 +147,12 @@ var PictureGallery = new (function(){
                 img.attr('width', params.defined_size.width).attr('height', params.defined_size.height);
             }
 
-            var audata = {width : output['thumb_width'], height : output['thumb_height']};
+            var audata = {
+                width           : output['thumb_width'],
+                height          : output['thumb_height'],
+                width_complete  : output['thumb_width_complete'],
+                height_complete : output['thumb_height_complete']
+            };
 
             if( !ul.is(':visible') ){
                 //li.find('a.jq-removeimg').bind('click', _remove_image);
@@ -167,12 +181,15 @@ var PictureGallery = new (function(){
     };
 
     var _get_filename = function(str){
-        var arr = str.split('/');
-        return arr[arr.length-1].toLowerCase();
+        if( typeof(str)=="string" ){
+            var arr = str.split('/');
+            return arr[arr.length-1].toLowerCase();
+        }else return "";
     };
 
     var _remove_image = function(e){
         e.preventDefault();
+        if( _working ) return false;
 
         if( confirm('¿Está seguro de quitar la imágen?') ){
             var li = $(e.target).parent().parent();
@@ -185,13 +202,14 @@ var PictureGallery = new (function(){
             };
 
             var tagA = li.find('a.jq-image');
-            var tagImg = tagA.find('img');
+            var tagImg = li.find('img:first');
             var image_full = tagA.attr('href');
             var image_thumb = tagImg.attr('src');
 
             if( li.data('au-newimg') ){
-
+                _working=true;
                 $.post(params.href_remove, {au_filename_image : image_full, au_filename_thumb : image_thumb}, function(data){
+                    _working=false;
                     if( data=="ok" ){
                         remove();
 
@@ -205,6 +223,7 @@ var PictureGallery = new (function(){
                 remove();
             }
         }
+        return false;
     };
 
 

@@ -258,7 +258,11 @@ var DD_belatedPNG = {
 			return;
 		}
 		el.isImg = false;
+
 		if (el.nodeName == 'IMG') {
+
+                    if( !(el.parentNode.nodeName=="LI" && el.parentNode.parentNode.id=='carousel') ){
+
 			if(el.src.toLowerCase().search(/\.png$/) != -1) {
 				el.isImg = true;
 				el.style.visibility = 'hidden';
@@ -266,6 +270,7 @@ var DD_belatedPNG = {
 			else {
 				return;
 			}
+                    }else return;
 		}
 		else if (el.currentStyle.backgroundImage.toLowerCase().search('.png') == -1) {
 			return;
@@ -303,5 +308,5 @@ DD_belatedPNG.createVmlNameSpace();
 DD_belatedPNG.createVmlStyleSheet();
 
 window.attachEvent("onload", function(){
-	DD_belatedPNG.fix('img, div, span');
+	DD_belatedPNG.fix('img, div, span, a');
 });

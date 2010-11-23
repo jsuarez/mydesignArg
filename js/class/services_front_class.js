@@ -1,4 +1,4 @@
-var Content=new(function(){
+var Services=new(function(){
 
     /* PRIVATE PROPERTIES
      **************************************************************************/
@@ -13,6 +13,8 @@ var Content=new(function(){
         var a = _content.find('>.middle');
         _content_revert = a.html();
         a.html('<div class="align-center"><img src="img/ajax-loader.gif" alt="Cargando, espere porfavor..." width="100" height="100" /></div>');
+
+        if( $('#carousel').length>0 ) _exec_carousel();
     });
 
     /* PUBLIC METHODS
@@ -24,11 +26,9 @@ var Content=new(function(){
                 $('<link rel="stylesheet" href="'+ get_url('load/css/plugins_jqueryboutique') +'" type="text/css" media="screen, projection" />').appendTo('head');
                 _load=true;
             }
-            $.get(get_url('index/ajax_moreinfo/'+id), '', function(data){
+            $.get(get_url('ajax/moreinfo/'+id), '', function(data){
                 $('#flipbox .middle').html(data);
-                $.getScript(get_url('load/js/plugins_jqueryboutique'), function(){
-                    $('#gallery').boutique();
-                });
+                _exec_carousel();
             });
         });
         return false;
@@ -52,6 +52,14 @@ var Content=new(function(){
                 callback();
                 $("#flipbox").css('backgroundColor', 'transparent');
             }
+        });
+    };
+
+    var _exec_carousel = function(){
+        $('#carousel').carousel({
+            speed           : 800,
+            sel_button_prev : 'div.carousel-prev',
+            sel_button_next : 'div.carousel-next'
         });
     };
 
