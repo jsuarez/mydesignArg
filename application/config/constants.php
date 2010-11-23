@@ -47,6 +47,8 @@ define('TBL_CONTENTS',                    'contents');
 define('TBL_CONTENTS_SERVICES',           'contents_services');
 define('TBL_CONTENTS_SERVICES_GALLERY',   'contents_services_gallery');
 define('TBL_BANNERS',                     'banners');
+define('TBL_PORTFOLIO_WORKS',             'portfolio_works');
+define('TBL_PORTFOLIO_CLIENTS',           'portfolio_clients');
 
 /*
 |--------------------------------------------------------------------------
@@ -56,6 +58,9 @@ define('TBL_BANNERS',                     'banners');
 define('ERR_UPLOAD_NOTUPLOAD', 'El archivo no ha podido llegar al servidor.');
 define('ERR_UPLOAD_MAXSIZE', 'El tamaño del archivo debe ser menor a {size} MB.');
 define('ERR_UPLOAD_FILETYPE', 'El tipo de archivo es incompatible.');
+
+define('ERR_VALID_REQUIRED', 'El campo "%s" es obligatorio.');
+define('ERR_VALID_EMAIL', 'Por favor, escribe una direcci&oacute;n de correo v&aacute;lida.');
 
 /*
 |--------------------------------------------------------------------------
@@ -84,6 +89,8 @@ define('UPLOAD_MAXSIZE', 2048); //Expresado en Kylobytes
 
 define('UPLOAD_PATH_SERVICES_THUMBS', './uploads/thumbs/');
 define('UPLOAD_PATH_SERVICES_GALLERY', './uploads/gallery/');
+define('UPLOAD_PATH_PORTFOLIOWORKS', './uploads/portfolio_works/');
+define('UPLOAD_PATH_PORTFOLIOCLIE', './uploads/portfolio_clients/');
 define('IMAGESIZE_WIDTH_THUMBS', 200);
 define('IMAGESIZE_HEIGHT_THUMBS', 120);
 define('IMAGESIZE_WIDTH_GALLERY', 320);

@@ -1,5 +1,5 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-class Services_model extends Model {
+class Portfolio_model extends Model {
 
     /* CONSTRUCTOR
      **************************************************************************/
@@ -17,47 +17,18 @@ class Services_model extends Model {
 
     /* PUBLIC FUNCTIONS
      **************************************************************************/
-    public function get_list_services($reference){
+    public function get_list_clients(){
         $this->db->order_by('order', 'asc');
-        $query = $this->db->get_where(TBL_CONTENTS_SERVICES, array('codlang'=>LANG, 'reference'=>$reference));
+        $query = $this->db->get_where(TBL_PORTFOLIO_CLIENTS);
         return $query->result_array();
     }
 
-    public function get_service($a, $b=null){
-        $where = is_numeric($a) ? array('content_id'=>$a) : array('reference'=>$a, 'reference2'=>$b);
-        $info = $this->db->get_where(TBL_CONTENTS_SERVICES, $where)->row_array();
-        $list = $this->get_list_services($info['reference']);
-
-        $info['prev']=null; $info['next']=null;
-        for( $n=0; $n<=count($list)-1; $n++ ){
-            $a = $list[$n];
-            if( $a['content_id']==$info['content_id'] ){
-                if( $n>0 ) {
-                    $info['prev']['title'] = $list[$n-1]['title'];
-                    $info['prev']['href'] = site_url($list[$n-1]['reference'] .'/'. $list[$n-1]['reference2']);
-                    $info['prev']['id'] = $list[$n-1]['content_id'];
-                }
-                if( $n<count($list)-1 ) {
-                    $info['next']['title'] = $list[$n+1]['title'];
-                    $info['next']['href'] = site_url($list[$n+1]['reference'] .'/'. $list[$n+1]['reference2']);
-                    $info['next']['id'] = $list[$n+1]['content_id'];
-                }
-                break;
-            }
-        }
-
+    public function get_list_works($type='all'){
+        if( $type!='all' ) $this->db->where('type', $type);
+        $this->db->order_by('type', 'desc');
         $this->db->order_by('order', 'asc');
-        $query = $this->db->get_where(TBL_CONTENTS_SERVICES_GALLERY, array('content_id'=>$info['content_id']));
-        if( $query->num_rows>0 ) $info['gallery'] = $query->result_array();
-
-        return $info;
-    }
-
-    public function get_info($id){
-        $row = $this->db->get_where(TBL_CONTENTS_SERVICES, array('content_id'=>$id))->row_array();
-        $this->db->order_by('order', 'asc');
-        $row['gallery'] = $this->db->get_where(TBL_CONTENTS_SERVICES_GALLERY, array('content_id'=>$id))->result_array();
-        return $row;
+        $query = $this->db->get_where(TBL_PORTFOLIO_WORKS);
+        return $query->result_array();
     }
 
     public function create(){

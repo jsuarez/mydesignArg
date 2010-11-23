@@ -27,8 +27,6 @@
     echo '<script type="text/javascript" src="'. site_url('load/js/plugins_validator'.@$tlp_script).'"></script>'.chr(13);
 ?>
     <!--[if IE 6]>
-    <script type="text/javascript">var IE6UPDATE_OPTIONS={icons_path:"js/plugins/ie6update/ie6update/images/"}</script>
-    <script type="text/javascript" src="js/plugins/ie6update/ie6update/ie6update.js"></script>
     <script type="text/javascript" src="js/helpers/DD_belatedPNG.js"></script>
     <![endif]-->
 </head>
@@ -49,7 +47,6 @@
                 <div class="bottom"></div>
                 <div class="cont-iso">
                     <div class="iso iso1"></div>
-                    <div class="iso iso2"></div>
                 </div>
             </div>
             <div class="column-sidebar">
@@ -57,7 +54,8 @@
             </div>
         </div>
     </div>
-    <div class="footer"> 
+    <div class="footer">
+        <div class="iso iso2"></div>         
         <?php require('includes/footer_inc.php')?>
     </div>
 </body>

@@ -14,7 +14,7 @@ class Index extends Controller {
     /* PUBLIC FUNCTIONS
      **************************************************************************/
     public function index(){
-        //echo $this->encpss->encode('1234');
+        //echo $this->encpss->encode('abc123');
         
         if( $this->session->userdata('logged_in') ) {
             redirect('/jpanel/services/');
@@ -30,7 +30,7 @@ class Index extends Controller {
 
     public function login(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
-            $statusLogin = $this->simplelogin->login($_POST["txtUser"], $_POST["txtPass"]);
+            $statusLogin = $this->simplelogin->login($this->input->post("txtUser"), $this->input->post("txtPass"));
             
             if( $statusLogin['status']=="error" ){
                 if( $statusLogin['error']=="loginfaild" ){

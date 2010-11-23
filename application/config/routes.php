@@ -42,6 +42,7 @@
 
 $route['default_controller'] = "index";
 $route['scaffolding_trigger'] = "";
+
 $route['disenio_web'] = "index/show/disenio_web";
 $route['disenio_grafico'] = "index/show/disenio_grafico";
 $route['marketing_online'] = "index/show/marketing_online";

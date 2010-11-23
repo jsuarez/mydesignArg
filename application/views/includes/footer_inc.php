@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 <div class="cont align-center">
-    MyDesign &copy; 2007 - 2010 | Todos los derechos reservados | <a href="<?=site_url('politicas-de-privacidad')?>">Pol&iacute;ticas de Privacidad</a> | <a href="<?=site_url('terminos-y-condiciones')?>">T&eacute;rminos y Condiciones</a>
+    MyDesign <span style="font-family: Verdana, Arial, Helvetica, sans-serif">&copy;</span> 2007 - 2010 | Todos los derechos reservados | <a href="<?=site_url('politicas-de-privacidad')?>">Pol&iacute;ticas de Privacidad</a>
 </div>
 <div class="line-h"></div>
 <div class="cont">
@@ -26,8 +26,8 @@
         <div class="line-h"></div>
         <div class="clear span-15 last align-center">
             <a href="http://validator.w3.org/check?uri=referer"><img src="img/xhtml-valid.jpg" alt="Valid XHTML 1.0 Strict" width="98" height="14" /></a>&nbsp;&nbsp;
-            <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="img/css-valid.jpg" alt="¡CSS Válido!" width="98" height="14" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a target="_blank" href="http://www.qweb.es/_diseno-web-en-argentina.html"><img border="0" width="97" height="31" alt="Directorio de Diseño web en Argentina" src="http://www.qweb.es/certqweb-www.mydesign.com.ar.gif"></a>
+            <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.demo.mydesign.com.ar%2Fmydesign%2F&profile=css3&usermedium=all&warning=1"><img src="img/css-valid.jpg" alt="¡CSS Válido!" width="98" height="14" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a target="_blank" href="http://www.qweb.es/_diseno-web-en-argentina.html"><img border="0" width="97" height="31" alt="Directorio de Diseño web en Argentina" src="http://www.qweb.es/certqweb-www.mydesign.com.ar.gif" /></a>
         </div>
     </div>
     <div class="col4 line-v1">

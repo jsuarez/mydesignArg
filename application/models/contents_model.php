@@ -11,10 +11,10 @@ class Contents_model extends Model {
      **************************************************************************/
     public function save(){
         $data = array(
-            'content'       => $_POST['content'],
-            'last_modified' => date('Y-m-d H:i:s')
+            'content'       => $this->input->post('content'),
+            'last_modified' => strtotime(date('d-m-Y'))
         );
-        $this->db->where('reference', $_POST['reference']);
+        $this->db->where('reference', $this->input->post('reference'));
         return $this->db->update(TBL_CONTENTS, $data);
     }
 

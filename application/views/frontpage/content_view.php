@@ -1,2 +1,4 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
-<?=$content?>
+<div class="textformat">
+    <?=$content?>
+</div>

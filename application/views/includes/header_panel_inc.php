@@ -5,11 +5,11 @@
 <?php
 $page = isset($reference) ? $reference : $this->uri->segment(1);
 ?>
-        <li <?php if( $page=="disenio_web" ) echo 'class="current"'?>><a href="<?=site_url('/jpanel/services/index/disenio_web/')?>"><h1>Dise&ntilde;o Web</h1></a><div class="line"></div></li>
-        <li <?php if( $page=="disenio_grafico" ) echo 'class="current"'?>><a href="<?=site_url('/jpanel/services/index/disenio_grafico/')?>"><h1>Dise&ntilde;o Gr&aacute;fico</h1></a><div class="line"></div></li>
-        <li <?php if( $page=="marketing_online" ) echo 'class="current"'?>><a href="<?=site_url('/jpanel/services/index/marketing_online/')?>"><h1>Marketing Online</h1></a><div class="line"></div></li>
-        <li <?php if( $page=="portfolio" ) echo 'class="current"'?>><a href="<?=site_url('/portfolio/')?>"><h1>Portfolio</h1></a><div class="line"></div></li>
-        <li <?php if( $page=="contents" ) echo 'class="current"'?>><a href="<?=site_url('/contents/')?>"><h1>Contenidos</h1></a><div class="line"></div></li>
+        <li <?php if( $page=="disenio_web" ) echo 'class="current"'?>><h1><a href="<?=site_url('/jpanel/services/index/disenio_web/')?>">Dise&ntilde;o Web</a></h1></li>
+        <li <?php if( $page=="disenio_grafico" ) echo 'class="current"'?>><h1><a href="<?=site_url('/jpanel/services/index/disenio_grafico/')?>">Dise&ntilde;o Gr&aacute;fico</a></h1></li>
+        <li <?php if( $page=="marketing_online" ) echo 'class="current"'?>><h1><a href="<?=site_url('/jpanel/services/index/marketing_online/')?>">Marketing Online</a></h1></li>
+        <li <?php if( $page=="portfolio" ) echo 'class="current"'?>><h1><a href="<?=site_url('/jpanel/portfolio/')?>">Portfolio</a></h1></li>
+        <li <?php if( $page=="contents" ) echo 'class="current"'?>><h1 class="outline"><a href="<?=site_url('/jpanel/contents/')?>">Contenidos</a></h1></li>
     </ul>
 </div>
 <div class="iso iso3"></div>

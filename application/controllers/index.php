@@ -33,7 +33,7 @@ class Index extends Controller {
             'tlp_meta_description' => $params['meta_description'],
             'tlp_meta_keywords'    => $params['meta_keywords'],
             'tlp_section'          => 'frontpage/servicios_view.php',
-            'tlp_script'           => array('plugins_jqueryflip', 'plugins_cycle'),
+            'tlp_script'           => array('plugins_jqueryflip', 'plugins_cycle', 'plugins_carousel', 'class_services_front'),
             'list_services'        => $this->services_model->get_list_services($params['reference']),
             'list_banners'         => $this->contents_model->get_list_banners($params['reference']),
             'reference'            => $params['reference']
@@ -54,22 +54,12 @@ class Index extends Controller {
             'tlp_meta_description' => $params['meta_description'],
             'tlp_meta_keywords'    => $params['meta_keywords'],
             'tlp_section'          => 'frontpage/servicios_masinfo_view.php',
-            'tlp_script'           => array('plugins_jqueryboutique'),
+            'tlp_script'           => array('plugins_carousel', 'class_services_front'),
             'info'                 => $info,
             'reference'            => $params['reference']
         ));
         $data = array_merge($this->_data, $data);
         $this->load->view('template_frontpage_view', $data);
-    }
-
-    /* AJAX FUNCTIONS
-     **************************************************************************/
-    public function ajax_moreinfo(){
-        $id=$this->uri->segment(3);
-        if( is_numeric($id) ) {
-            $data = array_merge($this->_data, array('info' => $this->services_model->get_service($id)));
-            $this->load->view('frontpage/servicios_masinfo_view', $data);
-        }
     }
 
 

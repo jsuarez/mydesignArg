@@ -20,15 +20,12 @@ class Services extends Controller {
     /* PUBLIC FUNCTIONS
      **************************************************************************/
     public function index(){
-       /*$this->load->library('encpss');
-       echo $this->encpss->encode('1234');
-       die();*/
         $params = $this->_get_params($this->uri->segment(4));
         $data = array_merge($this->_data, array(
             'tlp_title'            => TITLE_INDEX_PANEL,
             'tlp_title_section'    => $params['title'],
             'tlp_section'          => 'panel/servicios_view.php',
-            'tlp_script'           => array('class_services'),
+            'tlp_script'           => array('class_services_panel'),
             'list_services'        => $this->services_model->get_list_services($params['reference']),
             'reference'            => $params['reference']
         ));
@@ -42,19 +39,19 @@ class Services extends Controller {
             $params = $this->_get_params($this->uri->segment(4));
 
             $data = array_merge($this->_data, array(
-                'tlp_title'            => TITLE_INDEX_PANEL,
-                'tlp_section'          => 'panel/servicios_form_view.php',
-                'reference'            => $params['reference']
+                'tlp_title'          => TITLE_INDEX_PANEL,
+                'tlp_section'        => 'panel/servicios_form_view.php',
+                'tlp_script'         => array('helpers_json', 'class_services_panel', 'plugins_validator', 'plugins_picturegallery'),
+                'tlp_script_special' => array('plugins_tiny_mce', 'plugins_jqui_sortable'),
+                'reference'          => $params['reference']
             ));
             if( is_numeric($id) ){ //EDIT
-                $info = $this->services_model->get_service($id);
+                $info = $this->services_model->get_info($id);
                 $data['tlp_title_section'] = "Editar - ".$info['title'];
                 $data['info'] = $info;
             }else{                 //NUEVO
                 $data['tlp_title_section'] = "Nuevo";
             }
-            $data['tlp_script'] = array('helpers_json', 'plugins_validator', 'plugins_picturegallery',  'class_services');
-            $data['tlp_script_special'] = array('plugins_tiny_mce', 'plugins_jqui_sortable');
             $this->load->view('template_panel_view', $data);
 
         }
@@ -62,33 +59,29 @@ class Services extends Controller {
 
     public function create(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
-           // print_array($_POST["json"]);die();
             $res = $this->services_model->create();
             if( !$res ){
                 $this->session->set_flashdata('status', "error");
+                $this->session->set_flashdata('error', $this->services_model->error);
                 redirect('/jpanel/services/form/'.$this->input->post('reference'));
-            }else redirect('/jpanel/services/');
+            }else redirect('/jpanel/services/index/'.$this->input->post('reference'));
         }
     }
 
     public function edit(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
             $res = $this->services_model->edit();
-            $this->session->set_flashdata('status', $res ? "success" : "error");
-            redirect('/jpanel/services/form/'.$this->input->post('bodas_id'));
+            if( !$res ){
+                $this->session->set_flashdata('status', "error");
+                $this->session->set_flashdata('error', $this->services_model->error);
+                redirect('/jpanel/services/form/'.$this->input->post('reference').'/'.$this->input->post('bodas_id'));
+            }else redirect('/jpanel/services/index/'.$this->input->post('reference'));
         }
     }
 
-    public function delete(){
-        if( $this->uri->segment(4) ){
-            $id = $this->uri->segment_array();
-            array_splice($id, 0,3);
-            $res = $this->bodas_model->delete($id);
-
-            $this->session->set_flashdata('status', $res ? "success" : "error");
-
-            redirect('/jpanel/services/');
-        }
+    public function delete(){        
+        $this->services_model->delete($this->uri->segment(5));
+        redirect('/jpanel/services/index/'.$this->uri->segment(4));
     }
 
     /* AJAX FUNCTIONS
@@ -132,8 +125,8 @@ class Services extends Controller {
     }
     public function ajax_upload_delete(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
-            @unlink($_POST['au_filename_image']);
-            @unlink($_POST['au_filename_thumb']);
+            @unlink($this->input->post('au_filename_image'));
+            @unlink($this->input->post('au_filename_thumb'));
             die("ok");
         }
     }

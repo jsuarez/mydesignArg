@@ -11,13 +11,13 @@ class Users_model extends Model {
      **************************************************************************/
      public function save(){
         $data = array(
-            'email'   => $_POST['txtEmail'],
+            'email'   => $this->input->post('txtEmail'),
             'last_modified' => date('Y-m-d H:i:s')
         );
 
-        if( !empty($_POST['txtPassNew']) ){
+        if( $this->input->post('txtPassNew')!='' ){
             $this->load->library('encpss');
-            $data['password'] = $this->encpss->encode($_POST['txtPassNew']);
+            $data['password'] = $this->encpss->encode($this->input->post('txtPassNew'));
         }
         
         $this->db->where(array('username'=>$this->session->userdata('username')));
