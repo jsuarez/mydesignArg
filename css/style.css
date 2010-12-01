@@ -9,6 +9,7 @@
 }
 .trow-contact{
     float:left;
+    position: relative;
     clear: both;
     width: 100%;
     margin: 2px 0 2px 0;
@@ -43,6 +44,12 @@ h3.title2{
     font-size: 150%;
     padding: 0 100px 5px 46px;
     margin-left: -17px;
+    border-bottom: 1px dashed #1C3A50;
+    white-space: nowrap;
+}
+h3.title3{
+    font-size: 150%;
+    padding-bottom: 5px;
     border-bottom: 1px dashed #1C3A50;
     white-space: nowrap;
 }
@@ -87,7 +94,7 @@ h4.title{
     float: left;
     border: none;
     background: transparent;
-    color: red;
+    color: #fff;
     padding: 0;
     margin-top: 8px;
     text-align: left;
@@ -100,26 +107,29 @@ h4.title{
 .valid-unhighlight{border-style: solid !important;}
 .valid-msgleft{
     float: left;
-    /*background: url({BASE_URL}img/msg-left.png) no-repeat;*/
-    background: url({BASE_URL}img/msg-left-2.png) no-repeat;
+    background: url({BASE_URL}img/msg-left.png) no-repeat;
     width: 10px;
     height: 32px;
 }
 .valid-msgmiddle{
     float: left;
-    /*background: url({BASE_URL}img/msg-middle.png) repeat-x;*/
-    background: url({BASE_URL}img/msg-middle-2.png) repeat-x;
+    background: url({BASE_URL}img/msg-middle.png) repeat-x;
     width: auto;
     height: 32px;
 }
 .valid-msgright{
     float: left;
-    /*background: url({BASE_URL}img/msg-right.png) no-repeat;*/
-    background: url({BASE_URL}img/msg-right-2.png) no-repeat;
+    background: url({BASE_URL}img/msg-right.png) no-repeat;
     width: 18px;
     height: 32px;
 }
-
+.cont-msgerror{
+    position: absolute;
+    left:-380px;
+    top:14px;
+    width: 376px;
+    /*border: 1px solid;*/
+}
 
 /*------------------------------------------------------------------------------
  - ESTILOS PARA LINK
@@ -280,6 +290,7 @@ button{
     .header .menu ul{
         float: left;
         margin-top: 10px;
+        width: 1000px;
         /*border: 1px solid red;*/
     }
     .header .menu li{
@@ -298,10 +309,10 @@ button{
     .header .menu a:hover{
         color:#1C3A50 !important;
     }
-        .header .menu li.current h1,
+        /*.header .menu li.current h1,
         .header .menu li.current h1 a{
             color:#1C3A50;
-        }
+        }*/
     .header .menu h1{
         font-size: 170%;
         white-space: nowrap;
@@ -532,7 +543,7 @@ button{
                 position: relative;
                 background: url({BASE_URL}img/mask-banner.png) no-repeat;
                 width: 250px;
-                height: 197px;
+                height: 196px;
                 z-index: 110;
                 margin-left: -10px;
             }
@@ -703,6 +714,23 @@ ul.list-faq >li{
     ul.list-faq p{
         margin: 4px 0 4px 0;
     }
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA EL LISTADO DE PREGUNTAS FRECUENTES
+ -----------------------------------------------------------------------------*/
+.list-sitemap li{
+    list-style-type: disc;
+    margin-bottom: 3px;
+}
+.list-sitemap li li{
+    list-style-type: circle;
+    margin-left: 10px;
+}
+.list-sitemap ul{
+    margin-bottom: 5px;
+}
+
+
 /*------------------------------------------------------------------------------
  - ESTILO PARA LISTADOS DEL PORTFOLIO
  -----------------------------------------------------------------------------*/

@@ -7,10 +7,11 @@
     <div class="span-15">
         <div class="col1 line-v2">
             <h4>MyDesign</h4>
-            <a href="<?=site_url('empresa')?>" class="link-footer">La Empresa</a><br />
+            <a href="<?=site_url('la_empresa')?>" class="link-footer">La Empresa</a><br />
             <a href="blog" class="link-footer">Blog de MyDesign</a><br />
-            <a href="<?=site_url('testimoniales')?>" class="link-footer">Testimoniales</a><br />
-            <a href="<?=site_url('preguntas-frecuentes')?>" class="link-footer">Preguntas Frecuentes</a>
+            <!--<a href="<?=site_url('testimoniales')?>" class="link-footer">Testimoniales</a><br />-->
+            <a href="<?=site_url('sitemap')?>" class="link-footer">Mapa del sitio</a><br />
+            <a href="<?=site_url('faq')?>" class="link-footer">Preguntas Frecuentes</a>
         </div>
         <div class="col2 line-v2">
             <h4>Servicios</h4>
@@ -34,9 +35,9 @@
         <ul class="list">
             <li><img src="img/icon-msn.png" alt="" width="20" height="20" />&nbsp;info@mydesign.com.ar</li>
             <li><img src="img/icon-skype.png" alt="" width="20" height="20" />&nbsp;infomydesign</li>
-            <li><img src="img/icon-facebook.png" alt="" width="20" height="20" />&nbsp;Hacete Fan</li>
-            <li><img src="img/icon-twitter.png" alt="" width="20" height="20" />&nbsp;Seguinos!</li>
-            <li><img src="img/icon-youtube.png" alt="" width="20" height="20" />&nbsp;Nuestro Canal</li>
+            <li><img src="img/icon-facebook.png" alt="" width="20" height="20" />&nbsp;<a href="http://www.facebook.com/mydesign.online" target="_blank">Hacete Fan</a></li>
+            <li><img src="img/icon-twitter.png" alt="" width="20" height="20" />&nbsp;<a href="http://www.twitter.com/mydesignar" target="_blank">Seguinos!</a></li>
+            <li><img src="img/icon-youtube.png" alt="" width="20" height="20" />&nbsp;<a href="http://www.youtube.com/mydesignar" target="_blank">Nuestro Canal</a></li>
         </ul>
     </div>
 </div>

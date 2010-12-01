@@ -70,6 +70,7 @@ class browser extends uploader {
             !is_writable($thumbsDir)
         )
             $this->backMsg($this->label("Cannot access or create thumbnails folder."));
+        
 
 
         $thumbsDir .= "/" . $this->type;

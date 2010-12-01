@@ -45,6 +45,15 @@
     width: 300px;
 }
 
+/* ESTILOS PARA EL FORMULARIO "PORTFOLIO"
+ -----------------------------------------------------------------------------*/
+.form-portfolio label{
+    width: 120px;
+}
+.form-portfolio input{
+    width: 300px;
+}
+
 /*------------------------------------------------------------------------------
  - ESTILOS PARA LA GALERIA DE IMAGEN
  -----------------------------------------------------------------------------*/
@@ -121,3 +130,55 @@ table tbody tr.row-even{
 .table-contents .cell2{
     text-align: center;
 }
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA TABLA "PORTFOLIO WORKS"
+ -----------------------------------------------------------------------------*/
+.table-portwork{
+    margin-top: 10px;
+}
+.table-portwork .cell1{
+    padding: 0;
+    text-align: center;
+    width: 20px;
+}
+.table-portwork .cell2{
+    width: 121px;
+}
+.table-portwork .cell3{
+    width: 100px;
+}
+.table-portwork .cell4{
+    width: 200px;
+}
+.table-portwork .cell5,
+.table-portwork .cell6,
+.table-portwork .cell7{
+    width: 50px;
+    text-align: center;
+}
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA TABLA "PORTFOLIO CLIENTS"
+ -----------------------------------------------------------------------------*/
+.table-portclie{
+    margin-top: 10px;
+}
+.table-portclie .cell1{
+    padding: 0;
+    text-align: center;
+    width: 20px;
+}
+.table-portclie .cell2{
+    width: 120px;
+}
+.table-portclie .cell3{
+    width: 200px;
+}
+.table-portclie .cell4,
+.table-portclie .cell5,
+.table-portclie .cell6{
+    width: 50px;
+    text-align: center;
+}
+

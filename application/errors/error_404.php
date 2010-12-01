@@ -1,3 +1,5 @@
+<?php header('Location: www.mydesign.com.ar');?>
+
 <html>
 <head>
 <title>404 Page Not Found</title>

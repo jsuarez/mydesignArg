@@ -18,34 +18,35 @@ class Content extends Controller {
     /* PUBLIC FUNCTIONS
      **************************************************************************/
     public function index(){
+        $meta = $this->setup_model->get(array('type'=>'meta'));
         switch($this->uri->segment(1)){
-            case 'empresa':
-                $reference = "empresa";
+            case 'la_empresa':
+                $reference = "la_empresa";
                 $title_section = 'Empresa';
-                $title = TITLE_EMPRESA;
-                $meta_description = META_KEYWORDS_EMPRESA;
-                $meta_keywords = META_KEYWORDS_EMPRESA;
+                $title = $meta['title_general'];
+                $meta_description = $meta['description_general'];
+                $meta_keywords = $meta['keywords_general'];
             break;
             case 'politicas-de-privacidad':
                 $reference = "politicas-de-privacidad";
                 $title_section = 'Pol&iacute;ticas de Privacidad';
-                $title = TITLE_POLITICAS;
-                $meta_description = META_KEYWORDS_POLITICAS;
-                $meta_keywords = META_KEYWORDS_POLITICAS;
+                $title = $meta['title_general'];
+                $meta_description = $meta['description_general'];
+                $meta_keywords = $meta['keywords_general'];
             break;
-            case 'terminos-y-condiciones':
-                $reference = "terminos-y-condiciones";
-                $title_section = 'Terminos y Condiciones';
-                $title = TITLE_TERMINOS;
-                $meta_description = META_KEYWORDS_TERMINOS;
-                $meta_keywords = META_KEYWORDS_TERMINOS;
-            break;
-            case 'preguntas-frecuentes':
-                $reference = "preguntas-frecuentes";
+            case 'faq':
+                $reference = "faq";
                 $title_section = 'Preguntas Frecuentes';
-                $title = TITLE_FAQ;
-                $meta_description = META_KEYWORDS_FAQ;
-                $meta_keywords = META_KEYWORDS_FAQ;
+                $title = $meta['title_general'];
+                $meta_description = $meta['description_general'];
+                $meta_keywords = $meta['keywords_general'];
+            break;
+            case 'sitemap':
+                $reference = "sitemap";
+                $title_section = 'Mapa del sitio';
+                $title = $meta['title_general'];
+                $meta_description = $meta['description_general'];
+                $meta_keywords = $meta['keywords_general'];
             break;
             default: die();
         }

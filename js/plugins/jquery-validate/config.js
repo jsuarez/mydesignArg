@@ -1,39 +1,12 @@
 // VALORES POR DEFECTO
 var jQueryValidatorOptDef = {
     errorPlacement: function(error, element) {
-        var left = -170, top=0;
-        if( error.text().indexOf('Por favor, escribe')!=-1 ) left = -237;
-
-        if( $.browser.msie && $.browser.version<7 ){
-            top = element.attr('id')=="txtConsult" ? element.offset().top-180 : element.offset().top-193;
-        }else{
-            top = element.attr('id')=="txtConsult" ? element.offset().top-145 : element.offset().top-160;
-        }
-
-        var h =$('<div></div>').append(error).html();
-        var div = $('<div><div class="valid-msgleft"></div><div class="valid-msgmiddle">'+h+'</div><div class="valid-msgright"></div></div>');
-        div.css({
-            position : 'absolute',
-            left : left,
-            top  : top
-        });
-        element.parent().append(div);
-
+        var div = $('<div class="fright"><div class="valid-msgleft"></div><div class="valid-msgmiddle">'+$('<div></div>').append(error).html()+'</div><div class="valid-msgright"></div></div>');
+        element.parent().find('.cont-msgerror').append(div);
     },
     highlight : function(element){
         element = $(element);
-        var d = element.parent().find('div').show();
-        if( element.attr('id')=="txtEmail" ){
-            var m = d.find('label.valid-error2').text();
-            var left1=-237, left2=-170;
-            if( $.browser.msie && $.browser.version<7 ){
-                left1 = -190;
-                left2 = -100;
-            }
-            if( m.indexOf('Por favor, escribe')!=-1 ) d.css('left', left1+'px');
-            else if( m.indexOf('El campo')!=-1 ) d.css('left', left2+'px');
-        }
-
+        element.parent().find('.cont-msgerror').show();
         element.removeClass('valid-unhighlight').addClass('valid-highlight');
     },
 

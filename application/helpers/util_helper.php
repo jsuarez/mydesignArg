@@ -66,4 +66,12 @@ function get_country($ip_address){
     return $pais;
 }
 
+function setup($var){
+    $CI =& get_instance();
+    $CI->db->select($var);
+    $arr = $CI->db->get(TBL_SETUP)->row_array();
+    return $arr[$var];
+}
+
+
 ?>

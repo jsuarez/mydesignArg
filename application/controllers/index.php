@@ -66,32 +66,34 @@ class Index extends Controller {
     /* PRIVATE FUNCTIONS
      **************************************************************************/
     private function _get_params($ref){
+         $meta = $this->setup_model->get(array('type'=>'meta'));
+
          switch($ref){
              case 'disenio_web': default:
                  return array(
-                     'reference'        => "disenio_web",
+                     'reference'        => 'disenio_web',
                      'title_section'    => 'Dise&ntilde;o de P&aacute;ginas Web',
-                     'title'            => TITLE_DISENIOWEB,
-                     'meta_description' => META_KEYWORDS_DISENIOWEB,
-                     'meta_keywords'    => META_KEYWORDS_DISENIOWEB
+                     'title'            => $meta['title_disenioweb'],
+                     'meta_description' => $meta['description_disenioweb'],
+                     'meta_keywords'    => $meta['keywords_disenioweb']
                  );
              break;
              case 'disenio_grafico':
                  return array(
                      'reference'        => "disenio_grafico",
                      'title_section'    => 'Dise&ntilde;o Gr&aacute;fico',
-                     'title'            => TITLE_DISENIOGRAFICO,
-                     'meta_description' => META_KEYWORDS_DISENIOGRAFICO,
-                     'meta_keywords'    => META_KEYWORDS_DISENIOGRAFICO
+                     'title'            => $meta['title_diseniografico'],
+                     'meta_description' => $meta['description_diseniografico'],
+                     'meta_keywords'    => $meta['keywords_diseniografico']
                  );
              break;
              case 'marketing_online':
                  return array(
                      'reference'        => "marketing_online",
                      'title_section'    => 'Marketing Online',
-                     'title'            => TITLE_MARKETINGONLINE,
-                     'meta_description' => META_KEYWORDS_MARKETINGONLINE,
-                     'meta_keywords'    => META_KEYWORDS_MARKETINGONLINE
+                     'title'            => $meta['title_marketingonline'],
+                     'meta_description' => $meta['description_marketingonline'],
+                     'meta_keywords'    => $meta['keywords_marketingonline']
                  );
              break;
          }

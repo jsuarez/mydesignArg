@@ -2,11 +2,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title><?=TITLE_GLOBAL . @$tlp_title;?></title>
+    <title><?=$tlp_title;?></title>
     <base href="<?=base_url();?>" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="<?=META_DESCRIPTION_GLOBAL . @$tlp_meta_description;?>" />
-    <meta name="keywords" content="<?=META_KEYWORDS_GLOBAL . @$tlp_meta_keywords;?>" />
+    <meta name="description" content="<?=$tlp_meta_description;?>" />
+    <meta name="keywords" content="<?=$tlp_meta_keywords;?>" />
     <meta name="robots" content="index,follow" />
     <link href="img/favicon.ico" rel="stylesheet icon" type="image/ico" />
 <?php

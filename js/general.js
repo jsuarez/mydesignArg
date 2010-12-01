@@ -1,6 +1,6 @@
 $(function(){
     //Esto es para el MENU
-    $("#lavaLamp").lavaLamp({fx: "backout", speed: 700})
+    setTimeout(function(){$("#lavaLamp").lavaLamp({fx: "backout", speed: 700})}, 2000);
 
     //Esto es para el validador del Formulario de Contacto
     var o = $.extend({}, jQueryValidatorOptDef, {
@@ -35,7 +35,7 @@ $(function(){
                 $('#fc-send').hide();
                 $('#flipbox-fcontact').flip({
                     direction : 'lr',
-                    content   : '<div class="fc-message" style="display:block;">'+(data=="true" ? '<p><img width="32" height="32" alt="" src="img/icon-success.png" style="position: relative; top: 8px; left: -5px;" /> El formulario ha sido enviado con &eacute;xito.</p>' : '<p><img width="32" height="32" alt="" src="img/icon-error.png" style="position: relative; top: 8px; left: -5px;" /> El formulario no ha podido ser enviado. Porfavor, intentelo nuevamente mas tarde o envienos un email a <a href="mailto:info@mydesign.com.ar">info@mydesign.com.ar</a>.</p>')+'</div>',
+                    content   : '<div class="fc-message" style="display:block;">'+(data=="true" ? '<p><img width="32" height="32" alt="" src="img/icon-success.png" style="position: relative; top: 8px; left: -5px;" /> El formulario se env&iacute;o correctamente. Nos pondremos en contacto a la brevedad.<br /><br />Muchas Gracias</p>' : '<p><img width="32" height="32" alt="" src="img/icon-error.png" style="position: relative; top: 8px; left: -5px;" /> El formulario no ha podido ser enviado. Porfavor, intentelo nuevamente mas tarde o envienos un email a <a href="mailto:info@mydesign.com.ar">info@mydesign.com.ar</a>.</p>')+'</div>',
                     color     : 'transparent',
                     onEnd: function(){
                         $('#flipbox-fcontact').css('backgroundColor', 'transparent');
@@ -60,6 +60,11 @@ $(function(){
 
     //Ejecuta la galeria de imagen
     if( $('#gallery').length>0 ) $('#gallery').boutique();
+
+    $.getScript('http://www.google-analytics.com/urchin.js', function(){
+        _uacct = "UA-818728-2";
+        urchinTracker();
+    });
 });
 
 var Chat = {

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>http://www.mydesign.com.ar/</loc>
+  <lastmod>2009-05-26T18:14:09+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.mydesign.com.ar/index.php</loc>
+  <lastmod>2009-05-26T18:14:09+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.mydesign.com.ar/sitemap.php</loc>
+  <lastmod>2009-05-26T18:14:09+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.mydesign.com.ar/faq.php</loc>
+  <lastmod>2009-05-26T18:14:09+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.mydesign.com.ar/disenio_web.php</loc>
+  <lastmod>2009-05-26T18:14:09+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.mydesign.com.ar/disenio_grafico.php</loc>
+  <lastmod>2009-05-26T18:14:09+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.mydesign.com.ar/marketing_online.php</loc>
+  <lastmod>2009-05-26T18:14:09+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.mydesign.com.ar/servicios_extra.php</loc>
+  <lastmod>2009-05-26T18:14:09+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.mydesign.com.ar/contactenos.php</loc>
+  <lastmod>2009-05-26T18:14:09+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.mydesign.com.ar/la_empresa.php</loc>
+  <lastmod>2009-05-26T18:14:09+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.mydesign.com.ar/portfolio.php</loc>
+  <lastmod>2009-05-26T18:14:09+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.mydesign.com.ar/blog/</loc>
+  <lastmod>2009-05-26T18:14:09+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+</urlset>

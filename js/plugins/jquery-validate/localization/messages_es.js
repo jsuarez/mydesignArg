@@ -1,7 +1,3 @@
-/*
- * Translated default messages for the jQuery validation plugin.
- * Locale: ES
- */
 jQuery.extend(jQuery.validator.messages, {
   required: "Este campo es obligatorio.",
   remote: "Por favor, rellena este campo.",
@@ -20,15 +16,4 @@ jQuery.extend(jQuery.validator.messages, {
   range: jQuery.validator.format("Por favor, escribe un valor entre {0} y {1}."),
   max: jQuery.validator.format("Por favor, escribe un valor menor o igual a {0}."),
   min: jQuery.validator.format("Por favor, escribe un valor mayor o igual a {0}.")  
-});
-
-jQuery.validator.setDefaults({
-    messages : {
-        txtName : {
-            remote : 'El nombre del producto ya existe.'
-        },
-        txtPassOld:{
-            remote : 'La contrase&ntilde;a es incorrecta.'
-        }
-    }
 });

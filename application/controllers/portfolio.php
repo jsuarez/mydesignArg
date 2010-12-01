@@ -5,16 +5,19 @@ class Portfolio extends Controller {
      **************************************************************************/
     function __construct(){
         parent::Controller();
+        $meta = $this->setup_model->get(array('type'=>'meta'));
 
         $this->load->model('contents_model');
         $this->load->model('portfolio_model');
-        $this->_data = array('content_footer'=>array(
-            'tlp_title'            => TITLE_PORTFOLIO,
-            'tlp_meta_description' => META_DESCRIPTION_PORTFOLIO,
-            'tlp_meta_keywords'    => META_KEYWORDS_PORTFOLIO,
-            'sitios-recomendados' => $this->contents_model->get_content('sitios-recomendados'),
-            'web-amigas'          => $this->contents_model->get_content('web-amigas')
-        ));
+        $this->_data = array(
+            'tlp_title'            => $meta['title_general'],
+            'tlp_meta_description' => $meta['description_general'],
+            'tlp_meta_keywords'    => $meta['keywords_general'],
+            'content_footer'=>array(
+                'sitios-recomendados' => $this->contents_model->get_content('sitios-recomendados'),
+                'web-amigas'          => $this->contents_model->get_content('web-amigas')
+            )
+        );
     }
 
     /* PRIVATE PROPERTIES

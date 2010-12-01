@@ -1,6 +1,6 @@
 $(function(){
     //Esto es para el MENU
-    $("#lavaLamp").lavaLamp({fx: "backout", speed: 700});
+    setTimeout(function(){$("#lavaLamp").lavaLamp({fx: "backout", speed: 700})}, 2000);
 
    
 });

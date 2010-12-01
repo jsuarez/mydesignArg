@@ -59,7 +59,7 @@ body {
   color: #1C3A50;
   /*background: #D3E8ED;*/
   background: #D3E8ED url({BASE_URL}img/bg-footer.jpg) repeat-x bottom center;
-  font-family: "SansationRegular", Arial, Helvetica, sans-serif;
+  font-family: "SansationRegular", Verdana, Arial, Helvetica, sans-serif;
 }
 
 

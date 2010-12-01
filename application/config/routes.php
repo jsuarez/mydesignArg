@@ -50,10 +50,10 @@ $route['disenio_web/:any'] = "index/moreinfo/$1";
 $route['disenio_grafico/:any'] = "index/moreinfo/$1";
 $route['marketing_online/:any'] = "index/moreinfo/$1";
 
-$route['empresa'] = "content/index/empresa";
-$route['terminos-y-condiciones'] = "content/index/terminos-y-condiciones";
+$route['la_empresa'] = "content/index/la_empresa";
+$route['sitemap'] = "content/index/sitemap";
 $route['politicas-de-privacidad'] = "content/index/politicas-de-privacidad";
-$route['preguntas-frecuentes'] = "content/index/preguntas-frecuentes";
+$route['faq'] = "content/index/faq";
 
 /* End of file routes.php */
 /* Location: ./system/application/config/routes.php */

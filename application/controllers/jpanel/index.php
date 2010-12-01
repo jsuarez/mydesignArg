@@ -20,9 +20,11 @@ class Index extends Controller {
             redirect('/jpanel/services/');
         }else{
             $data = array(
-                'tlp_section'        =>  'panel/login_view.php',
-                'tlp_title'          =>  TITLE_INDEX_PANEL,
-                'tlp_title_section'  => "Acceder al Sistema"
+                'tlp_section'          => 'panel/login_view.php',
+                'tlp_title'            => TITLE_INDEX_PANEL,
+                'tlp_meta_description' => '',
+                'tlp_meta_keywords'    => '',
+                'tlp_title_section'    => "Acceder al Sistema"
             );
             $this->load->view('template_frontpage_view', $data);
         }

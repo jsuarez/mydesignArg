@@ -25,3 +25,17 @@ function ShowHide(sel){
 }
 
 function get_url(url){return baseURI+url+url_suffix}
+
+function get_data(arr){
+    var names = [], id = [];
+
+    arr.each(function(i){
+        id.push(this.value);
+        names.push($(this).parent().parent().find('.jq-itemname').text());
+    });
+
+    return {
+        id    : id,
+        names : names
+    }
+}

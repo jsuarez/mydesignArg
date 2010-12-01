@@ -6,11 +6,12 @@ class Testimoniales extends Controller {
     function __construct(){
         parent::Controller();
 
+        $meta = $this->setup_model->get(array('type'=>'meta'));
         $this->load->model('contents_model');
         $this->_data = array(
-            'tlp_title'            => TITLE_TESTIMONIALES,
-            'tlp_meta_description' => META_DESCRIPTION_TESTIMONIALES,
-            'tlp_meta_keywords'    => META_KEYWORDS_TESTIMONIALES,
+            'tlp_title'            => $meta['title_general'],
+            'tlp_meta_description' => $meta['description_general'],
+            'tlp_meta_keywords'    => $meta['keywords_general'],
             'content_footer' => array(
                 'sitios-recomendados'  => $this->contents_model->get_content('sitios-recomendados'),
                 'web-amigas'           => $this->contents_model->get_content('web-amigas')

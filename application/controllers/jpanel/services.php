@@ -41,7 +41,7 @@ class Services extends Controller {
             $data = array_merge($this->_data, array(
                 'tlp_title'          => TITLE_INDEX_PANEL,
                 'tlp_section'        => 'panel/servicios_form_view.php',
-                'tlp_script'         => array('helpers_json', 'class_services_panel', 'plugins_validator', 'plugins_picturegallery'),
+                'tlp_script'         => array('helpers_json', 'plugins_validator', 'plugins_picturegallery', 'class_services_panel'),
                 'tlp_script_special' => array('plugins_tiny_mce', 'plugins_jqui_sortable'),
                 'reference'          => $params['reference']
             ));

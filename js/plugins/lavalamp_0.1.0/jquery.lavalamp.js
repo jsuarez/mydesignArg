@@ -61,6 +61,8 @@ $.fn.lavaLamp = function(o) {
             $back = $('<li class="back"><div class="left"></div></li>').appendTo(me),
             $li = $("li", this), curr = $("li.current", this)[0] || $($li[0]).addClass("current")[0];
 
+        $(curr).find('a').css('color', '#1C3A50');
+
         $li.not(".back").hover(function() {
             fhover=false;
             $(curr).find('a').css('color', '#fff');
