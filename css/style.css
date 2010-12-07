@@ -207,10 +207,6 @@ a.link-arrow-left, a.link-arrow-right:hover{color: #273B56}
 }
 
 /*------------------------------------------------------------------------------
- - ESTILOS PARA SELECT
- -----------------------------------------------------------------------------*/
-
-/*------------------------------------------------------------------------------
  - ESTILOS PARA BUTTON
  -----------------------------------------------------------------------------*/
 button{
@@ -679,36 +675,42 @@ button{
 /*------------------------------------------------------------------------------
  - ESTILO PARA EL LISTADO DE PREGUNTAS FRECUENTES
  -----------------------------------------------------------------------------*/
-ul.list-faq, ul.list-faq >li{
+ul.list-faq, ul.list-faq li{
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
-ul.list-faq >li{
+ul.list-faq li li{
+    margin-left: 10px;
+    list-style-type: disc !important;
+    width: auto;
+}
+ul.list-faq li{
     float: left;
     clear: left;
     padding-bottom: 5px;
     margin-bottom: 5px;
     color:#1C3A50;
     font-size: 100%;
+    width: 100%;
 }
-    ul.list-faq >li a{
+    ul.list-faq li a{
         font-size: 120%;
         color:#1C3A50;
     }
-    ul.list-faq >li a:hover{text-decoration: underline;}
-    ul.list-faq >li span{
+    ul.list-faq li a:hover{text-decoration: underline;}
+    ul.list-faq li span{
         float: left;
         color: #BAC3CA;
         font-size: 180%;
         font-weight: bold;
         margin-right: 10px;
     }
-    ul.list-faq >li div div{
+    ul.list-faq li div div{
         padding-top: 5px;
         display: none;
     }
-    ul.list-faq >li >div{
+    ul.list-faq li div{
         padding-top: 5px;
     }
     ul.list-faq p{

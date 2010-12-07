@@ -6,6 +6,7 @@ class Index extends Controller {
     function __construct(){
         parent::Controller();
         $this->load->library("simplelogin");
+        $this->load->model('contents_model');
     }
 
     /* PRIVATE PROPERTIES
@@ -24,7 +25,11 @@ class Index extends Controller {
                 'tlp_title'            => TITLE_INDEX_PANEL,
                 'tlp_meta_description' => '',
                 'tlp_meta_keywords'    => '',
-                'tlp_title_section'    => "Acceder al Sistema"
+                'tlp_title_section'    => "Acceder al Sistema",
+                'content_footer'       => array(
+                    'sitios-recomendados' => $this->contents_model->get_content('sitios-recomendados'),
+                    'web-amigas'          => $this->contents_model->get_content('web-amigas')
+                )
             );
             $this->load->view('template_frontpage_view', $data);
         }
