@@ -1,22 +1,32 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-class Index extends Controller {
+class Index extends My_Controller {
 
     /* CONSTRUCTOR
      **************************************************************************/
     function __construct(){
-        parent::Controller();
+        parent::My_Controller();
 
         $this->load->model('contents_model');
         $this->load->model('services_model');
-        $this->_data = array('content_footer'=>array(
-            'sitios-recomendados' => $this->contents_model->get_content('sitios-recomendados'),
-            'web-amigas'          => $this->contents_model->get_content('web-amigas')
-        ));
-    }
 
-    /* PRIVATE PROPERTIES
-     **************************************************************************/
-    private $_data;
+        $this->assets->add_css('view_services');
+        $this->assets->add_js_group(array('plugins_carousel'));
+        $this->assets->add_js(array('plugins/jquery.cycle.all.min', 'plugins/formatnumber/formatnumber.min', 'class/services_front'));
+
+        $params = $this->_get_params($this->uri->segment(1, 'index'));
+        $this->_data = array(
+            'tlp_title'            => $params['title'],
+            'tlp_title_section'    => $params['title_section'],
+            'tlp_meta_description' => $params['meta_description'],
+            'tlp_meta_keywords'    => $params['meta_keywords'],
+            'reference'            => $params['reference'],
+            'content_footer'       => array(
+                'sitios-recomendados'  => $this->contents_model->get_content('sitios-recomendados'),
+                'web-amigas'           => $this->contents_model->get_content('web-amigas')
+            )
+        );
+
+    }
 
     /* PUBLIC FUNCTIONS
      **************************************************************************/
@@ -25,41 +35,21 @@ class Index extends Controller {
     }
 
     public function show(){
-        $params = $this->_get_params($this->uri->segment(1));
-
-        $data = array_merge($this->_data, array(
-            'tlp_title'            => $params['title'],
-            'tlp_title_section'    => $params['title_section'],
-            'tlp_meta_description' => $params['meta_description'],
-            'tlp_meta_keywords'    => $params['meta_keywords'],
-            'tlp_section'          => 'frontpage/servicios_view.php',
-            'tlp_script'           => array('plugins_jqueryflip', 'plugins_cycle', 'plugins_carousel', 'class_services_front'),
-            'list_services'        => $this->services_model->get_list_services($params['reference']),
-            'list_banners'         => $this->contents_model->get_list_banners($params['reference']),
-            'reference'            => $params['reference']
-        ));
-        $this->load->view('template_frontpage_view', $data);
+        $this->_render('front/servicios_view', array_merge($this->_data, array(
+            'list_services'        => $this->services_model->get_list_services($this->_data['reference']),
+            'list_banners'         => $this->contents_model->get_list_banners($this->_data['reference'])
+        )));
     }
 
     public function moreinfo(){
         $ref1 = $this->uri->segment(1);
         $ref2 = $this->uri->segment(2);
 
-        $params = $this->_get_params($ref1);
         $info = $this->services_model->get_service($ref1, $ref2);
-
-        $data = array_merge($this->_data, array(
-            'tlp_title'            => $params['title'],
+        $this->_render('front/servicios_masinfo_view', array_merge($this->_data, array(
             'tlp_title_section'    => $info['title'],
-            'tlp_meta_description' => $params['meta_description'],
-            'tlp_meta_keywords'    => $params['meta_keywords'],
-            'tlp_section'          => 'frontpage/servicios_masinfo_view.php',
-            'tlp_script'           => array('plugins_carousel', 'class_services_front'),
-            'info'                 => $info,
-            'reference'            => $params['reference']
-        ));
-        $data = array_merge($this->_data, $data);
-        $this->load->view('template_frontpage_view', $data);
+            'info'                 => $info
+        )));
     }
 
 

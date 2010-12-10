@@ -20,7 +20,7 @@ $src = @$info['filename']!='' ? UPLOAD_PATH_PORTFOLIOCLIE . @$info['filename'] :
             <div class="clear span-13 last">
                 <input type="file" id="txtThumb" name="txtThumb" class="ajaxupload-input" size="20" />&nbsp;
                 <button type="button" onclick="Portfolio.upload('#cont-image-1');">Subir</button>
-                <img src="images/ajax-loader4.gif" alt="Loading..." width="43" height="11" class="hide ajaxupload-load" />
+                <img src="public/img/ajax-loader4.gif" alt="Loading..." width="43" height="11" class="hide ajaxupload-load" />
                 <div class="ajaxupload-error clear span-7 hide" style="margin-top:10px"></div>
             </div>
         </div>

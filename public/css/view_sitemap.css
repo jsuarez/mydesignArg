@@ -1,0 +1,14 @@
+/*------------------------------------------------------------------------------
+ - ESTILO PARA EL LISTADO SITEMAP
+ -----------------------------------------------------------------------------*/
+.list-sitemap li{
+    list-style-type: disc;
+    margin-bottom: 3px;
+}
+.list-sitemap li li{
+    list-style-type: circle;
+    margin-left: 10px;
+}
+.list-sitemap ul{
+    margin-bottom: 5px;
+}

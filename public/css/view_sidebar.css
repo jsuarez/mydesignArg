@@ -1,0 +1,109 @@
+
+/* SIDEBAR - SOPORTE
+-----------------------------------------------------------------------------*/
+.main-container .column-sidebar .soporte{
+    float: left;
+    background: url(public/img/bg-soporte.png) no-repeat;
+    width:245px;
+    height: 38px;
+    padding-top:12px;
+    font-size: 150%;
+    color:#1B3A50;
+    text-align: center;
+}
+    .main-container .column-sidebar .soporte img{
+        position: relative;
+        top:4px;
+    }
+/* SIDEBAR - FORMULARIO DE CONTACTO
+ ---------------------------------------------------------------------*/
+.main-container .column-sidebar .form-contact{
+    clear: left;
+    float:left;
+    background: url(public/img/bg-formcontact.png) no-repeat;
+    width: 200px;
+    height: 295px;
+    padding: 25px 25px 0 25px;
+    margin-top: -10px;
+}
+    .main-container .column-sidebar .form-contact input {
+        width: 200px;
+    }
+        .main-container .column-sidebar .form-contact input.w1 {
+            width:50px;
+            text-align: center;
+        }
+        .main-container .column-sidebar .form-contact input.w2 {
+            width:142px;
+        }
+    .main-container .column-sidebar .form-contact textarea {
+        width: 189px;
+        height: 50px;
+    }
+    .main-container .column-sidebar .form-contact p{
+        margin: 4px 0 4px 0 !important;
+    }
+    .main-container .column-sidebar .form-contact .fc-message{
+        font-size: 110%;
+        text-align: center;
+        padding-top: 60px;
+        display: none;
+    }
+        .main-container .column-sidebar .form-contact .fc-message img{
+            margin-top: 5px;
+        }
+
+
+/* SIDEBAR - CONT TESTIMONIAL
+ ---------------------------------------------------------------------*/
+.main-container .column-sidebar .cont-testimonial{
+    clear: left;
+    float:left;
+    background: url(public/img/bg-cont-testimonial.png) no-repeat;
+    width: 200px;
+    height: 149px;
+    padding: 30px 25px 25px 25px;
+    margin-top: -10px;
+    font-size: 110%;
+}
+    .main-container .column-sidebar .cont-testimonial .info{
+        margin-top: 10px;
+        width: 210px;
+    }
+        .main-container .column-sidebar .cont-testimonial .info .col1{
+            float: left;
+            width: 143px;
+        }
+        .main-container .column-sidebar .cont-testimonial .info p{
+            clear: left;
+            margin: 0 !important;
+            width: 100%;
+            text-align: right;
+        }
+
+/* SIDEBAR - CONT TESTIMONIAL
+ ---------------------------------------------------------------------*/
+.main-container .column-sidebar .cont-banner{
+    position: relative;
+    clear: left;
+    float:left;
+    margin-left: 10px;
+    overflow: hidden;
+    /*border:1px solid red;*/
+}
+    .main-container .column-sidebar .cont-banner .mask{
+        position: relative;
+        background: url(public/img/mask-banner.png) no-repeat;
+        width: 250px;
+        height: 196px;
+        z-index: 110;
+        margin-left: -10px;
+    }
+    .main-container .column-sidebar .cont-banner .cont-images{
+        position: absolute;
+        width: 250px;
+        height: 197px;
+        top:0;
+        left:-10px;
+        overflow: hidden;
+    }

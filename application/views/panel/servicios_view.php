@@ -23,8 +23,8 @@ foreach( $list_services as $row ){
         </div>
         <p class="clear"><?=$row['content_intro']?></p>
         <div class="cont-icons">
-            <a href="<?=site_url('/jpanel/services/form/'.$reference.'/'.$row['content_id'])?>"><img src="img/icon_edit.png" alt="" width="16" height="16" class="link-img" /> Editar</a>
-            <a href="javascript:void(Services.del('<?=$row['reference']?>', <?=$row['content_id']?>))"><img src="img/icon_delete.png" alt="" width="16" height="16" class="link-img" /> Eliminar</a>
+            <a href="<?=site_url('/jpanel/services/form/'.$reference.'/'.$row['content_id'])?>"><img src="public/img/icon_edit.png" alt="" width="16" height="16" class="link-img" /> Editar</a>
+            <a href="javascript:void(Services.del('<?=$row['reference']?>', <?=$row['content_id']?>))"><img src="public/img/icon_delete.png" alt="" width="16" height="16" class="link-img" /> Eliminar</a>
         </div>
     </div>
 </li>

@@ -1,12 +1,11 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-class Portfolio extends Controller {
+class Portfolio extends MY_Controller {
 
     /* CONSTRUCTOR
      **************************************************************************/
     function __construct(){
-        parent::Controller();
-
-        if( !$this->session->userdata('logged_in') ) redirect($this->config->item('base_url'));
+        parent::MY_Controller();
+        if( !$this->session->userdata('logged_in') ) redirect('/jpanel/');
         
         $this->load->model("contents_model");
         $this->load->model("portfolio_model");
@@ -20,21 +19,19 @@ class Portfolio extends Controller {
         );
     }
 
-    /* PRIVATE PROPERTIES
-     **************************************************************************/
-    private $_data;
 
     /* PUBLIC FUNCTIONS
      **************************************************************************/
     public function index(){
-        $this->_data = array_merge($this->_data, array(
-            'tlp_script'          => array('helpers_json', 'class_portfolio_list'),
-            'tlp_script_special'  => array('plugins_jqui_tabs', 'plugins_jqui_sortable'),
-            'tlp_section'         => 'panel/portfolio_list_view.php',
+        $this->assets->add_js_group(array('helpers_json'));
+        $this->assets->add_js_group(array('plugins_jqui_tabs'), false);
+        $this->assets->add_js(array('class/portfolio_list'));
+        $this->assets->add_js('plugins/jquery-ui.sortable/jquery-ui-1.8.2.custom.min', false);
+
+        $this->_render('panel/portfolio_list_view', array_merge($this->_data, array(
             'tlp_title_section'   => "Portfolio",
             'list'                => $this->portfolio_model->get_list_works()
-        ));
-        $this->load->view('template_panel_view', $this->_data);
+        )), 'panel_view');
     }
 
     public function workform(){
@@ -42,8 +39,6 @@ class Portfolio extends Controller {
 
         $data = array_merge($this->_data, array(
             'tlp_title'          => TITLE_INDEX_PANEL,
-            'tlp_section'        => 'panel/portfolio_form_works_view.php',
-            'tlp_script'         => array('helpers_json', 'plugins_validator', 'class_portfolio_form')
         ));
         if( is_numeric($id) ){ //EDIT
             $info = $this->portfolio_model->get_info_works($id);
@@ -52,7 +47,10 @@ class Portfolio extends Controller {
         }else{                 //NUEVO
             $data['tlp_title_section'] = "Portfolio Trabajo - Nuevo";
         }
-        $this->load->view('template_panel_view', $data);
+
+        $this->assets->add_js_group(array('helpers_json', 'plugins_validate'));
+        $this->assets->add_js(array('class/portfolio_form'));
+        $this->_render('panel/portfolio_form_works_view', $data, 'panel_view');
     }
 
     public function clientsform(){
@@ -60,8 +58,6 @@ class Portfolio extends Controller {
 
         $data = array_merge($this->_data, array(
             'tlp_title'          => TITLE_INDEX_PANEL,
-            'tlp_section'        => 'panel/portfolio_form_clients_view.php',
-            'tlp_script'         => array('helpers_json', 'plugins_validator', 'class_portfolio_form')
         ));
         if( is_numeric($id) ){ //EDIT
             $info = $this->portfolio_model->get_info_clients($id);
@@ -70,7 +66,9 @@ class Portfolio extends Controller {
         }else{                 //NUEVO
             $data['tlp_title_section'] = "Portfolio Clientes - Nuevo";
         }
-        $this->load->view('template_panel_view', $data);
+        $this->assets->add_js_group(array('helpers_json', 'plugins_validate'));
+        $this->assets->add_js(array('class/portfolio_form'));
+        $this->_render('panel/portfolio_form_clients_view', $data, 'panel_view');
     }
 
     public function workcreate(){

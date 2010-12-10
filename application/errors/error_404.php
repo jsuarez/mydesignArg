@@ -1,4 +1,4 @@
-<?php header('Location: www.mydesign.com.ar');?>
+<?php Header('Location: http://www.mydesign.com.ar');?>
 
 <html>
 <head>

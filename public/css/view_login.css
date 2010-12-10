@@ -1,0 +1,21 @@
+/*------------------------------------------------------------------------------
+ - ESTILO PARA LOGIN
+ -----------------------------------------------------------------------------*/
+.contlogin{
+    width: 300px;
+    margin: 0 auto;
+}
+.contlogin .form{
+    float: left;
+    width: 300px;
+    height: auto;
+    border:1px dashed #273B56;
+    background-color: #C5DBE5;
+    padding: 5px;
+}
+    .contlogin input{
+        width: 120px;
+    }
+    .contlogin label{
+        width: 100px;
+    }

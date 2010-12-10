@@ -1,10 +1,11 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-class Services extends Controller {
+class Services extends MY_Controller {
 
     /* CONSTRUCTOR
      **************************************************************************/
     function __construct(){
-        parent::Controller();
+        parent::MY_Controller();
+        if( !$this->session->userdata('logged_in') ) redirect('/jpanel/');
 
         $this->load->model('contents_model');
         $this->load->model('services_model');
@@ -21,15 +22,14 @@ class Services extends Controller {
      **************************************************************************/
     public function index(){
         $params = $this->_get_params($this->uri->segment(4));
-        $data = array_merge($this->_data, array(
+        $this->assets->add_js('class/services_panel');
+        $this->assets->add_css('view_services');
+        $this->_render('panel/servicios_view', array_merge($this->_data, array(
             'tlp_title'            => TITLE_INDEX_PANEL,
             'tlp_title_section'    => $params['title'],
-            'tlp_section'          => 'panel/servicios_view.php',
-            'tlp_script'           => array('class_services_panel'),
             'list_services'        => $this->services_model->get_list_services($params['reference']),
             'reference'            => $params['reference']
-        ));
-        $this->load->view('template_panel_view', $data);
+        )), 'panel_view');
     }
 
     public function form(){
@@ -38,22 +38,25 @@ class Services extends Controller {
             $id = $this->uri->segment(5);
             $params = $this->_get_params($this->uri->segment(4));
 
-            $data = array_merge($this->_data, array(
-                'tlp_title'          => TITLE_INDEX_PANEL,
-                'tlp_section'        => 'panel/servicios_form_view.php',
-                'tlp_script'         => array('helpers_json', 'plugins_validator', 'plugins_picturegallery', 'class_services_panel'),
-                'tlp_script_special' => array('plugins_tiny_mce', 'plugins_jqui_sortable'),
-                'reference'          => $params['reference']
-            ));
+            $this->assets->add_js_group(array('helpers_json', 'plugins_validate'));
+            $this->assets->add_js_group(array('plugins_tiny_mce'), false);
+            $this->assets->add_js(array('plugins/picturegallery/picturegallery.min', 'class/services_panel'));
+            $this->assets->add_js('plugins/jquery-ui.sortable/jquery-ui-1.8.2.custom.min', false);
+
+            $data = array(
+                'tlp_title' => TITLE_INDEX_PANEL,
+                'reference' => $params['reference']
+            );
+
             if( is_numeric($id) ){ //EDIT
                 $info = $this->services_model->get_info($id);
                 $data['tlp_title_section'] = "Editar - ".$info['title'];
                 $data['info'] = $info;
-            }else{                 //NUEVO
+            }else{   //NUEVO
                 $data['tlp_title_section'] = "Nuevo";
             }
-            $this->load->view('template_panel_view', $data);
 
+            $this->_render('panel/servicios_form_view', array_merge($this->_data, $data), 'panel_view');
         }
     }
 

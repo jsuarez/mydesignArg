@@ -19,18 +19,12 @@ foreach( $listPages as $row ) {
 
                     <p class="prepend-top">
                         <button type="button" class="fleft" onclick="Contents.save(this, '<?=$row['reference']?>', 'txtCont<?=$n?>');">Guardar</button>
-                        <img src="img/ajax-loader3.gif" alt="Loading" width="32" height="32" class="jq-ajaxloader hide" />
+                        <img src="public/img/ajax-loader3.gif" alt="Loading" width="32" height="32" class="jq-ajaxloader hide" />
                     </p>
                 </div>
             </td>
-            <td class="cell2"><a href="#cont<?=$n?>" onclick="Contents.slideCont(this); return false;"><img src="img/icon_arrow_down.png" alt="Abrir" width="16" height="16" class="jq-icon" /></a></td>
+            <td class="cell2"><a href="#cont<?=$n?>" onclick="Contents.slideCont(this); return false;"><img src="public/img/icon_arrow_down.png" alt="Abrir" width="16" height="16" class="jq-icon" /></a></td>
         </tr>
 <?php }?>
     </tbody>
 </table>
-
-<script type="text/javascript">
-<!--
-    Contents.initializer();
--->
-</script>

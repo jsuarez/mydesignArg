@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
-<div class="span-12 logo"><a href="http://www.mydesign.com.ar"><img src="img/logo.png" alt="www.mydesign.com.ar" width="331" height="51" border="0" /></a></div>
+<div class="span-12 logo"><a href="http://www.mydesign.com.ar"><img src="public/img/logo.png" alt="www.mydesign.com.ar" width="331" height="51" border="0" /></a></div>
 <div class="cont-phone">
-    <img src="img/icon-phone.png" alt="" width="33" height="33" />
+    <img src="public/img/icon-phone.png" alt="" width="33" height="33" />
     <div class="fleft textformat">
         <p><span>Mendoza</span> <b>(0261)</b> 4237658</p>
         <p class="line"><span>Bahia Blanca</span> <b>(0291)</b> 154-195047</p>

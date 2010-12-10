@@ -1,0 +1,510 @@
+/*------------------------------------------------------------------------------
+ - ESTILO GENERAL
+ -----------------------------------------------------------------------------*/
+.trow{
+    float:left;
+    clear: both;
+    width: 100%;
+    margin: 8px 0 8px 0;
+}
+.trow-contact{
+    float:left;
+    position: relative;
+    clear: both;
+    width: 100%;
+    margin: 2px 0 2px 0;
+    white-space: nowrap;
+}
+h1.title, h2.title, h3.title, h4.title{
+    font-weight: bold;
+    float: left;
+}
+h1.title{
+    position: relative;
+    font-size: 190%;
+    margin: -30px 0 15px -18px;
+    padding: 0 100px 5px 70px;
+    border-bottom: 1px dashed #1C3A50;
+}
+h2.title{
+    font-size: 150%;
+    width: 100%;
+    padding-bottom: 2px;
+    border-bottom: 1px dashed #1C3A50;
+}
+h3.title{
+    font-size: 120%;
+    margin: 0 0 5px -10px;
+    padding: 0 0 5px 10px;
+    width:210px;
+    border-bottom: 1px dashed #1C3A50;
+}
+h3.title2{
+    float: left;
+    font-size: 150%;
+    padding: 0 100px 5px 46px;
+    margin-left: -17px;
+    border-bottom: 1px dashed #1C3A50;
+    white-space: nowrap;
+}
+h3.title3{
+    font-size: 150%;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #1C3A50;
+    white-space: nowrap;
+}
+h4.title{
+    font-size: 110%;
+    margin: 0 0 4px -9px;
+    padding-bottom: 2px;
+    text-align: right;
+    width: 150px;
+    border-bottom: 1px dashed #fff;
+}
+
+.textformat{font-family: Verdana, Arial, Helvetica, sans-serif !important;}
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA MENSAJES DEL VALIDADOR
+ -----------------------------------------------------------------------------*/
+.valid-success{
+    background: transparent url(public/img/icon_success.png) no-repeat left !important;
+    width: 16px;
+    height: 16px;
+    padding: 0 0 0 18px !important;
+    color: #264409 !important;
+    border: none !important;
+    font-size: 100% !important;
+    z-index: 100;
+}
+.valid-error{
+    background: #FBE3E4;
+    color: #8a1f11;
+    border: 2px solid #FBC2C4;
+    padding: 5px;
+    margin-left: 5px;
+    font-size: 90%;
+    font-weight: normal;
+    min-width: 180px;
+    max-width: 180px;
+    text-align: left;
+    z-index: 100;
+}
+.valid-error2{
+    float: left;
+    border: none;
+    background: transparent;
+    color: #fff;
+    padding: 0;
+    margin-top: 8px;
+    text-align: left;
+    z-index: 100;
+    font-size: 90%;
+    font-weight: normal;
+}
+
+.valid-highlight{border-style: dashed !important;}
+.valid-unhighlight{border-style: solid !important;}
+.valid-msgleft{
+    float: left;
+    background: url(public/img/msg-left.png) no-repeat;
+    width: 10px;
+    height: 32px;
+}
+.valid-msgmiddle{
+    float: left;
+    background: url(public/img/msg-middle.png) repeat-x;
+    width: auto;
+    height: 32px;
+}
+.valid-msgright{
+    float: left;
+    background: url(public/img/msg-right.png) no-repeat;
+    width: 18px;
+    height: 32px;
+}
+.cont-msgerror{
+    position: absolute;
+    left:-380px;
+    top:14px;
+    width: 376px;
+    /*border: 1px solid;*/
+}
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA LINK
+ -----------------------------------------------------------------------------*/
+a.link-moreinfo, a.link-back{
+    color:#F69924;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 110%;
+}
+a.link-moreinfo{
+    position: absolute;
+    display: block;
+    left:130px;
+    top:250px;
+    white-space: nowrap;
+    background: url(public/img/icon-arrow-right.png) no-repeat right bottom;
+    padding: 0 9px 4px 0;
+    font-size: 100%;
+}
+a.link-back{
+    float: left;
+    background: url(public/img/icon-arrow-left.png) no-repeat left bottom;
+    padding:0 0 2px 10px;
+    margin-right: 10px;
+}
+a.link-img{
+    color:#A62D38 !important;
+    font-size: 110%;
+}
+    a.link-img img{
+        position: relative;
+        top:3px;
+    }
+    a.link-img:hover{color:#581B23 !important;}
+
+a.link-arrow-left{
+    float: left;
+    background: url(public/img/icon-arrow-left2.png) no-repeat left bottom;
+    padding: 0 0 5px 10px;
+}
+a.link-arrow-right{
+    float: right;
+    background: url(public/img/icon-arrow-right2.png) no-repeat right bottom;
+    padding: 0 10px 5px 0;
+}    
+a.link-arrow-left, a.link-arrow-right:hover{color: #273B56}
+
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA LABEL
+ -----------------------------------------------------------------------------*/
+.label{
+    display: block;
+    float: left;
+    text-align: right;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA INPUT
+ -----------------------------------------------------------------------------*/
+.input-form{
+    width: 300px;
+}
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA TEXTAREA
+ -----------------------------------------------------------------------------*/
+.textarea{
+    width: 450px;
+    height: 100px;
+}
+
+/*------------------------------------------------------------------------------
+ - ESTILOS PARA BUTTON
+ -----------------------------------------------------------------------------*/
+button{
+    background: transparent url(public/img/button.png) no-repeat bottom;
+    border: none;
+    width: 80px;
+    height: 25px;
+    color: #1B3A50;
+}
+
+
+/*------------------------------------------------------------------------------
+ - ESTILO QUE ESTAN EN EL "HEADER"
+ -----------------------------------------------------------------------------*/
+.header{
+    background: url(public/img/bg-body.jpg) no-repeat bottom center;
+    padding-top:30px;
+    height: 448px;
+}
+    .header .cont-phone{
+        float: right;
+        width: 293px;
+        height: 60px;
+        color: #365265;
+    }
+        .header .cont-phone p{
+            margin: 0 !important;
+            padding: 4px 0 4px !important;
+        }
+        .header .cont-phone .line{
+            border-top: 1px dashed #205580;
+        }
+        .header .cont-phone img{
+            float: left;
+            margin: 10px 5px;
+        }
+        .header .cont-phone span{
+            color:#19517F;
+            font-style: italic;
+            font-weight: bold;
+        }
+    .header .logo{
+        padding-left: 10px;
+    }
+
+
+/* MENU
+ -----------------------------------------------------------------------------*/
+.header .menu{
+    clear: both;
+    float: left;
+    position: relative;
+    z-index: 10;
+    background: url(public/img/menu.png) no-repeat;
+    width: 974px;
+    height: 62px;
+    margin-top: 15px;
+    z-index: 300;
+}
+    .header .menu ul,.header .menu li{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    .header .menu ul li.back {
+        background: #FCDB89 url(public/img/menu-right.png) no-repeat right top;
+        z-index: 11;
+        position: absolute;
+    }
+        .header .menu ul li.back .left {
+            float: left;
+            background: url(public/img/menu-left.png) no-repeat;
+            height: 37px;
+            width: 27px;
+        }
+
+    .header .menu ul{
+        float: left;
+        margin-top: 10px;
+        width: 1000px;
+        /*border: 1px solid red;*/
+    }
+    .header .menu li{
+        float: left;
+        margin-right: 2px;
+        text-align: center;
+    }
+    .header .menu a{
+        position: relative;
+        display: block;
+        padding: 9px 25px 9px 25px;
+        z-index: 20;
+        color: #fff;
+        /*border: 1px solid green;*/
+    }
+    .header .menu a:hover{
+        color:#1C3A50 !important;
+    }
+        /*.header .menu li.current h1,
+        .header .menu li.current h1 a{
+            color:#1C3A50;
+        }*/
+    .header .menu h1{
+        font-size: 170%;
+        white-space: nowrap;
+        padding-right: 2px;
+        background: url(public/img/menu-separator.jpg) no-repeat right top;
+    }
+    .header .menu h1.outline{
+        background: none;
+        padding-right: 0;
+    }
+    .header .menu .contmenu{
+        float: left;
+        position: relative;
+        overflow: hidden;
+        width: 935px;
+        height: 62px;
+        margin-left: 20px;
+    }
+
+/*------------------------------------------------------------------------------
+ - ESTILO QUE ESTAN EN EL "MAIN CONTAINER"
+ -----------------------------------------------------------------------------*/
+.main-container{
+    margin-top:-320px;
+    width: 978px;
+    /*border: 1px solid red;*/
+}
+    .main-container .column-container{
+        float: left;
+        position: relative;
+        width: 730px;
+        z-index: 200;
+        /*border: 1px solid red;*/
+    }
+        .main-container .column-container .top{
+            position: relative;
+            float: left;
+            background: url(public/img/main-container-top.png) no-repeat;
+            width:730px;
+            height: 70px;
+            z-index: 10;
+        }
+        .main-container .column-container .middle{
+            position: relative;
+            float: left;
+            clear: left;
+            background: url(public/img/main-container-middle.png) repeat-y;
+            width:670px;
+            padding: 0 30px 0 30px;
+            z-index: 10;
+            font-size: 110%;
+    }
+        .main-container .column-container .bottom{
+            position: relative;
+            float: left;
+            clear: left;
+            background: url(public/img/main-container-bottom.png) no-repeat;
+            width:730px;
+            height: 24px;
+            z-index: 10;
+        }
+        .main-container .column-container .content-moreinfo{
+            float: left;
+            width: 500px;
+            height: auto;
+            margin-bottom: 22px;
+            font-family: Verdana, Arial, Helvetica, sans-serif !important;
+        }
+
+/* SIDEBAR
+-----------------------------------------------------------------------------*/
+.main-container .column-sidebar{
+    float: left;
+    width:245px;
+    margin-left: -8px;
+    position: relative;
+    z-index: 200;
+    /*border: 1px solid red;*/
+}
+
+
+/*------------------------------------------------------------------------------
+ - ESTILO QUE ESTAN EN EL "FOOTER"
+ -----------------------------------------------------------------------------*/
+.footer{
+    clear: both;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 295px;
+    margin: 5px auto;
+}
+    .footer .cont{
+        width: 978px;
+        margin:0 auto;
+        color:#fff;
+        font-size: 110%;
+        text-align: left;
+        position: relative;
+        z-index: 1000;
+        /*border:1px solid red;*/
+    }
+        .footer .cont a,.footer .cont a:link{
+            color:#fff;
+        }
+        .footer .cont a:hover{
+            text-decoration: underline;
+        }
+        .footer .cont h4{
+            color:#fff;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 110%;
+            margin: 0 0 8px 0;
+        }
+        .footer .cont a.link-footer{
+            color:#97A2B2 !important;
+        }
+        .footer .cont a.link-webamiga, .footer .cont a.link-webamiga:link{
+            color: #6F9FD0;
+        }
+        .footer .cont strong{
+            color:#306186;
+        }
+        .footer .cont .col1, .footer .cont .col2, .footer .cont .col3, .footer .cont .col4{
+            float:left;
+            margin-right: 15px;
+            padding-right: 15px;
+        }
+        .footer .cont ul.list, .footer .cont ul.list li{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .footer .cont ul.list li{
+            margin:0 0 5px 20px;
+        }
+            .footer .cont ul.list li img{
+                position: relative;
+                top:4px;
+                right:4px;
+            }
+
+    .footer .line-h{
+        width: 100%;
+        height: 10px;
+        float: left;
+        clear: left;
+        margin-bottom: 18px;
+        border-bottom: 1px dashed #BACAD8;
+        font-size: 0;
+    }
+    .footer .line-v2{
+        border-right: 2px solid #97A2B2;
+    }
+    .footer .line-v1{
+        border-left: 1px dashed #BACAD8;
+    }
+
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA LOS ISO
+ -----------------------------------------------------------------------------*/
+.cont-iso{
+    float: left;
+    clear: left;
+    position: relative;
+    width: 730px;
+    z-index: 0;
+}
+.iso{
+    position: absolute;
+    z-index: 0;
+}
+.iso1{
+    background: url(public/img/iso-01.png) no-repeat;
+    width: 381px;
+    height: 336px;
+    top:-328px;
+    left:-158px;
+    /*margin: -328px 0 0 -158px;*/
+}
+.iso2{
+    background: url(public/img/iso-02.png) no-repeat;
+    width: 280px;
+    height: 246px;
+    /*left: 560px;
+    top: -200px;*/
+    left: 765px;
+    top: -126px;
+}
+.iso3{
+    background: url(public/img/iso-03.png) no-repeat;
+    width: 318px;
+    height: 280px;
+    top:20px;
+    left:930px;
+    /*margin: -328px 0 0 -158px;*/
+}

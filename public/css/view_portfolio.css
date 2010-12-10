@@ -1,0 +1,113 @@
+/*------------------------------------------------------------------------------
+ - ESTILO PARA LISTADOS DEL PORTFOLIO
+ -----------------------------------------------------------------------------*/
+#portfolio-filter{
+    list-style-type: none;
+    clear: both;
+    margin-left: 30px;
+}
+    #portfolio-filter li{
+        display: inline;
+        padding-right: 10px;
+        margin-right: 10px;
+        border-right: 1px dashed #778C9C;
+    }
+        #portfolio-filter li a{
+            font-size: 120%;
+        }
+        #portfolio-filter li a.current{
+            font-weight: bold;
+        }
+
+#portfolio-list{
+    clear: both;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    list-style-type: none;
+}
+    #portfolio-list li{
+        display: inline;
+        float: left;
+        width: 213px;
+        height: 146px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        /*border: 1px solid red;*/
+    }
+    #portfolio-list .info{
+        position: absolute;
+        width: 194px;
+        height: 136px;
+        left:11px;
+        top:0;
+        overflow: hidden;
+        /*border:1px solid red;*/
+    }
+    #portfolio-list .message{
+        position: relative;
+        display: none;
+        width: 194px;
+        left:0;
+        top:0;
+        background-color: #000;
+        font-size: 80%;
+        color:#fff;
+        padding: 5px;
+    }
+        #portfolio-list .message a,
+        #portfolio-list .message a:link{
+            color:#fff;
+        }
+        #portfolio-list .message a:hover{
+            text-decoration: underline;
+        }
+
+/*------------------------------------------------------------------------------
+ - ESTILO PARA PORTFOLIO - CLIENTES
+ -----------------------------------------------------------------------------*/
+.portfolio-clientes{
+    float: left;
+    margin:0 0 40px 20px;
+}
+    .portfolio-clientes .cont{
+        float: left;
+        position: relative;
+        overflow: hidden;
+        width: 586px;
+        height: 93px;
+        /*border: 1px solid green;*/
+    }
+    .portfolio-clientes .back{
+        float: left;
+        width: 2000px;
+    }
+    .portfolio-clientes ul{
+        position: relative;
+        top:0;left:0;
+        width: 600px;
+        /*border: 1px solid green;*/
+    }
+    .portfolio-clientes li{float: left}
+    .portfolio-clientes .prev,
+    .portfolio-clientes .next{
+        display: block;
+        width: 20px;
+        height: 103px;
+        margin-top: -5px;
+    }
+    .portfolio-clientes .next{
+        margin-left: 10px;
+    }
+    .portfolio-clientes .prev{
+        margin-right: 1px;
+    }
+    .portfolio-clientes .line{
+        float: left;
+        border-right: 1px dashed #778C9C;
+        width:1px;
+        height: 58px;
+        margin-top: 17px;
+        font-size: 0; /*IE6*/
+    }

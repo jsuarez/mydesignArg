@@ -23,7 +23,7 @@ foreach( $list as $row ) {
             <td class="cell1"><input type="checkbox" name="chkItem" value="<?=$row['id']?>" /></td>
             <td class="cell2"><img src="<?=UPLOAD_PATH_PORTFOLIOCLIE.$row['filename']?>" alt="<?=$row['filename']?>" width="120" height="80" /></td>
             <td class="cell3 jq-itemname"><?=$row['name']?></td>
-            <td class="cell4"><a href="javascript:void(0)" class="handle"><img src="img/icon_arrow_move.png" alt="" width="16" alt="16" /></a></td>
+            <td class="cell4"><a href="javascript:void(0)" class="handle"><img src="public/img/icon_arrow_move.png" alt="" width="16" alt="16" /></a></td>
             <td class="cell5"><a href="<?=$url?>">Modificar</a></td>
             <td class="cell6"><a href="javascript:void(Portfolio.del(<?=$row['id']?>))">Eliminar</a></td>
         </tr>

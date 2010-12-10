@@ -1,0 +1,56 @@
+/* ESTILOS PARA LA GALERIA DE IMAGEN
+ -----------------------------------------------------------------------------*/
+.main-container .column-container .container-gallery{
+    clear: both;
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+}
+
+/* CONTAINER PACK
+ -----------------------------------------------------------------------------*/
+.main-container .cont-pack{
+    position: relative;
+    float: left;
+    width: 205px;
+    height: 280px;
+    margin: 0 26px 0 0;
+    /*border: 1px solid green;*/
+}
+    .main-container .cont-pack .cont-thumb{
+        position: relative;
+        width: 230px;
+        height: 150px;
+        display: block;
+        margin: 0 0 3px -15px;
+        /*border:1px solid red;*/
+    }
+        .main-container .cont-pack .cont-thumb .mask{
+            position: relative;
+            background: transparent url(public/img/mask-thumb.png) no-repeat;
+            width: 230px;
+            height: 150px;
+            z-index: 100;
+        }
+        .main-container .cont-pack .cont-thumb .image{
+            position: absolute;
+            left:15px;
+            top:15px;
+            z-index: 0;
+        }
+    .main-container .cont-pack h2{
+        font-size: 130%;
+        padding-bottom: 2px;
+        margin-bottom: 0;
+        width: 200px;
+        border-bottom: 1px dashed #1C3A50;
+        white-space: nowrap;
+    }
+    .main-container .cont-pack p{
+        clear: left;
+        font-size: 90%;
+        margin: -5px 0 0 0 !important;
+        font-family: Verdana, Arial, Helvetica, sans-serif !important;
+    }
+

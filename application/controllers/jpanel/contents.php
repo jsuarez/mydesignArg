@@ -1,17 +1,15 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-class Contents extends Controller {
+class Contents extends MY_Controller {
 
     /* CONSTRUCTOR
      **************************************************************************/
     function __construct(){
-        parent::Controller();
-
-        if( !$this->session->userdata('logged_in') ) redirect($this->config->item('base_url'));
+        parent::MY_Controller();
+        if( !$this->session->userdata('logged_in') ) redirect('/jpanel/');
         
         $this->load->model("contents_model");
 
         $this->_data = array(
-            'tlp_section'         => 'panel/contents_view.php',
             'tlp_title'           => TITLE_INDEX_PANEL,
             'tlp_title_section'   => "Contenidos",
             'content_footer'      => array(
@@ -21,19 +19,15 @@ class Contents extends Controller {
         );
     }
 
-    /* PRIVATE PROPERTIES
-     **************************************************************************/
-    private $_data;
-
     /* PUBLIC FUNCTIONS
      **************************************************************************/
     public function index(){
-        $this->_data = array_merge($this->_data, array(
-            'tlp_script'         => array('class_contents'),
-            'tlp_script_special' => array('plugins_tiny_mce', 'plugins_jqui_sortable'),
-            'listPages'          => $this->contents_model->get_list()
-        ));
-        $this->load->view('template_panel_view', $this->_data);
+        $this->assets->add_js('class/contents');
+        $this->assets->add_js_group(array('plugins_tiny_mce'), false);
+        $this->assets->add_js('plugins/jquery-ui.sortable/jquery-ui-1.8.2.custom.min', false);
+        $this->_render('panel/contents_view', array_merge($this->_data, array(
+            'listPages' => $this->contents_model->get_list()
+        )), 'panel_view');
     }
 
     /* AJAX FUNCTIONS

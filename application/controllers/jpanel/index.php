@@ -1,16 +1,14 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-class Index extends Controller {
+class Index extends MY_Controller {
 
     /* CONSTRUCTOR
      **************************************************************************/
     function __construct(){
-        parent::Controller();
+        parent::MY_Controller();
         $this->load->library("simplelogin");
         $this->load->model('contents_model');
     }
 
-    /* PRIVATE PROPERTIES
-     **************************************************************************/
 
     /* PUBLIC FUNCTIONS
      **************************************************************************/
@@ -20,8 +18,9 @@ class Index extends Controller {
         if( $this->session->userdata('logged_in') ) {
             redirect('/jpanel/services/');
         }else{
-            $data = array(
-                'tlp_section'          => 'panel/login_view.php',
+            $this->assets->add_css('view_login');
+            $this->assets->add_js(array('plugins/formatnumber/formatnumber.min'));
+            $this->_render('panel/login_view.php', array(
                 'tlp_title'            => TITLE_INDEX_PANEL,
                 'tlp_meta_description' => '',
                 'tlp_meta_keywords'    => '',
@@ -30,8 +29,7 @@ class Index extends Controller {
                     'sitios-recomendados' => $this->contents_model->get_content('sitios-recomendados'),
                     'web-amigas'          => $this->contents_model->get_content('web-amigas')
                 )
-            );
-            $this->load->view('template_frontpage_view', $data);
+            ));
         }
     }
 

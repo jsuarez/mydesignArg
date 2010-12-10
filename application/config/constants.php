@@ -69,14 +69,15 @@ define('ERR_VALID_EMAIL', 'Por favor, escribe una direcci&oacute;n de correo v&a
 | EMAIL FORM CONTACTO
 |--------------------------------------------------------------------------
 */
-$msg = '<b>Nombre:</b> {name}<br /><br />
-<b>Telefono:</b> {phone}<br /><br />
-<b>E-mail:</b> {email}<br /><br />
-<b>Consulta:</b><br />{message}';
-define('EMAIL_CONTACT_TO', 'info@mydesign.com.ar, basaezj@mydesign.com.ar');
-//define('EMAIL_CONTACT_TO', 'ivan@mydesign.com.ar');
+//define('EMAIL_CONTACT_TO', 'info@mydesign.com.ar, basaezj@mydesign.com.ar');
+define('EMAIL_CONTACT_TO', 'ivan@mydesign.com.ar, gustavo@mydesign.com.ar');
 define('EMAIL_CONTACT_SUBJECT', 'MyDesign - Formulario de Contacto');
-define('EMAIL_CONTACT_MESSAGE', $msg);
+define('EMAIL_CONTACT_MESSAGE', json_encode(array(
+    '<b>Nombre:</b> {txtName}<br /><br />',
+    '<b>Telefono:</b> {txtPhoneCode}-{txtPhoneNum}<br /><br />',
+    '<b>E-mail:</b> {txtEmail}<br /><br />',
+    '<b>Consulta:</b><br />{txtConsult}'
+)));
 
 /*
 |--------------------------------------------------------------------------

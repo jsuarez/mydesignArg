@@ -1,10 +1,10 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-class Contact extends Controller {
+class Contact extends MY_Controller {
 
     /* CONSTRUCTOR
      **************************************************************************/
     function __construct(){
-        parent::Controller();
+        parent::MY_Controller();
         $this->load->library('email');
     }
 
@@ -13,31 +13,21 @@ class Contact extends Controller {
 
     /* PUBLIC FUNCTIONS
      **************************************************************************/
-    public function index(){
-    }
+    public function index(){}
 
     public function send(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
             $this->_valid();
 
             $this->load->model('contact_model');
-
-            $phone = $this->input->post('txtPhoneNum');
-            if( $this->input->post('txtPhoneCode')!='' ) $phone = $this->input->post('txtPhoneCode').' - '.$phone;
             
-            $message = EMAIL_CONTACT_MESSAGE;
-            $message = str_replace('{name}', $this->input->post('txtName'), $message);
-            $message = str_replace('{phone}', $phone, $message);
-            $message = str_replace('{email}', $this->input->post('txtEmail'), $message);
-            $message = str_replace('{message}', nl2br($this->input->post('txtConsult')), $message);
-
             //die($message);
             $this->contact_model->save();
             
             $this->email->from($this->input->post('txtEmail'), $this->input->post('txtName'));
             $this->email->to(EMAIL_CONTACT_TO);
             $this->email->subject(EMAIL_CONTACT_SUBJECT);
-            $this->email->message($message);
+            $this->email->message(EMAIL_CONTACT_MESSAGE, 'txtConsult', 'sin codigo');
             
             die(json_encode($this->email->send()));
         }

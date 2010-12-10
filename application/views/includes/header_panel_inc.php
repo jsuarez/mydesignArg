@@ -1,5 +1,5 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
-<div class="span-12 logo"><a href="http://www.mydesign.com.ar"><img src="img/logo.png" alt="www.mydesign.com.ar" width="331" height="51" border="0" /></a></div>
+<div class="span-12 logo"><a href="http://www.mydesign.com.ar"><img src="public/img/logo.png" alt="www.mydesign.com.ar" width="331" height="51" border="0" /></a></div>
 <div class="menu">
     <div class="contmenu">
         <ul id="lavaLamp">

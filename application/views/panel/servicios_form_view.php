@@ -21,7 +21,7 @@ $src = isset($info) ? UPLOAD_PATH_SERVICES_THUMBS .$reference.'/'. @$info['thumb
             <div class="clear span-13 last">
                 <input type="file" id="txtThumb" name="txtThumb" class="ajaxupload-input" size="20" />&nbsp;
                 <button type="button" onclick="Services.upload('#cont-image-1');">Subir</button>
-                <img src="img/ajax-loader2.gif" alt="Loading..." width="43" height="11" class="hide ajaxupload-load" />
+                <img src="public/img/ajax-loader2.gif" alt="Loading..." width="43" height="11" class="hide ajaxupload-load" />
                 <div class="ajaxupload-error clear error span-7 hide" style="margin-top:10px"></div>
             </div>
         </div>
@@ -48,8 +48,8 @@ $src = isset($info) ? UPLOAD_PATH_SERVICES_THUMBS .$reference.'/'. @$info['thumb
                         <li>
                             <img src="<?=$path.$row['filename']?>" alt="<?=$row['filename']?>" width="108" height="70" />
                             <div class="d1 clear">
-                                <a href="javascript:void(0)" class="link-img fleft jq-removeimg"><img src="img/icon_delete.png" alt="" width="16" height="16" />Quitar</a>
-                                <a href="javascript:void(0)" class="link-img fright handle"><img src="img/icon_arrow_move2.png" alt="" width="16" height="16" /></a>
+                                <a href="javascript:void(0)" class="link-img fleft jq-removeimg"><img src="public/img/icon_delete.png" alt="" width="16" height="16" />Quitar</a>
+                                <a href="javascript:void(0)" class="link-img fright handle"><img src="public/img/icon_arrow_move2.png" alt="" width="16" height="16" /></a>
                             </div>
                         </li>
                 <?php }?>
@@ -58,8 +58,8 @@ $src = isset($info) ? UPLOAD_PATH_SERVICES_THUMBS .$reference.'/'. @$info['thumb
                         <li>
                             <img src="" alt="" width="" height="" />
                             <div class="d1 clear">
-                                <a href="javascript:void(0)" class="link-img fleft jq-removeimg"><img src="img/icon_delete.png" alt="" width="16" height="16" />Quitar</a>
-                                <a href="javascript:void(0)" class="link-img fright handle"><img src="img/icon_arrow_move2.png" alt="" width="16" height="16" /></a>
+                                <a href="javascript:void(0)" class="link-img fleft jq-removeimg"><img src="public/img/icon_delete.png" alt="" width="16" height="16" />Quitar</a>
+                                <a href="javascript:void(0)" class="link-img fright handle"><img src="public/img/icon_arrow_move2.png" alt="" width="16" height="16" /></a>
                             </div>
                         </li>
             <?php }?>
@@ -71,7 +71,7 @@ $src = isset($info) ? UPLOAD_PATH_SERVICES_THUMBS .$reference.'/'. @$info['thumb
                 <div class="span-14 last">
                     <input type="file" size="20" name="txtUploadFile" id="txtUploadFile" />&nbsp;
                     <button id="btnUpload" type="button" onclick="PictureGallery.upluad()">Subir</button>
-                    <img id="ajax-loader1" src="img/ajax-loader2.gif" alt="Loading..." width="43" height="11" class="hide" />
+                    <img id="ajax-loader1" src="public/img/ajax-loader2.gif" alt="Loading..." width="43" height="11" class="hide" />
                 </div>
                 <div id="pg-msgerror" class="clear error span-7 hide"></div>
             </div>
@@ -88,9 +88,4 @@ $src = isset($info) ? UPLOAD_PATH_SERVICES_THUMBS .$reference.'/'. @$info['thumb
     <iframe name="ifr" id="ifr" src="about:blank" frameborder="1" style="width:800px; height: 100px; border: 1px solid red;"></iframe>
     <input type="hidden" name="reference" value="<?=$reference?>" />
 </form>
-
-<script type="text/javascript">
-<!--
-    Services.modedit = <?=isset($info) ? "true" : "false"?>;
--->
-</script>
+<input type="hidden" id="modedit" value="<?=isset($info) ? "1" : "0"?>" />
