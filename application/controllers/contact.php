@@ -23,11 +23,14 @@ class Contact extends MY_Controller {
             
             //die($message);
             $this->contact_model->save();
+
+            $msg = set_message(json_decode(EMAIL_CONTACT_MESSAGE), 'txtConsult', 'sin codigo');
             
             $this->email->from($this->input->post('txtEmail'), $this->input->post('txtName'));
             $this->email->to(EMAIL_CONTACT_TO);
             $this->email->subject(EMAIL_CONTACT_SUBJECT);
-            $this->email->message(EMAIL_CONTACT_MESSAGE, 'txtConsult', 'sin codigo');
+            //$this->email->message(json_decode(EMAIL_CONTACT_MESSAGE), 'txtConsult', 'sin codigo');
+            $this->email->message($msg);
             
             die(json_encode($this->email->send()));
         }

@@ -6,9 +6,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="robots" content="none" />
     <link href="public/img/favicon.ico" rel="stylesheet icon" type="image/ico" />
-    <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"/><![endif]-->
-    <!--[if IE 6]><link href="css/style_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
-    <!--[if IE 7]><link href="css/style_ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
     <?php echo $this->assets->css(); ?>
     <?php echo $this->assets->js(); ?>
 </head>

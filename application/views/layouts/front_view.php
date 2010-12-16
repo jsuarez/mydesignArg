@@ -8,12 +8,12 @@
     <meta name="keywords" content="<?=@$tlp_meta_keywords;?>" />
     <meta name="robots" content="index,follow" />
     <link href="public/img/favicon.ico" rel="stylesheet icon" type="image/ico" />
-    <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"/><![endif]-->
-    <!--[if IE 6]><link href="css/style_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
-    <!--[if IE 7]><link href="css/style_ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if lt IE 8]><link rel="stylesheet" href="public/css/blueprint/ie.css" type="text/css" media="screen, projection"/><![endif]-->
+    <!--[if IE 6]><link href="public/css/style_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if IE 7]><link href="public/css/style_ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
     <?php echo $this->assets->css(); ?>
     <?php echo $this->assets->js(); ?>
-    <!--[if IE 6]><script type="text/javascript" src="js/helpers/DD_belatedPNG.js"></script><![endif]-->
+    <!--[if IE 6]><script type="text/javascript" src="public/js/helpers/DD_belatedPNG.js"></script><![endif]-->
 </head>
 <body>
     <div class="container">

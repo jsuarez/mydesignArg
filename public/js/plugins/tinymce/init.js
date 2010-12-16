@@ -42,7 +42,7 @@ var TinyMCE_init = {
 function openKCFinder(field_name, url, type, win) {
 
     tinyMCE.activeEditor.windowManager.open({
-        file: 'js/plugins/kcfinder-1.7/browse.php?opener=tinymce&type=' + type,
+        file: 'public/js/plugins/kcfinder-1.7/browse.php?opener=tinymce&type=' + type,
         title: 'KCFinder',
         width: 700,
         height: 500,

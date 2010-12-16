@@ -1,7 +1,7 @@
 AddHandler x-httpd-php5 .php
 <IfModule mod_rewrite.c>
 	RewriteEngine On
-	#RewriteBase /
+	RewriteBase /
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
 
@@ -95,3 +95,23 @@ AddHandler x-httpd-php5 .php
  # Submitted by: ElliotHaughin
 ErrorDocument 404 /index.php
 </IfModule>
+
+########### SECURITY ##############
+
+# secure htaccess file
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+# multiple file types
+<FilesMatch ".(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
+ Order Allow,Deny
+ Deny from all
+</FilesMatch>
+
+# disable directory browsing
+Options All -Indexes
+
+# enable directory browsing
+Options All +Indexes

@@ -69,8 +69,8 @@ define('ERR_VALID_EMAIL', 'Por favor, escribe una direcci&oacute;n de correo v&a
 | EMAIL FORM CONTACTO
 |--------------------------------------------------------------------------
 */
-//define('EMAIL_CONTACT_TO', 'info@mydesign.com.ar, basaezj@mydesign.com.ar');
-define('EMAIL_CONTACT_TO', 'ivan@mydesign.com.ar, gustavo@mydesign.com.ar');
+define('EMAIL_CONTACT_TO', 'info@mydesign.com.ar, basaezj@mydesign.com.ar');
+//define('EMAIL_CONTACT_TO', 'ivan@mydesign.com.ar');
 define('EMAIL_CONTACT_SUBJECT', 'MyDesign - Formulario de Contacto');
 define('EMAIL_CONTACT_MESSAGE', json_encode(array(
     '<b>Nombre:</b> {txtName}<br /><br />',
@@ -117,7 +117,6 @@ define('TITLE_INDEX_PANEL', 'MyDesign Argentina - Panel');
 */
 define('CACHE_TIME', 5);
 define('LANG', 1);
-
 
 /* End of file constants.php */
 /* Location: ./system/application/config/constants.php */

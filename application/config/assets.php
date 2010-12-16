@@ -64,7 +64,7 @@ $config['asset_host'] = '';
  * to determine whether to combine the files or not.
  */
 $config['servers']= array(
-    'dev'	=> 'localhost/trabajos/mydesign_ar_v3.git',
+    'dev'	=> 'local.mydesign',
     'test'	=> '',
     'prod'	=> 'www.mydesign.com.ar'
 );

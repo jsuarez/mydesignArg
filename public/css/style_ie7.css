@@ -9,8 +9,8 @@
 
 /* SIDEBAR - FORMULARIO DE CONTACTO
  ---------------------------------------------------------------------*/
-.main-container .column-sidebar #form-contact{
-    margin-top: -25px;
+.main-container .column-sidebar .form-contact form{
+    margin-top: -25px !important;
 }
 .main-container .column-sidebar .form-contact textarea {
     margin-top: 0;
