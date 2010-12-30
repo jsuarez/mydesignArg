@@ -27,17 +27,17 @@
         <div class="line-h"></div>
         <div class="clear span-15 last align-center">
             <a href="http://validator.w3.org/check?uri=referer"><img src="public/img/xhtml-valid.jpg" alt="Valid XHTML 1.0 Strict" width="98" height="14" /></a>&nbsp;&nbsp;
-            <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.demo.mydesign.com.ar%2Fmydesign%2F&profile=css3&usermedium=all&warning=1"><img src="public/img/css-valid.jpg" alt="¡CSS Válido!" width="98" height="14" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a target="_blank" href="http://www.qweb.es/_diseno-web-en-argentina.html"><img border="0" width="97" height="31" alt="Directorio de Diseño web en Argentina" src="http://www.qweb.es/certqweb-www.mydesign.com.ar.gif" /></a>
+            <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.mydesign.com.ar%2F&amp;profile=css3&amp;usermedium=all&amp;warning=1"><img src="public/img/css-valid.jpg" alt="¡CSS Válido!" width="98" height="14" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a target="_blank" href="http://www.qweb.es/_diseno-web-en-argentina.html"><img border="0" width="97" height="31" alt="Directorio de Diseño web en Argentina" src="public/img/icon-cert.png" /></a>
         </div>
     </div>
     <div class="col4 line-v1">
         <ul class="list">
-            <li><img src="public/img/icon-msn.png" alt="" width="20" height="20" />&nbsp;info@mydesign.com.ar</li>
-            <li><img src="public/img/icon-skype.png" alt="" width="20" height="20" />&nbsp;infomydesign</li>
-            <li><img src="public/img/icon-facebook.png" alt="" width="20" height="20" />&nbsp;<a href="http://www.facebook.com/mydesign.online" target="_blank">Hacete Fan</a></li>
-            <li><img src="public/img/icon-twitter.png" alt="" width="20" height="20" />&nbsp;<a href="http://www.twitter.com/mydesignar" target="_blank">Seguinos!</a></li>
-            <li><img src="public/img/icon-youtube.png" alt="" width="20" height="20" />&nbsp;<a href="http://www.youtube.com/mydesignar" target="_blank">Nuestro Canal</a></li>
+            <li class="icon-msn"><span>info@mydesign.com.ar</span></li>
+            <li class="icon-skype"><span>infomydesign</span></li>
+            <li class="icon-facebook"><a href="http://www.facebook.com/mydesign.online" target="_blank">Hacete Fan</a></li>
+            <li class="icon-twitter"><a href="http://www.twitter.com/mydesignar" target="_blank">Seguinos!</a></li>
+            <li class="icon-youtube"><a href="http://www.youtube.com/mydesignar" target="_blank">Nuestro Canal</a></li>
         </ul>
     </div>
 </div>

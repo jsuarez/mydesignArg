@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 
-<a href="./chat.html" target="_blank" onclick="Chat.open(); return false" class="soporte"><img src="public/img/icon-chat.png" alt="" width="19" height="19" /> Soporte en l&iacute;nea</a>
+<a href="./chat.html" target="_blank" onclick="Chat.open(); return false" class="soporte"><span class="icon"></span><span class="fleft">Soporte en l&iacute;nea</span></a>
 <div id="flipbox-fcontact" class="form-contact textformat">
     <h3 class="title">Solicitar Informaci&oacute;n</h3>
     <form id="form-contact" action="<?=site_url('/contact/send/')?>" method="post" enctype="application/x-www-form-urlencoded">

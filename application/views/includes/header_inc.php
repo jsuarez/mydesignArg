@@ -1,7 +1,8 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 <div class="span-12 logo"><a href="http://www.mydesign.com.ar"><img src="public/img/logo.png" alt="www.mydesign.com.ar" width="331" height="51" border="0" /></a></div>
 <div class="cont-phone">
-    <img src="public/img/icon-phone.png" alt="" width="33" height="33" />
+    <div class="icon"></div>
+    <!--<img src="public/img/icon-phone.png" alt="" width="33" height="33" />-->
     <div class="fleft textformat">
         <p><span>Mendoza</span> <b>(0261)</b> 4237658</p>
         <p class="line"><span>Bahia Blanca</span> <b>(0291)</b> 154-195047</p>
@@ -16,7 +17,7 @@
             <li <?php if( $page=="marketing_online" ) echo 'class="current"'?>><h1><a href="<?=site_url('/marketing_online/')?>">Marketing Online</a></h1></li>
             <li <?php if( $page=="portfolio" ) echo 'class="current"'?>><h1><a href="<?=site_url('/portfolio/')?>">Portfolio</a></h1></li>
             <li <?php if( $page=="la_empresa" ) echo 'class="current"'?>><h1><a href="<?=site_url('/la_empresa/')?>">Empresa</a></h1></li>
-            <li><h1 class="outline"><a href="/blog">Blog</a></h1></li>
+            <li><h1 class="outline"><a href="/blog/index.php">Blog</a></h1></li>
         </ul>
     </div>
 </div>

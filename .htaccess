@@ -96,6 +96,8 @@ AddHandler x-httpd-php5 .php
 ErrorDocument 404 /index.php
 </IfModule>
 
+ErrorDocument 404 http://local.mydesign/$1.php
+
 ########### SECURITY ##############
 
 # secure htaccess file

@@ -3,7 +3,7 @@
 -----------------------------------------------------------------------------*/
 .main-container .column-sidebar .soporte{
     float: left;
-    background: url(public/img/bg-soporte.png) no-repeat;
+    background: url(public/img/sprites-bg2.png) no-repeat 0 0;
     width:245px;
     height: 38px;
     padding-top:12px;
@@ -11,9 +11,11 @@
     color:#1B3A50;
     text-align: center;
 }
-    .main-container .column-sidebar .soporte img{
-        position: relative;
-        top:4px;
+    .main-container .column-sidebar .soporte span.icon{
+        background: url(public/img/sprites-icons-varios.png) no-repeat -47px 0;
+        width: 19px; height: 19px;
+        float: left;
+        margin: 4px 5px 0 45px;
     }
 /* SIDEBAR - FORMULARIO DE CONTACTO
  ---------------------------------------------------------------------*/
@@ -107,3 +109,11 @@
         left:-10px;
         overflow: hidden;
     }
+
+.cont-msgerror{
+    position: absolute;
+    left:-380px;
+    top:14px;
+    width: 376px;
+    /*border: 1px solid;*/
+}

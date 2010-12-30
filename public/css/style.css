@@ -123,13 +123,7 @@ h4.title{
     width: 18px;
     height: 32px;
 }
-.cont-msgerror{
-    position: absolute;
-    left:-380px;
-    top:14px;
-    width: 376px;
-    /*border: 1px solid;*/
-}
+
 
 /*------------------------------------------------------------------------------
  - ESTILOS PARA LINK
@@ -139,16 +133,6 @@ a.link-moreinfo, a.link-back{
     font-weight: bold;
     font-style: italic;
     font-size: 110%;
-}
-a.link-moreinfo{
-    position: absolute;
-    display: block;
-    left:130px;
-    top:250px;
-    white-space: nowrap;
-    background: url(public/img/icon-arrow-right.png) no-repeat right bottom;
-    padding: 0 9px 4px 0;
-    font-size: 100%;
 }
 a.link-back{
     float: left;
@@ -210,7 +194,7 @@ a.link-arrow-left, a.link-arrow-right:hover{color: #273B56}
  - ESTILOS PARA BUTTON
  -----------------------------------------------------------------------------*/
 button{
-    background: transparent url(public/img/button.png) no-repeat bottom;
+    background: transparent url(public/img/sprites-bg2.png) no-repeat 0 -78px;
     border: none;
     width: 80px;
     height: 25px;
@@ -232,16 +216,19 @@ button{
         height: 60px;
         color: #365265;
     }
+        .header .cont-phone .icon{
+            float: left;
+            background: url(public/img/sprites-icons-varios.png) no-repeat -85px 0;
+            width: 33px;
+            height: 33px;
+            margin: 10px 5px;
+        }
         .header .cont-phone p{
             margin: 0 !important;
             padding: 4px 0 4px !important;
         }
         .header .cont-phone .line{
             border-top: 1px dashed #205580;
-        }
-        .header .cont-phone img{
-            float: left;
-            margin: 10px 5px;
         }
         .header .cont-phone span{
             color:#19517F;
@@ -444,13 +431,19 @@ button{
             padding: 0;
         }
         .footer .cont ul.list li{
+            background: url(public/img/sprites-icons-socialnet.png) no-repeat top left;
+            display: list-item;
             margin:0 0 5px 20px;
         }
-            .footer .cont ul.list li img{
-                position: relative;
-                top:4px;
-                right:4px;
+            .footer .cont ul.list li a, .footer .cont ul.list li span{
+                white-space: nowrap;
+                margin-left: 28px;
             }
+            .footer .cont ul.list li.icon-msn{background-position: -40px 0; width: 20px; height: 20px;}
+            .footer .cont ul.list li.icon-skype{background-position: -80px 0; width: 20px; height: 20px;}
+            .footer .cont ul.list li.icon-facebook{background-position: 0 0; width: 20px; height: 20px;}
+            .footer .cont ul.list li.icon-twitter{background-position: -120px 0; width: 20px; height: 20px;}
+            .footer .cont ul.list li.icon-youtube{background-position: -160px 0; width: 20px; height: 20px;}
 
     .footer .line-h{
         width: 100%;

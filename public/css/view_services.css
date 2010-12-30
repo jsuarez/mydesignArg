@@ -28,7 +28,7 @@
     }
         .main-container .cont-pack .cont-thumb .mask{
             position: relative;
-            background: transparent url(public/img/mask-thumb.png) no-repeat;
+            background: transparent url(public/img/sprites-bg2.png) no-repeat 0 -128px;
             width: 230px;
             height: 150px;
             z-index: 100;
@@ -54,3 +54,28 @@
         font-family: Verdana, Arial, Helvetica, sans-serif !important;
     }
 
+    .main-container .cont-pack .moreinfo{
+        position: absolute;
+        left:130px;
+        top:250px;
+        font-size: 100%;
+    }
+        .main-container .cont-pack .moreinfo a{
+            display: block;
+            white-space: nowrap;
+        }
+        .main-container .cont-pack .moreinfo span{
+            float: right;
+            clear: left;
+            background: url(public/img/sprites-icons-varios.png) no-repeat 0 0;
+            width: 28px; height: 10px;
+            margin:-7px -2px 0 0;
+        }
+
+.cont-msgerror{
+    position: absolute;
+    left:-380px;
+    top:14px;
+    width: 376px;
+    /*border: 1px solid;*/
+}

@@ -17,7 +17,10 @@ foreach( $list_services as $row ){
             <img class="image" src="<?=UPLOAD_PATH_SERVICES_THUMBS . $reference .'/'. $row['thumb']?>" alt="<?=$row['thumb']?>" width="200" height="120" />
         </div>
         <p class="clear"><?=str_replace('<p>', '',str_replace('</p>', '', $row['content_intro']))?></p>
-        <a href="<?=site_url($row['reference'].'/'.$row['reference2'])?>" class="link-moreinfo" onclick="Services.show(<?=$row['content_id']?>, 'lr'); return false">M&aacute;s info</a>
+
+        <div class="moreinfo">
+            <a href="<?=site_url($row['reference'].'/'.$row['reference2'])?>" class="link-moreinfo" onclick="Services.show(<?=$row['content_id']?>, 'lr'); return false">M&aacute;s info<span class="icon"></span></a>
+        </div>
     </div>
 </div>
 <?php }?>

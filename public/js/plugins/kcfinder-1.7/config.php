@@ -22,7 +22,7 @@ $_CONFIG = array(
 
     'theme' => "oxygen",
 
-    'uploadURL' => "../../../uploads/kcfinder",
+    'uploadURL' => "../../../../uploads/kcfinder",
     'uploadDir' => "",
 
     'dirPerms' => 0755,
